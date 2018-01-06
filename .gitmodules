@@ -1,0 +1,6 @@
+[submodule "crimild"]
+	path = crimild
+	url = https://github.com/hhsaez/crimild.git
+[submodule "emscripten"]
+	path = emscripten
+	url = https://github.com/kripken/emscripten.git
