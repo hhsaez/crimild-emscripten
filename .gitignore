@@ -29,3 +29,5 @@ crimild-emcc.build
 *.VC.opendb
 *.VC.db
 
+build
+build-web

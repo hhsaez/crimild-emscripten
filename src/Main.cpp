@@ -29,41 +29,178 @@
 #include <Crimild_GLFW.hpp>
 
 using namespace crimild;
+using namespace crimild::messaging;
+
+static SharedPointer< Simulation > sim;
+
+class ViewControls : 
+    public NodeComponent,
+    public Messenger {
+public:
+    ViewControls( void )
+    {
+        auto self = this;
+
+        registerMessageHandler< MouseButtonDown >( [self]( MouseButtonDown const &msg ) {
+            self->_lastMousePos = Input::getInstance()->getNormalizedMousePosition();
+        });
+
+        registerMessageHandler< MouseMotion >( [self]( MouseMotion const &msg ) {
+            if ( Input::getInstance()->isMouseButtonDown( CRIMILD_INPUT_MOUSE_BUTTON_LEFT ) ) {
+                auto currentMousePos = Input::getInstance()->getNormalizedMousePosition();
+                auto delta = currentMousePos - self->_lastMousePos;
+                self->_lastMousePos = Input::getInstance()->getNormalizedMousePosition();
+
+                if ( Input::getInstance()->isKeyDown( CRIMILD_INPUT_KEY_LEFT_SHIFT ) ) {
+                    self->translateView( Vector3f( 3.0f * delta[ 0 ], -3.0f * delta[ 1 ], 0.0f ) );
+                }
+                else {
+                    self->rotateView( Vector3f( delta[ 1 ], 3.0f * delta[ 0 ], 0.0f ) );
+                }
+            }
+        });
+
+        registerMessageHandler< MouseButtonUp >( [self]( MouseButtonUp const &msg ) {
+
+        });
+
+        registerMessageHandler< MouseScroll >( [self]( MouseScroll const &msg ) {
+            self->getNode()->local().translate() += 0.1f * msg.dy * Vector3f( 0.0f, 0.0f, 1.0f );
+        });
+    }
+
+    virtual ~ViewControls( void )
+    {
+
+    }
+
+    virtual void update( const Clock &clock ) override
+    {
+        bool shouldTranslate = Input::getInstance()->isKeyDown( CRIMILD_INPUT_KEY_LEFT_SHIFT );
+        bool translateSpeed = 0.5f * clock.getDeltaTime();
+
+        if ( Input::getInstance()->isKeyDown( 'W' ) ) {
+            if ( shouldTranslate ) {
+                translateView( Vector3f( 0.0f, -translateSpeed, 0.0f ) );
+            }
+            else {
+                rotateView( Vector3f( -0.1f, 0.0f, 0.0f ) );
+            }
+        }
+
+        if ( Input::getInstance()->isKeyDown( 'S' ) ) {
+            if ( shouldTranslate ) {
+                translateView( Vector3f( 0.0f, translateSpeed, 0.0f ) );
+            }
+            else {
+                rotateView( Vector3f( 0.1f, 0.0f, 0.0f ) );
+            }
+        }
+
+        if ( Input::getInstance()->isKeyDown( 'A' ) ) {
+            if ( shouldTranslate ) {
+                translateView( Vector3f( translateSpeed, 0.0f, 0.0f ) );
+            }
+            else {
+                rotateView( Vector3f( 0.0f, -0.1f, 0.0f ) );
+            }
+        }
+
+        if ( Input::getInstance()->isKeyDown( 'D' ) ) {
+            if ( shouldTranslate ) {
+                translateView( Vector3f( -translateSpeed, 0.0f, 0.0f ) );
+            }
+            else {
+                rotateView( Vector3f( 0.0f, 0.1f, 0.0f ) );
+            }
+        }
+
+        if ( Input::getInstance()->isKeyDown( 'Q' ) ) {
+            rotateView( Vector3f( 0.0f, 0.0f, 0.1f ) );
+        }
+
+        if ( Input::getInstance()->isKeyDown( 'E' ) ) {
+            rotateView( Vector3f( 0.0f, 0.0f, -0.1f ) );
+        }
+    }
+
+private:
+    void translateView( const Vector3f &delta )
+    {
+        getNode()->local().translate() += delta;
+    }
+
+    void rotateView( const Vector3f &delta )
+    {
+        if ( delta[ 0 ] != 0.0f ) {
+            Vector3f xAxis( 1.0f, 0.0f, 0.0f );
+            getNode()->getLocal().applyInverseToVector( Vector3f( 1.0f, 0.0f, 0.0f ), xAxis );
+            getNode()->local().rotate() *= Quaternion4f::createFromAxisAngle( xAxis, delta[ 0 ] );
+        }
+
+        if ( delta[ 1 ] != 0.0f ) {
+            Vector3f yAxis( 0.0f, 1.0f, 0.0f );
+            getNode()->getLocal().applyInverseToVector( Vector3f( 0.0f, 1.0f, 0.0f ), yAxis );
+            getNode()->local().rotate() *= Quaternion4f::createFromAxisAngle( yAxis, delta[ 1 ] );
+        }
+
+        if ( delta[ 2 ] != 0.0f ) {
+            Vector3f zAxis( 0.0f, 0.0f, 1.0f );
+            getNode()->getLocal().applyInverseToVector( Vector3f( 0.0f, 0.0f, 1.0f ), zAxis );
+            getNode()->local().rotate() *= Quaternion4f::createFromAxisAngle( zAxis, delta[ 2 ] );
+        }
+    }
+
+private:
+    Vector2f _lastMousePos;
+};
 
 int main( int argc, char **argv )
 {
-    auto sim = crimild::alloc< GLSimulation >( "Triangle", crimild::alloc< Settings >( argc, argv ) );
+	sim = crimild::alloc< GLSimulation >( "Triangle", crimild::alloc< Settings >( argc, argv ) );
+
+	sim->getRenderer()->getScreenBuffer()->setClearColor( RGBAColorf( 0.0f, 0.0f, 0.0f, 1.0f ) );
 
     auto scene = crimild::alloc< Group >();
-
-    float vertices[] = {
-        -1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-        0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f
-    };
-
-    unsigned short indices[] = {
-        0, 1, 2
-    };
-
-    auto primitive = crimild::alloc< Primitive >();
-    primitive->setVertexBuffer( crimild::alloc< VertexBufferObject >( VertexFormat::VF_P3_C4, 3, vertices ) );
-    primitive->setIndexBuffer( crimild::alloc< IndexBufferObject >( 3, indices ) );
-
-    auto geometry = crimild::alloc< Geometry >();
-    geometry->attachPrimitive( primitive );
-    auto material = crimild::alloc< Material >();
-    material->setProgram( AssetManager::getInstance()->get< ShaderProgram >( Renderer::SHADER_PROGRAM_UNLIT_VERTEX_COLOR ) );
-    material->getCullFaceState()->setEnabled( false );
-    geometry->getComponent< MaterialComponent >()->attachMaterial( material );
-    geometry->attachComponent< RotationComponent >( Vector3f( 0.0f, 1.0f, 0.0f ), 0.25f * Numericf::HALF_PI );
-    scene->attachNode( geometry );
 
     auto camera = crimild::alloc< Camera >();
     camera->local().setTranslate( Vector3f( 0.0f, 0.0f, 3.0f ) );
     scene->attachNode( camera );
-    
+
+	std::string modelPath = FileSystem::getInstance().pathForResource( "assets/astroboy.crimild" );
+	FileStream is( modelPath, FileStream::OpenMode::READ );
+	is.load();
+	if ( is.getObjectCount() > 0 ) {
+		auto model = is.getObjectAt< Node >( 0 );
+		if ( model != nullptr ) {
+			model->perform( UpdateWorldState() );
+
+			const auto SCALE = 1.0f / model->getWorldBound()->getRadius();
+			model->local().setScale( SCALE );
+			model->local().translate() -= SCALE * Vector3f( 0.0f, model->getWorldBound()->getCenter()[ 1 ], 0.0f );
+			
+			auto pivot = crimild::alloc< Group >();
+			pivot->attachNode( model );
+			pivot->attachComponent< ViewControls >();
+			scene->attachNode( pivot );
+			
+			scene->attachNode( pivot );
+		}
+	}
+
+	auto light = crimild::alloc< Light >( Light::Type::POINT );
+	light->local().setTranslate( 1.0f, 1.0f, 1.0f );
+	light->setAmbient( RGBAColorf::ZERO );
+	scene->attachNode( light );
+
     sim->setScene( scene );
-	return sim->run();
+
+#ifdef CRIMILD_PLATFORM_EMSCRIPTEN
+	sim->start();
+#else
+	sim->run();
+	sim = nullptr;
+	return 0;
+#endif
 }
 
