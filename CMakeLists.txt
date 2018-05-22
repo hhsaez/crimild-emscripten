@@ -17,7 +17,7 @@ SET( CRIMILD_APP_INCLUDE_DIRECTORIES src )
 INCLUDE( ModuleBuildApp )
 
 if ( ${CMAKE_SYSTEM_NAME} MATCHES "Emscripten" )
-    set_target_properties( crimild-emcc PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 -s --preload-file assets" )
+    set_target_properties( crimild-emcc PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 -s ALLOW_MEMORY_GROWTH=1 -s --preload-file assets" )
 
     configure_file( ${PROJECT_SOURCE_DIR}/src/index.html "." COPYONLY )
 

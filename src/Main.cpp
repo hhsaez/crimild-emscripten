@@ -157,6 +157,8 @@ private:
 
 int main( int argc, char **argv )
 {
+	crimild::init();
+	
 	sim = crimild::alloc< GLSimulation >( "Triangle", crimild::alloc< Settings >( argc, argv ) );
 
 	sim->getRenderer()->getScreenBuffer()->setClearColor( RGBAColorf( 0.0f, 0.0f, 0.0f, 1.0f ) );
@@ -167,24 +169,25 @@ int main( int argc, char **argv )
     camera->local().setTranslate( Vector3f( 0.0f, 0.0f, 3.0f ) );
     scene->attachNode( camera );
 
+	coding::FileDecoder decoder;
 	std::string modelPath = FileSystem::getInstance().pathForResource( "assets/astroboy.crimild" );
-	FileStream is( modelPath, FileStream::OpenMode::READ );
-	is.load();
-	if ( is.getObjectCount() > 0 ) {
-		auto model = is.getObjectAt< Node >( 0 );
-		if ( model != nullptr ) {
-			model->perform( UpdateWorldState() );
+	if ( decoder.read( modelPath ) ) {
+		if ( decoder.getObjectCount() > 0 ) {
+			auto model = decoder.getObjectAt< Node >( 0 );
+			if ( model != nullptr ) {
+				model->perform( UpdateWorldState() );
 
-			const auto SCALE = 1.0f / model->getWorldBound()->getRadius();
-			model->local().setScale( SCALE );
-			model->local().translate() -= SCALE * Vector3f( 0.0f, model->getWorldBound()->getCenter()[ 1 ], 0.0f );
+				const auto SCALE = 1.0f / model->getWorldBound()->getRadius();
+				model->local().setScale( SCALE );
+				model->local().translate() -= SCALE * Vector3f( 0.0f, model->getWorldBound()->getCenter()[ 1 ], 0.0f );
 			
-			auto pivot = crimild::alloc< Group >();
-			pivot->attachNode( model );
-			pivot->attachComponent< ViewControls >();
-			scene->attachNode( pivot );
+				auto pivot = crimild::alloc< Group >();
+				pivot->attachNode( model );
+				pivot->attachComponent< ViewControls >();
+				scene->attachNode( pivot );
 			
-			scene->attachNode( pivot );
+				scene->attachNode( pivot );
+			}
 		}
 	}
 
