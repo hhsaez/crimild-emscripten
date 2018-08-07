@@ -26,16 +26,17 @@
  */
 
 #include <Crimild.hpp>
-#include <Crimild_GLFW.hpp>
+#include <Crimild_SDL.hpp>
 
 using namespace crimild;
+using namespace crimild::sdl;
+using namespace crimild::animation;
 using namespace crimild::messaging;
-
-static SharedPointer< Simulation > sim;
 
 class ViewControls : 
     public NodeComponent,
     public Messenger {
+	CRIMILD_IMPLEMENT_RTTI( ViewControls );
 public:
     ViewControls( void )
     {
@@ -58,14 +59,6 @@ public:
                     self->rotateView( Vector3f( delta[ 1 ], 3.0f * delta[ 0 ], 0.0f ) );
                 }
             }
-        });
-
-        registerMessageHandler< MouseButtonUp >( [self]( MouseButtonUp const &msg ) {
-
-        });
-
-        registerMessageHandler< MouseScroll >( [self]( MouseScroll const &msg ) {
-            self->getNode()->local().translate() += 0.1f * msg.dy * Vector3f( 0.0f, 0.0f, 1.0f );
         });
     }
 
@@ -155,18 +148,24 @@ private:
     Vector2f _lastMousePos;
 };
 
+#ifdef CRIMILD_PLATFORM_EMSCRIPTEN
+#define SIM_LIFETIME static
+#else
+#define SIM_LIFETIME
+#endif
+
 int main( int argc, char **argv )
 {
 	crimild::init();
-	
-	sim = crimild::alloc< GLSimulation >( "Triangle", crimild::alloc< Settings >( argc, argv ) );
+
+	SIM_LIFETIME auto sim = crimild::alloc< SDLSimulation >( "Crimild Emscripten Demo", crimild::alloc< Settings >( argc, argv ) );
 
 	sim->getRenderer()->getScreenBuffer()->setClearColor( RGBAColorf( 0.0f, 0.0f, 0.0f, 1.0f ) );
 
     auto scene = crimild::alloc< Group >();
 
     auto camera = crimild::alloc< Camera >();
-    camera->local().setTranslate( Vector3f( 0.0f, 0.0f, 3.0f ) );
+    camera->local().setTranslate( Vector3f( 0.0f, 0.0f, 1.25f ) );
     scene->attachNode( camera );
 
 	coding::FileDecoder decoder;
@@ -184,26 +183,114 @@ int main( int argc, char **argv )
 				auto pivot = crimild::alloc< Group >();
 				pivot->attachNode( model );
 				pivot->attachComponent< ViewControls >();
+
+				model->perform( ApplyToGeometries( []( Geometry *g ) {
+					if ( auto ms = g->getComponent< MaterialComponent >() ) {
+						ms->forEachMaterial( []( Material *m ) {
+							m->setAmbient( RGBAColorf::ZERO );
+						});
+					}
+				}));
+
 				scene->attachNode( pivot );
-			
-				scene->attachNode( pivot );
+
+				if ( auto skeleton = model->getComponent< Skeleton >() ) {
+					if ( skeleton->getClips().size() > 0 ) {
+						auto animation = crimild::alloc< Animation >( skeleton->getClips().values().first() );
+						
+						auto centerAnim = crimild::alloc< Animation >(
+							crimild::alloc< Clip >(
+								"center",
+								crimild::alloc< Quaternion4fChannel >(
+									"astroBoy_newSkeleton_neck01[r]",
+									containers::Array< crimild::Real32 > { 2.0 },
+									containers::Array< Quaternion4f > { Quaternion4f::createFromAxisAngle( Vector3f::UNIT_Y, 0.0 ) }
+									)
+								)
+							);
+						
+						auto leftAnim = crimild::alloc< Animation >(
+							crimild::alloc< Clip >(
+								"left",
+								crimild::alloc< Quaternion4fChannel >(
+									"astroBoy_newSkeleton_neck01[r]",
+									containers::Array< crimild::Real32 > { 2.0 },
+									containers::Array< Quaternion4f > { Quaternion4f::createFromAxisAngle( Vector3f::UNIT_Z, -0.45 * Numericf::PI ) }
+									)
+								)
+							);
+						
+						auto rightAnim = crimild::alloc< Animation >(
+							crimild::alloc< Clip >(
+								"right",
+								crimild::alloc< Quaternion4fChannel >(
+									"astroBoy_newSkeleton_neck01[r]",
+									containers::Array< crimild::Real32 > { 2.0 },
+									containers::Array< Quaternion4f > { Quaternion4f::createFromAxisAngle( Vector3f::UNIT_Z, 0.45 * Numericf::PI ) }
+									)
+								)
+							);
+						
+						auto upAnim = crimild::alloc< Animation >(
+							crimild::alloc< Clip >(
+								"up",
+								crimild::alloc< Quaternion4fChannel >(
+									"astroBoy_newSkeleton_neck01[r]",
+									containers::Array< crimild::Real32 > { 2.0 },
+									containers::Array< Quaternion4f > { Quaternion4f::createFromAxisAngle( Vector3f::UNIT_Y, -0.45 * Numericf::PI ) }
+									)
+								)
+							);
+						
+						auto downAnim = crimild::alloc< Animation >(
+							crimild::alloc< Clip >(
+								"down",
+								crimild::alloc< Quaternion4fChannel >(
+									"astroBoy_newSkeleton_neck01[r]",
+									containers::Array< crimild::Real32 > { 2.0 },
+									containers::Array< Quaternion4f > { Quaternion4f::createFromAxisAngle( Vector3f::UNIT_Y, 0.45 * Numericf::PI ) }
+									)
+								)
+							);
+
+						model->attachComponent< LambdaComponent >( [ animation, skeleton, centerAnim, leftAnim, rightAnim, upAnim, downAnim ]( Node *node, const Clock &c ) {
+							auto mousePos = Input::getInstance()->getNormalizedMousePosition();
+							
+							auto xLeft = Numericf::clamp( 2.0f * mousePos.x(), 0.0f, 1.0f );
+							auto xRight = Numericf::clamp( 2.0f * ( mousePos.x() - 0.5f ), 0.0f, 1.0f );
+							leftAnim->update( c )->lerp( centerAnim, xLeft )->lerp( rightAnim, xRight );
+							
+							auto yUp = Numericf::clamp( mousePos.y() / 0.3f, 0.0f, 1.0f );
+							auto yDown = Numericf::clamp( ( mousePos.y() - 0.3f ) / 0.7f, 0.0f, 1.0f );
+							upAnim->update( c )->lerp( centerAnim, yUp )->lerp( downAnim, yDown );
+							
+							leftAnim->lerp( upAnim, 0.5f, false );
+
+							animation->update( c )->add( leftAnim, 1.0f );
+							skeleton->animate( crimild::get_ptr( animation ) );
+							node->perform( UpdateWorldState() );
+						});
+					}
+				}
 			}
 		}
 	}
 
 	auto light = crimild::alloc< Light >( Light::Type::POINT );
 	light->local().setTranslate( 1.0f, 1.0f, 1.0f );
-	light->setAmbient( RGBAColorf::ZERO );
 	scene->attachNode( light );
-
+	
+	auto light2 = crimild::alloc< Light >( Light::Type::POINT );
+	light2->local().setTranslate( -1.0f, -1.0f, -1.0f );
+	scene->attachNode( light2 );
+	
+	auto light3 = crimild::alloc< Light >( Light::Type::POINT );
+	light3->local().setTranslate( 0.0f, 0.0f, 3.0f );
+	light3->setAttenuation( Vector3f( 2.0f, 0.0f, 0.0f ) );
+	scene->attachNode( light3 );
+	
     sim->setScene( scene );
 
-#ifdef CRIMILD_PLATFORM_EMSCRIPTEN
-	sim->start();
-#else
-	sim->run();
-	sim = nullptr;
-	return 0;
-#endif
+	return sim->run();
 }
 

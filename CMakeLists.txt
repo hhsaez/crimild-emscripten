@@ -2,9 +2,7 @@ CMAKE_MINIMUM_REQUIRED( VERSION 3.1.0 FATAL_ERROR )
 
 PROJECT( crimild-emcc )
 
-SET( CRIMILD_ENABLE_OPENGL ON CACHE BOOL "Enable opengl module for Crimild" )
-SET( CRIMILD_ENABLE_GLFW ON CACHE BOOL "Enable glfw module for Crimild" )
-SET( CRIMILD_ENABLE_TESTS OFF CACHE BOOL "Disable testing for Crimild" )
+SET( CRIMILD_ENABLE_SDL ON CACHE BOOL "Enable SDL module for Crimild" )
 
 ADD_SUBDIRECTORY( crimild )
 
