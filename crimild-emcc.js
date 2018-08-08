@@ -114,6 +114,7 @@ Module.expectedDataFileDownloads++;
       if (!check) throw msg + new Error().stack;
     }
 Module['FS_createPath']('/', 'assets', true, true);
+Module['FS_createPath']('/assets', 'music', true, true);
 
     function DataRequest(start, end, audio) {
       this.start = start;
@@ -186,7 +187,7 @@ Module['FS_createPath']('/', 'assets', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 1300135, "filename": "/assets/astroboy.crimild"}], "remote_package_size": 1300135, "package_uuid": "8db8c3d3-d35b-4c3f-8a84-a3d1745e0fc8"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 8196, "filename": "/assets/.DS_Store"}, {"start": 8196, "audio": 0, "end": 1308331, "filename": "/assets/astroboy.crimild"}, {"start": 1308331, "audio": 0, "end": 1314479, "filename": "/assets/music/.DS_Store"}, {"start": 1314479, "audio": 1, "end": 1360169, "filename": "/assets/music/violin.wav"}, {"start": 1360169, "audio": 1, "end": 1422089, "filename": "/assets/music/piano.wav"}, {"start": 1422089, "audio": 1, "end": 2106639, "filename": "/assets/music/steps.wav"}, {"start": 2106639, "audio": 1, "end": 3731315, "filename": "/assets/music/piano.ogg"}, {"start": 3731315, "audio": 1, "end": 8182344, "filename": "/assets/music/universe.mp3"}, {"start": 8182344, "audio": 1, "end": 8247906, "filename": "/assets/music/chello.wav"}], "remote_package_size": 8247906, "package_uuid": "9249859c-bf75-48e4-b253-46fc501379e6"});
 
 })();
 
@@ -2042,8 +2043,8 @@ function _emscripten_asm_const_iiii(code, a0, a1, a2) {
 
 STATIC_BASE = GLOBAL_BASE;
 
-STATICTOP = STATIC_BASE + 326544;
-/* global initializers */  __ATINIT__.push({ func: function() { __GLOBAL__I_000101() } }, { func: function() { ___cxx_global_var_init() } }, { func: function() { ___cxx_global_var_init_12() } }, { func: function() { ___cxx_global_var_init_13() } }, { func: function() { ___cxx_global_var_init_14() } }, { func: function() { __GLOBAL__sub_I_MaterialComponent_cpp() } }, { func: function() { __GLOBAL__sub_I_Log_cpp() } }, { func: function() { ___cxx_global_var_init_4() } }, { func: function() { ___cxx_global_var_init_5() } }, { func: function() { ___cxx_global_var_init_14_466() } }, { func: function() { __GLOBAL__sub_I_Primitive_cpp() } }, { func: function() { __GLOBAL__sub_I_AlphaState_cpp() } }, { func: function() { __GLOBAL__sub_I_DepthState_cpp() } }, { func: function() { __GLOBAL__sub_I_Image_cpp() } }, { func: function() { __GLOBAL__sub_I_IndexBufferObject_cpp() } }, { func: function() { __GLOBAL__sub_I_Material_cpp() } }, { func: function() { __GLOBAL__sub_I_Node_cpp() } }, { func: function() { __GLOBAL__sub_I_Texture_cpp() } }, { func: function() { __GLOBAL__sub_I_VertexBufferObject_cpp() } }, { func: function() { __GLOBAL__sub_I_VertexFormat_cpp() } }, { func: function() { __GLOBAL__sub_I_Geometry_cpp() } }, { func: function() { __GLOBAL__sub_I_Group_cpp() } }, { func: function() { __GLOBAL__sub_I_Trigger_cpp() } }, { func: function() { ___cxx_global_var_init_1_1602() } }, { func: function() { __GLOBAL__sub_I_RenderStateComponent_cpp() } }, { func: function() { __GLOBAL__sub_I_ColorMaskState_cpp() } }, { func: function() { __GLOBAL__sub_I_CullFaceState_cpp() } }, { func: function() { ___emscripten_environ_constructor() } }, { func: function() { __GLOBAL__sub_I_iostream_cpp() } });
+STATICTOP = STATIC_BASE + 327280;
+/* global initializers */  __ATINIT__.push({ func: function() { __GLOBAL__I_000101() } }, { func: function() { ___cxx_global_var_init() } }, { func: function() { ___cxx_global_var_init_13() } }, { func: function() { ___cxx_global_var_init_14() } }, { func: function() { ___cxx_global_var_init_15() } }, { func: function() { __GLOBAL__sub_I_MaterialComponent_cpp() } }, { func: function() { __GLOBAL__sub_I_Log_cpp() } }, { func: function() { ___cxx_global_var_init_4() } }, { func: function() { ___cxx_global_var_init_5() } }, { func: function() { ___cxx_global_var_init_14_472() } }, { func: function() { __GLOBAL__sub_I_Primitive_cpp() } }, { func: function() { __GLOBAL__sub_I_AlphaState_cpp() } }, { func: function() { __GLOBAL__sub_I_DepthState_cpp() } }, { func: function() { __GLOBAL__sub_I_Image_cpp() } }, { func: function() { __GLOBAL__sub_I_IndexBufferObject_cpp() } }, { func: function() { __GLOBAL__sub_I_Material_cpp() } }, { func: function() { __GLOBAL__sub_I_Node_cpp() } }, { func: function() { __GLOBAL__sub_I_Texture_cpp() } }, { func: function() { __GLOBAL__sub_I_VertexBufferObject_cpp() } }, { func: function() { __GLOBAL__sub_I_VertexFormat_cpp() } }, { func: function() { __GLOBAL__sub_I_Geometry_cpp() } }, { func: function() { __GLOBAL__sub_I_Group_cpp() } }, { func: function() { __GLOBAL__sub_I_Trigger_cpp() } }, { func: function() { ___cxx_global_var_init_1_1608() } }, { func: function() { __GLOBAL__sub_I_RenderStateComponent_cpp() } }, { func: function() { __GLOBAL__sub_I_ColorMaskState_cpp() } }, { func: function() { __GLOBAL__sub_I_CullFaceState_cpp() } }, { func: function() { ___emscripten_environ_constructor() } }, { func: function() { __GLOBAL__sub_I_iostream_cpp() } });
 
 
 
@@ -2051,7 +2052,7 @@ STATICTOP = STATIC_BASE + 326544;
 
 
 
-var STATIC_BUMP = 326544;
+var STATIC_BUMP = 327280;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 
@@ -2095,202 +2096,18 @@ function copyTempDouble(ptr) {
 // {{PRE_LIBRARY}}
 
 
-  function ___assert_fail(condition, filename, line, func) {
-      abort('Assertion failed: ' + Pointer_stringify(condition) + ', at: ' + [filename ? Pointer_stringify(filename) : 'unknown filename', line, func ? Pointer_stringify(func) : 'unknown function']);
-    }
-
-  
-  var ENV={};function ___buildEnvironment(environ) {
-      // WARNING: Arbitrary limit!
-      var MAX_ENV_VALUES = 64;
-      var TOTAL_ENV_SIZE = 1024;
-  
-      // Statically allocate memory for the environment.
-      var poolPtr;
-      var envPtr;
-      if (!___buildEnvironment.called) {
-        ___buildEnvironment.called = true;
-        // Set default values. Use string keys for Closure Compiler compatibility.
-        ENV['USER'] = ENV['LOGNAME'] = 'web_user';
-        ENV['PATH'] = '/';
-        ENV['PWD'] = '/';
-        ENV['HOME'] = '/home/web_user';
-        ENV['LANG'] = 'C.UTF-8';
-        ENV['_'] = Module['thisProgram'];
-        // Allocate memory.
-        poolPtr = getMemory(TOTAL_ENV_SIZE);
-        envPtr = getMemory(MAX_ENV_VALUES * 4);
-        HEAP32[((envPtr)>>2)]=poolPtr;
-        HEAP32[((environ)>>2)]=envPtr;
-      } else {
-        envPtr = HEAP32[((environ)>>2)];
-        poolPtr = HEAP32[((envPtr)>>2)];
-      }
-  
-      // Collect key=value lines.
-      var strings = [];
-      var totalSize = 0;
-      for (var key in ENV) {
-        if (typeof ENV[key] === 'string') {
-          var line = key + '=' + ENV[key];
-          strings.push(line);
-          totalSize += line.length;
-        }
-      }
-      if (totalSize > TOTAL_ENV_SIZE) {
-        throw new Error('Environment size exceeded TOTAL_ENV_SIZE!');
-      }
-  
-      // Make new.
-      var ptrSize = 4;
-      for (var i = 0; i < strings.length; i++) {
-        var line = strings[i];
-        writeAsciiToMemory(line, poolPtr);
-        HEAP32[(((envPtr)+(i * ptrSize))>>2)]=poolPtr;
-        poolPtr += line.length + 1;
-      }
-      HEAP32[(((envPtr)+(strings.length * ptrSize))>>2)]=0;
-    }
-
-  function ___cxa_allocate_exception(size) {
-      return _malloc(size);
-    }
-
-  
-  var EXCEPTIONS={last:0,caught:[],infos:{},deAdjust:function (adjusted) {
-        if (!adjusted || EXCEPTIONS.infos[adjusted]) return adjusted;
-        for (var key in EXCEPTIONS.infos) {
-          var ptr = +key; // the iteration key is a string, and if we throw this, it must be an integer as that is what we look for
-          var info = EXCEPTIONS.infos[ptr];
-          if (info.adjusted === adjusted) {
-            return ptr;
-          }
-        }
-        return adjusted;
-      },addRef:function (ptr) {
-        if (!ptr) return;
-        var info = EXCEPTIONS.infos[ptr];
-        info.refcount++;
-      },decRef:function (ptr) {
-        if (!ptr) return;
-        var info = EXCEPTIONS.infos[ptr];
-        assert(info.refcount > 0);
-        info.refcount--;
-        // A rethrown exception can reach refcount 0; it must not be discarded
-        // Its next handler will clear the rethrown flag and addRef it, prior to
-        // final decRef and destruction here
-        if (info.refcount === 0 && !info.rethrown) {
-          if (info.destructor) {
-            Module['dynCall_vi'](info.destructor, ptr);
-          }
-          delete EXCEPTIONS.infos[ptr];
-          ___cxa_free_exception(ptr);
-        }
-      },clearRef:function (ptr) {
-        if (!ptr) return;
-        var info = EXCEPTIONS.infos[ptr];
-        info.refcount = 0;
-      }};function ___cxa_begin_catch(ptr) {
-      var info = EXCEPTIONS.infos[ptr];
-      if (info && !info.caught) {
-        info.caught = true;
-        __ZSt18uncaught_exceptionv.uncaught_exception--;
-      }
-      if (info) info.rethrown = false;
-      EXCEPTIONS.caught.push(ptr);
-      EXCEPTIONS.addRef(EXCEPTIONS.deAdjust(ptr));
-      return ptr;
-    }
-
-  function ___cxa_pure_virtual() {
-      ABORT = true;
-      throw 'Pure virtual function called!';
-    }
-
   
   
-  function ___resumeException(ptr) {
-      if (!EXCEPTIONS.last) { EXCEPTIONS.last = ptr; }
-      throw ptr + " - Exception catching is disabled, this exception cannot be caught. Compile with -s DISABLE_EXCEPTION_CATCHING=0 or DISABLE_EXCEPTION_CATCHING=2 to catch.";
-    }function ___cxa_find_matching_catch() {
-      var thrown = EXCEPTIONS.last;
-      if (!thrown) {
-        // just pass through the null ptr
-        return ((setTempRet0(0),0)|0);
-      }
-      var info = EXCEPTIONS.infos[thrown];
-      var throwntype = info.type;
-      if (!throwntype) {
-        // just pass through the thrown ptr
-        return ((setTempRet0(0),thrown)|0);
-      }
-      var typeArray = Array.prototype.slice.call(arguments);
-  
-      var pointer = Module['___cxa_is_pointer_type'](throwntype);
-      // can_catch receives a **, add indirection
-      if (!___cxa_find_matching_catch.buffer) ___cxa_find_matching_catch.buffer = _malloc(4);
-      HEAP32[((___cxa_find_matching_catch.buffer)>>2)]=thrown;
-      thrown = ___cxa_find_matching_catch.buffer;
-      // The different catch blocks are denoted by different types.
-      // Due to inheritance, those types may not precisely match the
-      // type of the thrown object. Find one which matches, and
-      // return the type of the catch block which should be called.
-      for (var i = 0; i < typeArray.length; i++) {
-        if (typeArray[i] && Module['___cxa_can_catch'](typeArray[i], throwntype, thrown)) {
-          thrown = HEAP32[((thrown)>>2)]; // undo indirection
-          info.adjusted = thrown;
-          return ((setTempRet0(typeArray[i]),thrown)|0);
-        }
-      }
-      // Shouldn't happen unless we have bogus data in typeArray
-      // or encounter a type for which emscripten doesn't have suitable
-      // typeinfo defined. Best-efforts match just in case.
-      thrown = HEAP32[((thrown)>>2)]; // undo indirection
-      return ((setTempRet0(throwntype),thrown)|0);
-    }function ___cxa_throw(ptr, type, destructor) {
-      EXCEPTIONS.infos[ptr] = {
-        ptr: ptr,
-        adjusted: ptr,
-        type: type,
-        destructor: destructor,
-        refcount: 0,
-        caught: false,
-        rethrown: false
-      };
-      EXCEPTIONS.last = ptr;
-      if (!("uncaught_exception" in __ZSt18uncaught_exceptionv)) {
-        __ZSt18uncaught_exceptionv.uncaught_exception = 1;
-      } else {
-        __ZSt18uncaught_exceptionv.uncaught_exception++;
-      }
-      throw ptr + " - Exception catching is disabled, this exception cannot be caught. Compile with -s DISABLE_EXCEPTION_CATCHING=0 or DISABLE_EXCEPTION_CATCHING=2 to catch.";
-    }
-
-  function ___cxa_uncaught_exception() {
-      return !!__ZSt18uncaught_exceptionv.uncaught_exception;
-    }
-
-  function ___gxx_personality_v0() {
-    }
-
-  function ___lock() {}
-
   
   var ERRNO_CODES={EPERM:1,ENOENT:2,ESRCH:3,EINTR:4,EIO:5,ENXIO:6,E2BIG:7,ENOEXEC:8,EBADF:9,ECHILD:10,EAGAIN:11,EWOULDBLOCK:11,ENOMEM:12,EACCES:13,EFAULT:14,ENOTBLK:15,EBUSY:16,EEXIST:17,EXDEV:18,ENODEV:19,ENOTDIR:20,EISDIR:21,EINVAL:22,ENFILE:23,EMFILE:24,ENOTTY:25,ETXTBSY:26,EFBIG:27,ENOSPC:28,ESPIPE:29,EROFS:30,EMLINK:31,EPIPE:32,EDOM:33,ERANGE:34,ENOMSG:42,EIDRM:43,ECHRNG:44,EL2NSYNC:45,EL3HLT:46,EL3RST:47,ELNRNG:48,EUNATCH:49,ENOCSI:50,EL2HLT:51,EDEADLK:35,ENOLCK:37,EBADE:52,EBADR:53,EXFULL:54,ENOANO:55,EBADRQC:56,EBADSLT:57,EDEADLOCK:35,EBFONT:59,ENOSTR:60,ENODATA:61,ETIME:62,ENOSR:63,ENONET:64,ENOPKG:65,EREMOTE:66,ENOLINK:67,EADV:68,ESRMNT:69,ECOMM:70,EPROTO:71,EMULTIHOP:72,EDOTDOT:73,EBADMSG:74,ENOTUNIQ:76,EBADFD:77,EREMCHG:78,ELIBACC:79,ELIBBAD:80,ELIBSCN:81,ELIBMAX:82,ELIBEXEC:83,ENOSYS:38,ENOTEMPTY:39,ENAMETOOLONG:36,ELOOP:40,EOPNOTSUPP:95,EPFNOSUPPORT:96,ECONNRESET:104,ENOBUFS:105,EAFNOSUPPORT:97,EPROTOTYPE:91,ENOTSOCK:88,ENOPROTOOPT:92,ESHUTDOWN:108,ECONNREFUSED:111,EADDRINUSE:98,ECONNABORTED:103,ENETUNREACH:101,ENETDOWN:100,ETIMEDOUT:110,EHOSTDOWN:112,EHOSTUNREACH:113,EINPROGRESS:115,EALREADY:114,EDESTADDRREQ:89,EMSGSIZE:90,EPROTONOSUPPORT:93,ESOCKTNOSUPPORT:94,EADDRNOTAVAIL:99,ENETRESET:102,EISCONN:106,ENOTCONN:107,ETOOMANYREFS:109,EUSERS:87,EDQUOT:122,ESTALE:116,ENOTSUP:95,ENOMEDIUM:123,EILSEQ:84,EOVERFLOW:75,ECANCELED:125,ENOTRECOVERABLE:131,EOWNERDEAD:130,ESTRPIPE:86};
+  
+  var ERRNO_MESSAGES={0:"Success",1:"Not super-user",2:"No such file or directory",3:"No such process",4:"Interrupted system call",5:"I/O error",6:"No such device or address",7:"Arg list too long",8:"Exec format error",9:"Bad file number",10:"No children",11:"No more processes",12:"Not enough core",13:"Permission denied",14:"Bad address",15:"Block device required",16:"Mount device busy",17:"File exists",18:"Cross-device link",19:"No such device",20:"Not a directory",21:"Is a directory",22:"Invalid argument",23:"Too many open files in system",24:"Too many open files",25:"Not a typewriter",26:"Text file busy",27:"File too large",28:"No space left on device",29:"Illegal seek",30:"Read only file system",31:"Too many links",32:"Broken pipe",33:"Math arg out of domain of func",34:"Math result not representable",35:"File locking deadlock error",36:"File or path name too long",37:"No record locks available",38:"Function not implemented",39:"Directory not empty",40:"Too many symbolic links",42:"No message of desired type",43:"Identifier removed",44:"Channel number out of range",45:"Level 2 not synchronized",46:"Level 3 halted",47:"Level 3 reset",48:"Link number out of range",49:"Protocol driver not attached",50:"No CSI structure available",51:"Level 2 halted",52:"Invalid exchange",53:"Invalid request descriptor",54:"Exchange full",55:"No anode",56:"Invalid request code",57:"Invalid slot",59:"Bad font file fmt",60:"Device not a stream",61:"No data (for no delay io)",62:"Timer expired",63:"Out of streams resources",64:"Machine is not on the network",65:"Package not installed",66:"The object is remote",67:"The link has been severed",68:"Advertise error",69:"Srmount error",70:"Communication error on send",71:"Protocol error",72:"Multihop attempted",73:"Cross mount point (not really error)",74:"Trying to read unreadable message",75:"Value too large for defined data type",76:"Given log. name not unique",77:"f.d. invalid for this operation",78:"Remote address changed",79:"Can   access a needed shared lib",80:"Accessing a corrupted shared lib",81:".lib section in a.out corrupted",82:"Attempting to link in too many libs",83:"Attempting to exec a shared library",84:"Illegal byte sequence",86:"Streams pipe error",87:"Too many users",88:"Socket operation on non-socket",89:"Destination address required",90:"Message too long",91:"Protocol wrong type for socket",92:"Protocol not available",93:"Unknown protocol",94:"Socket type not supported",95:"Not supported",96:"Protocol family not supported",97:"Address family not supported by protocol family",98:"Address already in use",99:"Address not available",100:"Network interface is not configured",101:"Network is unreachable",102:"Connection reset by network",103:"Connection aborted",104:"Connection reset by peer",105:"No buffer space available",106:"Socket is already connected",107:"Socket is not connected",108:"Can't send after socket shutdown",109:"Too many references",110:"Connection timed out",111:"Connection refused",112:"Host is down",113:"Host is unreachable",114:"Socket already connected",115:"Connection already in progress",116:"Stale file handle",122:"Quota exceeded",123:"No medium (in tape drive)",125:"Operation canceled",130:"Previous owner died",131:"State not recoverable"};
   
   function ___setErrNo(value) {
       if (Module['___errno_location']) HEAP32[((Module['___errno_location']())>>2)]=value;
       else err('failed to set errno from JS');
       return value;
-    }function ___map_file(pathname, size) {
-      ___setErrNo(ERRNO_CODES.EPERM);
-      return -1;
     }
-
-  
-  
-  
-  var ERRNO_MESSAGES={0:"Success",1:"Not super-user",2:"No such file or directory",3:"No such process",4:"Interrupted system call",5:"I/O error",6:"No such device or address",7:"Arg list too long",8:"Exec format error",9:"Bad file number",10:"No children",11:"No more processes",12:"Not enough core",13:"Permission denied",14:"Bad address",15:"Block device required",16:"Mount device busy",17:"File exists",18:"Cross-device link",19:"No such device",20:"Not a directory",21:"Is a directory",22:"Invalid argument",23:"Too many open files in system",24:"Too many open files",25:"Not a typewriter",26:"Text file busy",27:"File too large",28:"No space left on device",29:"Illegal seek",30:"Read only file system",31:"Too many links",32:"Broken pipe",33:"Math arg out of domain of func",34:"Math result not representable",35:"File locking deadlock error",36:"File or path name too long",37:"No record locks available",38:"Function not implemented",39:"Directory not empty",40:"Too many symbolic links",42:"No message of desired type",43:"Identifier removed",44:"Channel number out of range",45:"Level 2 not synchronized",46:"Level 3 halted",47:"Level 3 reset",48:"Link number out of range",49:"Protocol driver not attached",50:"No CSI structure available",51:"Level 2 halted",52:"Invalid exchange",53:"Invalid request descriptor",54:"Exchange full",55:"No anode",56:"Invalid request code",57:"Invalid slot",59:"Bad font file fmt",60:"Device not a stream",61:"No data (for no delay io)",62:"Timer expired",63:"Out of streams resources",64:"Machine is not on the network",65:"Package not installed",66:"The object is remote",67:"The link has been severed",68:"Advertise error",69:"Srmount error",70:"Communication error on send",71:"Protocol error",72:"Multihop attempted",73:"Cross mount point (not really error)",74:"Trying to read unreadable message",75:"Value too large for defined data type",76:"Given log. name not unique",77:"f.d. invalid for this operation",78:"Remote address changed",79:"Can   access a needed shared lib",80:"Accessing a corrupted shared lib",81:".lib section in a.out corrupted",82:"Attempting to link in too many libs",83:"Attempting to exec a shared library",84:"Illegal byte sequence",86:"Streams pipe error",87:"Too many users",88:"Socket operation on non-socket",89:"Destination address required",90:"Message too long",91:"Protocol wrong type for socket",92:"Protocol not available",93:"Unknown protocol",94:"Socket type not supported",95:"Not supported",96:"Protocol family not supported",97:"Address family not supported by protocol family",98:"Address already in use",99:"Address not available",100:"Network interface is not configured",101:"Network is unreachable",102:"Connection reset by network",103:"Connection aborted",104:"Connection reset by peer",105:"No buffer space available",106:"Socket is already connected",107:"Socket is not connected",108:"Can't send after socket shutdown",109:"Too many references",110:"Connection timed out",111:"Connection refused",112:"Host is down",113:"Host is unreachable",114:"Socket already connected",115:"Connection already in progress",116:"Stale file handle",122:"Quota exceeded",123:"No medium (in tape drive)",125:"Operation canceled",130:"Previous owner died",131:"State not recoverable"};
   
   var PATH={splitPath:function (filename) {
         var splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
@@ -5229,440 +5046,7 @@ function copyTempDouble(ptr) {
           transaction.onerror = onerror;
         };
         openRequest.onerror = onerror;
-      }};var SYSCALLS={DEFAULT_POLLMASK:5,mappings:{},umask:511,calculateAt:function (dirfd, path) {
-        if (path[0] !== '/') {
-          // relative path
-          var dir;
-          if (dirfd === -100) {
-            dir = FS.cwd();
-          } else {
-            var dirstream = FS.getStream(dirfd);
-            if (!dirstream) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
-            dir = dirstream.path;
-          }
-          path = PATH.join2(dir, path);
-        }
-        return path;
-      },doStat:function (func, path, buf) {
-        try {
-          var stat = func(path);
-        } catch (e) {
-          if (e && e.node && PATH.normalize(path) !== PATH.normalize(FS.getPath(e.node))) {
-            // an error occurred while trying to look up the path; we should just report ENOTDIR
-            return -ERRNO_CODES.ENOTDIR;
-          }
-          throw e;
-        }
-        HEAP32[((buf)>>2)]=stat.dev;
-        HEAP32[(((buf)+(4))>>2)]=0;
-        HEAP32[(((buf)+(8))>>2)]=stat.ino;
-        HEAP32[(((buf)+(12))>>2)]=stat.mode;
-        HEAP32[(((buf)+(16))>>2)]=stat.nlink;
-        HEAP32[(((buf)+(20))>>2)]=stat.uid;
-        HEAP32[(((buf)+(24))>>2)]=stat.gid;
-        HEAP32[(((buf)+(28))>>2)]=stat.rdev;
-        HEAP32[(((buf)+(32))>>2)]=0;
-        HEAP32[(((buf)+(36))>>2)]=stat.size;
-        HEAP32[(((buf)+(40))>>2)]=4096;
-        HEAP32[(((buf)+(44))>>2)]=stat.blocks;
-        HEAP32[(((buf)+(48))>>2)]=(stat.atime.getTime() / 1000)|0;
-        HEAP32[(((buf)+(52))>>2)]=0;
-        HEAP32[(((buf)+(56))>>2)]=(stat.mtime.getTime() / 1000)|0;
-        HEAP32[(((buf)+(60))>>2)]=0;
-        HEAP32[(((buf)+(64))>>2)]=(stat.ctime.getTime() / 1000)|0;
-        HEAP32[(((buf)+(68))>>2)]=0;
-        HEAP32[(((buf)+(72))>>2)]=stat.ino;
-        return 0;
-      },doMsync:function (addr, stream, len, flags) {
-        var buffer = new Uint8Array(HEAPU8.subarray(addr, addr + len));
-        FS.msync(stream, buffer, 0, len, flags);
-      },doMkdir:function (path, mode) {
-        // remove a trailing slash, if one - /a/b/ has basename of '', but
-        // we want to create b in the context of this function
-        path = PATH.normalize(path);
-        if (path[path.length-1] === '/') path = path.substr(0, path.length-1);
-        FS.mkdir(path, mode, 0);
-        return 0;
-      },doMknod:function (path, mode, dev) {
-        // we don't want this in the JS API as it uses mknod to create all nodes.
-        switch (mode & 61440) {
-          case 32768:
-          case 8192:
-          case 24576:
-          case 4096:
-          case 49152:
-            break;
-          default: return -ERRNO_CODES.EINVAL;
-        }
-        FS.mknod(path, mode, dev);
-        return 0;
-      },doReadlink:function (path, buf, bufsize) {
-        if (bufsize <= 0) return -ERRNO_CODES.EINVAL;
-        var ret = FS.readlink(path);
-  
-        var len = Math.min(bufsize, lengthBytesUTF8(ret));
-        var endChar = HEAP8[buf+len];
-        stringToUTF8(ret, buf, bufsize+1);
-        // readlink is one of the rare functions that write out a C string, but does never append a null to the output buffer(!)
-        // stringToUTF8() always appends a null byte, so restore the character under the null byte after the write.
-        HEAP8[buf+len] = endChar;
-  
-        return len;
-      },doAccess:function (path, amode) {
-        if (amode & ~7) {
-          // need a valid mode
-          return -ERRNO_CODES.EINVAL;
-        }
-        var node;
-        var lookup = FS.lookupPath(path, { follow: true });
-        node = lookup.node;
-        var perms = '';
-        if (amode & 4) perms += 'r';
-        if (amode & 2) perms += 'w';
-        if (amode & 1) perms += 'x';
-        if (perms /* otherwise, they've just passed F_OK */ && FS.nodePermissions(node, perms)) {
-          return -ERRNO_CODES.EACCES;
-        }
-        return 0;
-      },doDup:function (path, flags, suggestFD) {
-        var suggest = FS.getStream(suggestFD);
-        if (suggest) FS.close(suggest);
-        return FS.open(path, flags, 0, suggestFD, suggestFD).fd;
-      },doReadv:function (stream, iov, iovcnt, offset) {
-        var ret = 0;
-        for (var i = 0; i < iovcnt; i++) {
-          var ptr = HEAP32[(((iov)+(i*8))>>2)];
-          var len = HEAP32[(((iov)+(i*8 + 4))>>2)];
-          var curr = FS.read(stream, HEAP8,ptr, len, offset);
-          if (curr < 0) return -1;
-          ret += curr;
-          if (curr < len) break; // nothing more to read
-        }
-        return ret;
-      },doWritev:function (stream, iov, iovcnt, offset) {
-        var ret = 0;
-        for (var i = 0; i < iovcnt; i++) {
-          var ptr = HEAP32[(((iov)+(i*8))>>2)];
-          var len = HEAP32[(((iov)+(i*8 + 4))>>2)];
-          var curr = FS.write(stream, HEAP8,ptr, len, offset);
-          if (curr < 0) return -1;
-          ret += curr;
-        }
-        return ret;
-      },varargs:0,get:function (varargs) {
-        SYSCALLS.varargs += 4;
-        var ret = HEAP32[(((SYSCALLS.varargs)-(4))>>2)];
-        return ret;
-      },getStr:function () {
-        var ret = Pointer_stringify(SYSCALLS.get());
-        return ret;
-      },getStreamFromFD:function () {
-        var stream = FS.getStream(SYSCALLS.get());
-        if (!stream) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
-        return stream;
-      },getSocketFromFD:function () {
-        var socket = SOCKFS.getSocket(SYSCALLS.get());
-        if (!socket) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
-        return socket;
-      },getSocketAddress:function (allowNull) {
-        var addrp = SYSCALLS.get(), addrlen = SYSCALLS.get();
-        if (allowNull && addrp === 0) return null;
-        var info = __read_sockaddr(addrp, addrlen);
-        if (info.errno) throw new FS.ErrnoError(info.errno);
-        info.addr = DNS.lookup_addr(info.addr) || info.addr;
-        return info;
-      },get64:function () {
-        var low = SYSCALLS.get(), high = SYSCALLS.get();
-        if (low >= 0) assert(high === 0);
-        else assert(high === -1);
-        return low;
-      },getZero:function () {
-        assert(SYSCALLS.get() === 0);
-      }};function ___syscall140(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // llseek
-      var stream = SYSCALLS.getStreamFromFD(), offset_high = SYSCALLS.get(), offset_low = SYSCALLS.get(), result = SYSCALLS.get(), whence = SYSCALLS.get();
-      // NOTE: offset_high is unused - Emscripten's off_t is 32-bit
-      var offset = offset_low;
-      FS.llseek(stream, offset, whence);
-      HEAP32[((result)>>2)]=stream.position;
-      if (stream.getdents && offset === 0 && whence === 0) stream.getdents = null; // reset readdir state
-      return 0;
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall145(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // readv
-      var stream = SYSCALLS.getStreamFromFD(), iov = SYSCALLS.get(), iovcnt = SYSCALLS.get();
-      return SYSCALLS.doReadv(stream, iov, iovcnt);
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall146(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // writev
-      var stream = SYSCALLS.getStreamFromFD(), iov = SYSCALLS.get(), iovcnt = SYSCALLS.get();
-      return SYSCALLS.doWritev(stream, iov, iovcnt);
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall221(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // fcntl64
-      var stream = SYSCALLS.getStreamFromFD(), cmd = SYSCALLS.get();
-      switch (cmd) {
-        case 0: {
-          var arg = SYSCALLS.get();
-          if (arg < 0) {
-            return -ERRNO_CODES.EINVAL;
-          }
-          var newStream;
-          newStream = FS.open(stream.path, stream.flags, 0, arg);
-          return newStream.fd;
-        }
-        case 1:
-        case 2:
-          return 0;  // FD_CLOEXEC makes no sense for a single process.
-        case 3:
-          return stream.flags;
-        case 4: {
-          var arg = SYSCALLS.get();
-          stream.flags |= arg;
-          return 0;
-        }
-        case 12:
-        case 12: {
-          var arg = SYSCALLS.get();
-          var offset = 0;
-          // We're always unlocked.
-          HEAP16[(((arg)+(offset))>>1)]=2;
-          return 0;
-        }
-        case 13:
-        case 14:
-        case 13:
-        case 14:
-          return 0; // Pretend that the locking is successful.
-        case 16:
-        case 8:
-          return -ERRNO_CODES.EINVAL; // These are for sockets. We don't have them fully implemented yet.
-        case 9:
-          // musl trusts getown return values, due to a bug where they must be, as they overlap with errors. just return -1 here, so fnctl() returns that, and we set errno ourselves.
-          ___setErrNo(ERRNO_CODES.EINVAL);
-          return -1;
-        default: {
-          return -ERRNO_CODES.EINVAL;
-        }
-      }
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall5(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // open
-      var pathname = SYSCALLS.getStr(), flags = SYSCALLS.get(), mode = SYSCALLS.get() // optional TODO
-      var stream = FS.open(pathname, flags, mode);
-      return stream.fd;
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall54(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // ioctl
-      var stream = SYSCALLS.getStreamFromFD(), op = SYSCALLS.get();
-      switch (op) {
-        case 21509:
-        case 21505: {
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          return 0;
-        }
-        case 21510:
-        case 21511:
-        case 21512:
-        case 21506:
-        case 21507:
-        case 21508: {
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          return 0; // no-op, not actually adjusting terminal settings
-        }
-        case 21519: {
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          var argp = SYSCALLS.get();
-          HEAP32[((argp)>>2)]=0;
-          return 0;
-        }
-        case 21520: {
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          return -ERRNO_CODES.EINVAL; // not supported
-        }
-        case 21531: {
-          var argp = SYSCALLS.get();
-          return FS.ioctl(stream, op, argp);
-        }
-        case 21523: {
-          // TODO: in theory we should write to the winsize struct that gets
-          // passed in, but for now musl doesn't read anything on it
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          return 0;
-        }
-        case 21524: {
-          // TODO: technically, this ioctl call should change the window size.
-          // but, since emscripten doesn't have any concept of a terminal window
-          // yet, we'll just silently throw it away as we do TIOCGWINSZ
-          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
-          return 0;
-        }
-        default: abort('bad ioctl syscall ' + op);
-      }
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall6(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // close
-      var stream = SYSCALLS.getStreamFromFD();
-      FS.close(stream);
-      return 0;
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___syscall91(which, varargs) {SYSCALLS.varargs = varargs;
-  try {
-   // munmap
-      var addr = SYSCALLS.get(), len = SYSCALLS.get();
-      // TODO: support unmmap'ing parts of allocations
-      var info = SYSCALLS.mappings[addr];
-      if (!info) return 0;
-      if (len === info.len) {
-        var stream = FS.getStream(info.fd);
-        SYSCALLS.doMsync(addr, stream, len, info.flags)
-        FS.munmap(stream);
-        SYSCALLS.mappings[addr] = null;
-        if (info.allocated) {
-          _free(info.malloc);
-        }
-      }
-      return 0;
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
-  function ___unlock() {}
-
-  function _abort() {
-      Module['abort']();
-    }
-
-  
-  function _emscripten_get_now() { abort() }
-  
-  function _emscripten_get_now_is_monotonic() {
-      // return whether emscripten_get_now is guaranteed monotonic; the Date.now
-      // implementation is not :(
-      return ENVIRONMENT_IS_NODE || (typeof dateNow !== 'undefined') ||
-          ((ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) && self['performance'] && self['performance']['now']);
-    }function _clock_gettime(clk_id, tp) {
-      // int clock_gettime(clockid_t clk_id, struct timespec *tp);
-      var now;
-      if (clk_id === 0) {
-        now = Date.now();
-      } else if (clk_id === 1 && _emscripten_get_now_is_monotonic()) {
-        now = _emscripten_get_now();
-      } else {
-        ___setErrNo(ERRNO_CODES.EINVAL);
-        return -1;
-      }
-      HEAP32[((tp)>>2)]=(now/1000)|0; // seconds
-      HEAP32[(((tp)+(4))>>2)]=((now % 1000)*1000*1000)|0; // nanoseconds
-      return 0;
-    }
-
-  
-  var DLFCN={error:null,errorMsg:null,loadedLibs:{},loadedLibNames:{}};function _dlclose(handle) {
-      // int dlclose(void *handle);
-      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlclose.html
-      if (!DLFCN.loadedLibs[handle]) {
-        DLFCN.errorMsg = 'Tried to dlclose() unopened handle: ' + handle;
-        return 1;
-      } else {
-        var lib_record = DLFCN.loadedLibs[handle];
-        if (--lib_record.refcount == 0) {
-          if (lib_record.module.cleanups) {
-            lib_record.module.cleanups.forEach(function(cleanup) { cleanup() });
-          }
-          delete DLFCN.loadedLibNames[lib_record.name];
-          delete DLFCN.loadedLibs[handle];
-        }
-        return 0;
-      }
-    }
-
-  function _dlerror() {
-      // char *dlerror(void);
-      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlerror.html
-      if (DLFCN.errorMsg === null) {
-        return 0;
-      } else {
-        if (DLFCN.error) _free(DLFCN.error);
-        var msgArr = intArrayFromString(DLFCN.errorMsg);
-        DLFCN.error = allocate(msgArr, 'i8', ALLOC_NORMAL);
-        DLFCN.errorMsg = null;
-        return DLFCN.error;
-      }
-    }
-
-  function _dlsym(handle, symbol) {
-      // void *dlsym(void *restrict handle, const char *restrict name);
-      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlsym.html
-      symbol = Pointer_stringify(symbol);
-  
-      if (!DLFCN.loadedLibs[handle]) {
-        DLFCN.errorMsg = 'Tried to dlsym() from an unopened handle: ' + handle;
-        return 0;
-      } else {
-        var lib = DLFCN.loadedLibs[handle];
-        symbol = '_' + symbol;
-        if (!lib.module.hasOwnProperty(symbol)) {
-          DLFCN.errorMsg = ('Tried to lookup unknown symbol "' + symbol +
-                                 '" in dynamic lib: ' + lib.name);
-          return 0;
-        } else {
-          var result = lib.module[symbol];
-          if (typeof result === 'function') {
-            // convert the exported function into a function pointer using our generic
-            // JS mechanism.
-            return addFunction(result);
-          }
-          return result;
-        }
-      }
-    }
-
-  
+      }};
   
   
   
@@ -5715,7 +5099,9 @@ function copyTempDouble(ptr) {
         Browser.mainLoop.method = 'immediate';
       }
       return 0;
-    }function _emscripten_set_main_loop(func, fps, simulateInfiniteLoop, arg, noSetTiming) {
+    }
+  
+  function _emscripten_get_now() { abort() }function _emscripten_set_main_loop(func, fps, simulateInfiniteLoop, arg, noSetTiming) {
       Module['noExitRuntime'] = true;
   
       assert(!Browser.mainLoop.func, 'emscripten_set_main_loop: there can only be one main loop function at once: call emscripten_cancel_main_loop to cancel the previous one before setting a new one with different parameters.');
@@ -6429,7 +5815,1901 @@ function copyTempDouble(ptr) {
         var handle = Browser.nextWgetRequestHandle;
         Browser.nextWgetRequestHandle++;
         return handle;
-      }};var EGL={errorCode:12288,defaultDisplayInitialized:false,currentContext:0,currentReadSurface:0,currentDrawSurface:0,stringCache:{},setErrorCode:function (code) {
+      }};var SDL={defaults:{width:320,height:200,copyOnLock:true,discardOnLock:false,opaqueFrontBuffer:true},version:null,surfaces:{},canvasPool:[],events:[],fonts:[null],audios:[null],rwops:[null],music:{audio:null,volume:1},mixerFrequency:22050,mixerFormat:32784,mixerNumChannels:2,mixerChunkSize:1024,channelMinimumNumber:0,GL:false,glAttributes:{0:3,1:3,2:2,3:0,4:0,5:1,6:16,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:1,16:0,17:0,18:0},keyboardState:null,keyboardMap:{},canRequestFullscreen:false,isRequestingFullscreen:false,textInput:false,startTime:null,initFlags:0,buttonState:0,modState:0,DOMButtons:[0,0,0],DOMEventToSDLEvent:{},TOUCH_DEFAULT_ID:0,eventHandler:null,eventHandlerContext:null,eventHandlerTemp:0,keyCodes:{16:1249,17:1248,18:1250,20:1081,33:1099,34:1102,35:1101,36:1098,37:1104,38:1106,39:1103,40:1105,44:316,45:1097,46:127,91:1251,93:1125,96:1122,97:1113,98:1114,99:1115,100:1116,101:1117,102:1118,103:1119,104:1120,105:1121,106:1109,107:1111,109:1110,110:1123,111:1108,112:1082,113:1083,114:1084,115:1085,116:1086,117:1087,118:1088,119:1089,120:1090,121:1091,122:1092,123:1093,124:1128,125:1129,126:1130,127:1131,128:1132,129:1133,130:1134,131:1135,132:1136,133:1137,134:1138,135:1139,144:1107,160:94,161:33,162:34,163:35,164:36,165:37,166:38,167:95,168:40,169:41,170:42,171:43,172:124,173:45,174:123,175:125,176:126,181:127,182:129,183:128,188:44,190:46,191:47,192:96,219:91,220:92,221:93,222:39,224:1251},scanCodes:{8:42,9:43,13:40,27:41,32:44,35:204,39:53,44:54,46:55,47:56,48:39,49:30,50:31,51:32,52:33,53:34,54:35,55:36,56:37,57:38,58:203,59:51,61:46,91:47,92:49,93:48,96:52,97:4,98:5,99:6,100:7,101:8,102:9,103:10,104:11,105:12,106:13,107:14,108:15,109:16,110:17,111:18,112:19,113:20,114:21,115:22,116:23,117:24,118:25,119:26,120:27,121:28,122:29,127:76,305:224,308:226,316:70},loadRect:function (rect) {
+        return {
+          x: HEAP32[((rect + 0)>>2)],
+          y: HEAP32[((rect + 4)>>2)],
+          w: HEAP32[((rect + 8)>>2)],
+          h: HEAP32[((rect + 12)>>2)]
+        };
+      },updateRect:function (rect, r) {
+        HEAP32[((rect)>>2)]=r.x;
+        HEAP32[(((rect)+(4))>>2)]=r.y;
+        HEAP32[(((rect)+(8))>>2)]=r.w;
+        HEAP32[(((rect)+(12))>>2)]=r.h;
+      },intersectionOfRects:function (first, second) {
+        var leftX = Math.max(first.x, second.x);
+        var leftY = Math.max(first.y, second.y);
+        var rightX = Math.min(first.x + first.w, second.x + second.w);
+        var rightY = Math.min(first.y + first.h, second.y + second.h);
+  
+        return {
+          x: leftX,
+          y: leftY,
+          w: Math.max(leftX, rightX) - leftX,
+          h: Math.max(leftY, rightY) - leftY
+        }
+      },checkPixelFormat:function (fmt) {
+        // Canvas screens are always RGBA.
+        var format = HEAP32[((fmt)>>2)];
+        if (format != -2042224636) {
+          warnOnce('Unsupported pixel format!');
+        }
+      },loadColorToCSSRGB:function (color) {
+        var rgba = HEAP32[((color)>>2)];
+        return 'rgb(' + (rgba&255) + ',' + ((rgba >> 8)&255) + ',' + ((rgba >> 16)&255) + ')';
+      },loadColorToCSSRGBA:function (color) {
+        var rgba = HEAP32[((color)>>2)];
+        return 'rgba(' + (rgba&255) + ',' + ((rgba >> 8)&255) + ',' + ((rgba >> 16)&255) + ',' + (((rgba >> 24)&255)/255) + ')';
+      },translateColorToCSSRGBA:function (rgba) {
+        return 'rgba(' + (rgba&0xff) + ',' + (rgba>>8 & 0xff) + ',' + (rgba>>16 & 0xff) + ',' + (rgba>>>24)/0xff + ')';
+      },translateRGBAToCSSRGBA:function (r, g, b, a) {
+        return 'rgba(' + (r&0xff) + ',' + (g&0xff) + ',' + (b&0xff) + ',' + (a&0xff)/255 + ')';
+      },translateRGBAToColor:function (r, g, b, a) {
+        return r | g << 8 | b << 16 | a << 24;
+      },makeSurface:function (width, height, flags, usePageCanvas, source, rmask, gmask, bmask, amask) {
+        flags = flags || 0;
+        var is_SDL_HWSURFACE = flags & 0x00000001;
+        var is_SDL_HWPALETTE = flags & 0x00200000;
+        var is_SDL_OPENGL = flags & 0x04000000;
+  
+        var surf = _malloc(60);
+        var pixelFormat = _malloc(44);
+        //surface with SDL_HWPALETTE flag is 8bpp surface (1 byte)
+        var bpp = is_SDL_HWPALETTE ? 1 : 4;
+        var buffer = 0;
+  
+        // preemptively initialize this for software surfaces,
+        // otherwise it will be lazily initialized inside of SDL_LockSurface
+        if (!is_SDL_HWSURFACE && !is_SDL_OPENGL) {
+          buffer = _malloc(width * height * 4);
+        }
+  
+        HEAP32[((surf)>>2)]=flags;
+        HEAP32[(((surf)+(4))>>2)]=pixelFormat;
+        HEAP32[(((surf)+(8))>>2)]=width;
+        HEAP32[(((surf)+(12))>>2)]=height;
+        HEAP32[(((surf)+(16))>>2)]=width * bpp;  // assuming RGBA or indexed for now,
+                                                                                          // since that is what ImageData gives us in browsers
+        HEAP32[(((surf)+(20))>>2)]=buffer;
+  
+        HEAP32[(((surf)+(36))>>2)]=0;
+        HEAP32[(((surf)+(40))>>2)]=0;
+        HEAP32[(((surf)+(44))>>2)]=Module["canvas"].width;
+        HEAP32[(((surf)+(48))>>2)]=Module["canvas"].height;
+  
+        HEAP32[(((surf)+(56))>>2)]=1;
+  
+        HEAP32[((pixelFormat)>>2)]=-2042224636;
+        HEAP32[(((pixelFormat)+(4))>>2)]=0;// TODO
+        HEAP8[(((pixelFormat)+(8))>>0)]=bpp * 8;
+        HEAP8[(((pixelFormat)+(9))>>0)]=bpp;
+  
+        HEAP32[(((pixelFormat)+(12))>>2)]=rmask || 0x000000ff;
+        HEAP32[(((pixelFormat)+(16))>>2)]=gmask || 0x0000ff00;
+        HEAP32[(((pixelFormat)+(20))>>2)]=bmask || 0x00ff0000;
+        HEAP32[(((pixelFormat)+(24))>>2)]=amask || 0xff000000;
+  
+        // Decide if we want to use WebGL or not
+        SDL.GL = SDL.GL || is_SDL_OPENGL;
+        var canvas;
+        if (!usePageCanvas) {
+          if (SDL.canvasPool.length > 0) {
+            canvas = SDL.canvasPool.pop();
+          } else {
+            canvas = document.createElement('canvas');
+          }
+          canvas.width = width;
+          canvas.height = height;
+        } else {
+          canvas = Module['canvas'];
+        }
+  
+        var webGLContextAttributes = {
+          antialias: ((SDL.glAttributes[13 /*SDL_GL_MULTISAMPLEBUFFERS*/] != 0) && (SDL.glAttributes[14 /*SDL_GL_MULTISAMPLESAMPLES*/] > 1)),
+          depth: (SDL.glAttributes[6 /*SDL_GL_DEPTH_SIZE*/] > 0),
+          stencil: (SDL.glAttributes[7 /*SDL_GL_STENCIL_SIZE*/] > 0),
+          alpha: (SDL.glAttributes[3 /*SDL_GL_ALPHA_SIZE*/] > 0)
+        };
+  
+        var ctx = Browser.createContext(canvas, is_SDL_OPENGL, usePageCanvas, webGLContextAttributes);
+  
+        SDL.surfaces[surf] = {
+          width: width,
+          height: height,
+          canvas: canvas,
+          ctx: ctx,
+          surf: surf,
+          buffer: buffer,
+          pixelFormat: pixelFormat,
+          alpha: 255,
+          flags: flags,
+          locked: 0,
+          usePageCanvas: usePageCanvas,
+          source: source,
+  
+          isFlagSet: function(flag) {
+            return flags & flag;
+          }
+        };
+  
+        return surf;
+      },copyIndexedColorData:function (surfData, rX, rY, rW, rH) {
+        // HWPALETTE works with palette
+        // setted by SDL_SetColors
+        if (!surfData.colors) {
+          return;
+        }
+  
+        var fullWidth  = Module['canvas'].width;
+        var fullHeight = Module['canvas'].height;
+  
+        var startX  = rX || 0;
+        var startY  = rY || 0;
+        var endX    = (rW || (fullWidth - startX)) + startX;
+        var endY    = (rH || (fullHeight - startY)) + startY;
+  
+        var buffer  = surfData.buffer;
+  
+        if (!surfData.image.data32) {
+          surfData.image.data32 = new Uint32Array(surfData.image.data.buffer);
+        }
+        var data32   = surfData.image.data32;
+  
+        var colors32 = surfData.colors32;
+  
+        for (var y = startY; y < endY; ++y) {
+          var base = y * fullWidth;
+          for (var x = startX; x < endX; ++x) {
+            data32[base + x] = colors32[HEAPU8[((buffer + base + x)>>0)]];
+          }
+        }
+      },freeSurface:function (surf) {
+        var refcountPointer = surf + 56;
+        var refcount = HEAP32[((refcountPointer)>>2)];
+        if (refcount > 1) {
+          HEAP32[((refcountPointer)>>2)]=refcount - 1;
+          return;
+        }
+  
+        var info = SDL.surfaces[surf];
+        if (!info.usePageCanvas && info.canvas) SDL.canvasPool.push(info.canvas);
+        if (info.buffer) _free(info.buffer);
+        _free(info.pixelFormat);
+        _free(surf);
+        SDL.surfaces[surf] = null;
+  
+        if (surf === SDL.screen) {
+          SDL.screen = null;
+        }
+      },blitSurface:function (src, srcrect, dst, dstrect, scale) {
+        var srcData = SDL.surfaces[src];
+        var dstData = SDL.surfaces[dst];
+        var sr, dr;
+        if (srcrect) {
+          sr = SDL.loadRect(srcrect);
+        } else {
+          sr = { x: 0, y: 0, w: srcData.width, h: srcData.height };
+        }
+        if (dstrect) {
+          dr = SDL.loadRect(dstrect);
+        } else {
+          dr = { x: 0, y: 0, w: srcData.width, h: srcData.height };
+        }
+        if (dstData.clipRect) {
+          var widthScale = (!scale || sr.w === 0) ? 1 : sr.w / dr.w;
+          var heightScale = (!scale || sr.h === 0) ? 1 : sr.h / dr.h;
+  
+          dr = SDL.intersectionOfRects(dstData.clipRect, dr);
+  
+          sr.w = dr.w * widthScale;
+          sr.h = dr.h * heightScale;
+  
+          if (dstrect) {
+            SDL.updateRect(dstrect, dr);
+          }
+        }
+        var blitw, blith;
+        if (scale) {
+          blitw = dr.w; blith = dr.h;
+        } else {
+          blitw = sr.w; blith = sr.h;
+        }
+        if (sr.w === 0 || sr.h === 0 || blitw === 0 || blith === 0) {
+          return 0;
+        }
+        var oldAlpha = dstData.ctx.globalAlpha;
+        dstData.ctx.globalAlpha = srcData.alpha/255;
+        dstData.ctx.drawImage(srcData.canvas, sr.x, sr.y, sr.w, sr.h, dr.x, dr.y, blitw, blith);
+        dstData.ctx.globalAlpha = oldAlpha;
+        if (dst != SDL.screen) {
+          // XXX As in IMG_Load, for compatibility we write out |pixels|
+          warnOnce('WARNING: copying canvas data to memory for compatibility');
+          _SDL_LockSurface(dst);
+          dstData.locked--; // The surface is not actually locked in this hack
+        }
+        return 0;
+      },downFingers:{},savedKeydown:null,receiveEvent:function (event) {
+        function unpressAllPressedKeys() {
+          // Un-press all pressed keys: TODO
+          for (var code in SDL.keyboardMap) {
+            SDL.events.push({
+              type: 'keyup',
+              keyCode: SDL.keyboardMap[code]
+            });
+          }
+        };
+        switch(event.type) {
+          case 'touchstart': case 'touchmove': {
+            event.preventDefault();
+  
+            var touches = [];
+  
+            // Clear out any touchstart events that we've already processed
+            if (event.type === 'touchstart') {
+              for (var i = 0; i < event.touches.length; i++) {
+                var touch = event.touches[i];
+                if (SDL.downFingers[touch.identifier] != true) {
+                  SDL.downFingers[touch.identifier] = true;
+                  touches.push(touch);
+                }
+              }
+            } else {
+              touches = event.touches;
+            }
+  
+            var firstTouch = touches[0];
+            if (firstTouch) {
+              if (event.type == 'touchstart') {
+                SDL.DOMButtons[0] = 1;
+              }
+              var mouseEventType;
+              switch(event.type) {
+                case 'touchstart': mouseEventType = 'mousedown'; break;
+                case 'touchmove': mouseEventType = 'mousemove'; break;
+              }
+              var mouseEvent = {
+                type: mouseEventType,
+                button: 0,
+                pageX: firstTouch.clientX,
+                pageY: firstTouch.clientY
+              };
+              SDL.events.push(mouseEvent);
+            }
+  
+            for (var i = 0; i < touches.length; i++) {
+              var touch = touches[i];
+              SDL.events.push({
+                type: event.type,
+                touch: touch
+              });
+            };
+            break;
+          }
+          case 'touchend': {
+            event.preventDefault();
+  
+            // Remove the entry in the SDL.downFingers hash
+            // because the finger is no longer down.
+            for(var i = 0; i < event.changedTouches.length; i++) {
+              var touch = event.changedTouches[i];
+              if (SDL.downFingers[touch.identifier] === true) {
+                delete SDL.downFingers[touch.identifier];
+              }
+            }
+  
+            var mouseEvent = {
+              type: 'mouseup',
+              button: 0,
+              pageX: event.changedTouches[0].clientX,
+              pageY: event.changedTouches[0].clientY
+            };
+            SDL.DOMButtons[0] = 0;
+            SDL.events.push(mouseEvent);
+  
+            for (var i = 0; i < event.changedTouches.length; i++) {
+              var touch = event.changedTouches[i];
+              SDL.events.push({
+                type: 'touchend',
+                touch: touch
+              });
+            };
+            break;
+          }
+          case 'DOMMouseScroll': case 'mousewheel': case 'wheel':
+            var delta = -Browser.getMouseWheelDelta(event); // Flip the wheel direction to translate from browser wheel direction (+:down) to SDL direction (+:up)
+            delta = (delta == 0) ? 0 : (delta > 0 ? Math.max(delta, 1) : Math.min(delta, -1)); // Quantize to integer so that minimum scroll is at least +/- 1.
+  
+            // Simulate old-style SDL events representing mouse wheel input as buttons
+            var button = delta > 0 ? 3 /*SDL_BUTTON_WHEELUP-1*/ : 4 /*SDL_BUTTON_WHEELDOWN-1*/; // Subtract one since JS->C marshalling is defined to add one back.
+            SDL.events.push({ type: 'mousedown', button: button, pageX: event.pageX, pageY: event.pageY });
+            SDL.events.push({ type: 'mouseup', button: button, pageX: event.pageX, pageY: event.pageY });
+  
+            // Pass a delta motion event.
+            SDL.events.push({ type: 'wheel', deltaX: 0, deltaY: delta });
+            event.preventDefault(); // If we don't prevent this, then 'wheel' event will be sent again by the browser as 'DOMMouseScroll' and we will receive this same event the second time.
+            break;
+          case 'mousemove':
+            if (SDL.DOMButtons[0] === 1) {
+              SDL.events.push({
+                type: 'touchmove',
+                touch: {
+                  identifier: 0,
+                  deviceID: -1,
+                  pageX: event.pageX,
+                  pageY: event.pageY
+                }
+              });
+            }
+            if (Browser.pointerLock) {
+              // workaround for firefox bug 750111
+              if ('mozMovementX' in event) {
+                event['movementX'] = event['mozMovementX'];
+                event['movementY'] = event['mozMovementY'];
+              }
+              // workaround for Firefox bug 782777
+              if (event['movementX'] == 0 && event['movementY'] == 0) {
+                // ignore a mousemove event if it doesn't contain any movement info
+                // (without pointer lock, we infer movement from pageX/pageY, so this check is unnecessary)
+                event.preventDefault();
+                return;
+              }
+            }
+            // fall through
+          case 'keydown': case 'keyup': case 'keypress': case 'mousedown': case 'mouseup':
+            // If we preventDefault on keydown events, the subsequent keypress events
+            // won't fire. However, it's fine (and in some cases necessary) to
+            // preventDefault for keys that don't generate a character. Otherwise,
+            // preventDefault is the right thing to do in general.
+            if (event.type !== 'keydown' || (!SDL.unicode && !SDL.textInput) || (event.keyCode === 8 /* backspace */ || event.keyCode === 9 /* tab */)) {
+              event.preventDefault();
+            }
+  
+            if (event.type == 'mousedown') {
+              SDL.DOMButtons[event.button] = 1;
+              SDL.events.push({
+                type: 'touchstart',
+                touch: {
+                  identifier: 0,
+                  deviceID: -1,
+                  pageX: event.pageX,
+                  pageY: event.pageY
+                }
+              });
+            } else if (event.type == 'mouseup') {
+              // ignore extra ups, can happen if we leave the canvas while pressing down, then return,
+              // since we add a mouseup in that case
+              if (!SDL.DOMButtons[event.button]) {
+                return;
+              }
+  
+              SDL.events.push({
+                type: 'touchend',
+                touch: {
+                  identifier: 0,
+                  deviceID: -1,
+                  pageX: event.pageX,
+                  pageY: event.pageY
+                }
+              });
+              SDL.DOMButtons[event.button] = 0;
+            }
+  
+            // We can only request fullscreen as the result of user input.
+            // Due to this limitation, we toggle a boolean on keydown which
+            // SDL_WM_ToggleFullScreen will check and subsequently set another
+            // flag indicating for us to request fullscreen on the following
+            // keyup. This isn't perfect, but it enables SDL_WM_ToggleFullScreen
+            // to work as the result of a keypress (which is an extremely
+            // common use case).
+            if (event.type === 'keydown' || event.type === 'mousedown') {
+              SDL.canRequestFullscreen = true;
+            } else if (event.type === 'keyup' || event.type === 'mouseup') {
+              if (SDL.isRequestingFullscreen) {
+                Module['requestFullscreen'](/*lockPointer=*/true, /*resizeCanvas=*/true);
+                SDL.isRequestingFullscreen = false;
+              }
+              SDL.canRequestFullscreen = false;
+            }
+  
+            // SDL expects a unicode character to be passed to its keydown events.
+            // Unfortunately, the browser APIs only provide a charCode property on
+            // keypress events, so we must backfill in keydown events with their
+            // subsequent keypress event's charCode.
+            if (event.type === 'keypress' && SDL.savedKeydown) {
+              // charCode is read-only
+              SDL.savedKeydown.keypressCharCode = event.charCode;
+              SDL.savedKeydown = null;
+            } else if (event.type === 'keydown') {
+              SDL.savedKeydown = event;
+            }
+  
+            // Don't push keypress events unless SDL_StartTextInput has been called.
+            if (event.type !== 'keypress' || SDL.textInput) {
+              SDL.events.push(event);
+            }
+            break;
+          case 'mouseout':
+            // Un-press all pressed mouse buttons, because we might miss the release outside of the canvas
+            for (var i = 0; i < 3; i++) {
+              if (SDL.DOMButtons[i]) {
+                SDL.events.push({
+                  type: 'mouseup',
+                  button: i,
+                  pageX: event.pageX,
+                  pageY: event.pageY
+                });
+                SDL.DOMButtons[i] = 0;
+              }
+            }
+            event.preventDefault();
+            break;
+          case 'focus':
+            SDL.events.push(event);
+            event.preventDefault();
+            break;
+          case 'blur':
+            SDL.events.push(event);
+            unpressAllPressedKeys();
+            event.preventDefault();
+            break;
+          case 'visibilitychange':
+            SDL.events.push({
+              type: 'visibilitychange',
+              visible: !document.hidden
+            });
+            unpressAllPressedKeys();
+            event.preventDefault();
+            break;
+          case 'unload':
+            if (Browser.mainLoop.runner) {
+              SDL.events.push(event);
+              // Force-run a main event loop, since otherwise this event will never be caught!
+              Browser.mainLoop.runner();
+            }
+            return;
+          case 'resize':
+            SDL.events.push(event);
+            // manually triggered resize event doesn't have a preventDefault member
+            if (event.preventDefault) {
+              event.preventDefault();
+            }
+            break;
+        }
+        if (SDL.events.length >= 10000) {
+          err('SDL event queue full, dropping events');
+          SDL.events = SDL.events.slice(0, 10000);
+        }
+        // If we have a handler installed, this will push the events to the app
+        // instead of the app polling for them.
+        SDL.flushEventsToHandler();
+        return;
+      },lookupKeyCodeForEvent:function (event) {
+          var code = event.keyCode;
+          if (code >= 65 && code <= 90) {
+            code += 32; // make lowercase for SDL
+          } else {
+            code = SDL.keyCodes[event.keyCode] || event.keyCode;
+            // If this is one of the modifier keys (224 | 1<<10 - 227 | 1<<10), and the event specifies that it is
+            // a right key, add 4 to get the right key SDL key code.
+            if (event.location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT && code >= (224 | 1<<10) && code <= (227 | 1<<10)) {
+              code += 4;
+            }
+          }
+          return code;
+      },handleEvent:function (event) {
+        if (event.handled) return;
+        event.handled = true;
+  
+        switch (event.type) {
+          case 'touchstart': case 'touchend': case 'touchmove': {
+            Browser.calculateMouseEvent(event);
+            break;
+          }
+          case 'keydown': case 'keyup': {
+            var down = event.type === 'keydown';
+            var code = SDL.lookupKeyCodeForEvent(event);
+            HEAP8[(((SDL.keyboardState)+(code))>>0)]=down;
+            // TODO: lmeta, rmeta, numlock, capslock, KMOD_MODE, KMOD_RESERVED
+            SDL.modState = (HEAP8[(((SDL.keyboardState)+(1248))>>0)] ? 0x0040 : 0) | // KMOD_LCTRL
+              (HEAP8[(((SDL.keyboardState)+(1249))>>0)] ? 0x0001 : 0) | // KMOD_LSHIFT
+              (HEAP8[(((SDL.keyboardState)+(1250))>>0)] ? 0x0100 : 0) | // KMOD_LALT
+              (HEAP8[(((SDL.keyboardState)+(1252))>>0)] ? 0x0080 : 0) | // KMOD_RCTRL
+              (HEAP8[(((SDL.keyboardState)+(1253))>>0)] ? 0x0002 : 0) | // KMOD_RSHIFT
+              (HEAP8[(((SDL.keyboardState)+(1254))>>0)] ? 0x0200 : 0); //  KMOD_RALT
+            if (down) {
+              SDL.keyboardMap[code] = event.keyCode; // save the DOM input, which we can use to unpress it during blur
+            } else {
+              delete SDL.keyboardMap[code];
+            }
+  
+            break;
+          }
+          case 'mousedown': case 'mouseup':
+            if (event.type == 'mousedown') {
+              // SDL_BUTTON(x) is defined as (1 << ((x)-1)).  SDL buttons are 1-3,
+              // and DOM buttons are 0-2, so this means that the below formula is
+              // correct.
+              SDL.buttonState |= 1 << event.button;
+            } else if (event.type == 'mouseup') {
+              SDL.buttonState &= ~(1 << event.button);
+            }
+            // fall through
+          case 'mousemove': {
+            Browser.calculateMouseEvent(event);
+            break;
+          }
+        }
+      },flushEventsToHandler:function () {
+        if (!SDL.eventHandler) return;
+  
+        while (SDL.pollEvent(SDL.eventHandlerTemp)) {
+          Module['dynCall_iii'](SDL.eventHandler, SDL.eventHandlerContext, SDL.eventHandlerTemp);
+        }
+      },pollEvent:function (ptr) {
+        if (SDL.initFlags & 0x200 && SDL.joystickEventState) {
+          // If SDL_INIT_JOYSTICK was supplied AND the joystick system is configured
+          // to automatically query for events, query for joystick events.
+          SDL.queryJoysticks();
+        }
+        if (ptr) {
+          while (SDL.events.length > 0) {
+            if (SDL.makeCEvent(SDL.events.shift(), ptr) !== false) return 1;
+          }
+          return 0;
+        } else {
+          // XXX: somewhat risky in that we do not check if the event is real or not (makeCEvent returns false) if no pointer supplied
+          return SDL.events.length > 0;
+        }
+      },makeCEvent:function (event, ptr) {
+        if (typeof event === 'number') {
+          // This is a pointer to a copy of a native C event that was SDL_PushEvent'ed
+          _memcpy(ptr, event, 28);
+          _free(event); // the copy is no longer needed
+          return;
+        }
+  
+        SDL.handleEvent(event);
+  
+        switch (event.type) {
+          case 'keydown': case 'keyup': {
+            var down = event.type === 'keydown';
+            //out('Received key event: ' + event.keyCode);
+            var key = SDL.lookupKeyCodeForEvent(event);
+            var scan;
+            if (key >= 1024) {
+              scan = key - 1024;
+            } else {
+              scan = SDL.scanCodes[key] || key;
+            }
+  
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP8[(((ptr)+(8))>>0)]=down ? 1 : 0;
+            HEAP8[(((ptr)+(9))>>0)]=0; // TODO
+            HEAP32[(((ptr)+(12))>>2)]=scan;
+            HEAP32[(((ptr)+(16))>>2)]=key;
+            HEAP16[(((ptr)+(20))>>1)]=SDL.modState;
+            // some non-character keys (e.g. backspace and tab) won't have keypressCharCode set, fill in with the keyCode.
+            HEAP32[(((ptr)+(24))>>2)]=event.keypressCharCode || key;
+  
+            break;
+          }
+          case 'keypress': {
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            // Not filling in windowID for now
+            var cStr = intArrayFromString(String.fromCharCode(event.charCode));
+            for (var i = 0; i < cStr.length; ++i) {
+              HEAP8[(((ptr)+(8 + i))>>0)]=cStr[i];
+            }
+            break;
+          }
+          case 'mousedown': case 'mouseup': case 'mousemove': {
+            if (event.type != 'mousemove') {
+              var down = event.type === 'mousedown';
+              HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+              HEAP32[(((ptr)+(4))>>2)]=0;
+              HEAP32[(((ptr)+(8))>>2)]=0;
+              HEAP32[(((ptr)+(12))>>2)]=0;
+              HEAP8[(((ptr)+(16))>>0)]=event.button+1; // DOM buttons are 0-2, SDL 1-3
+              HEAP8[(((ptr)+(17))>>0)]=down ? 1 : 0;
+              HEAP32[(((ptr)+(20))>>2)]=Browser.mouseX;
+              HEAP32[(((ptr)+(24))>>2)]=Browser.mouseY;
+            } else {
+              HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+              HEAP32[(((ptr)+(4))>>2)]=0;
+              HEAP32[(((ptr)+(8))>>2)]=0;
+              HEAP32[(((ptr)+(12))>>2)]=0;
+              HEAP32[(((ptr)+(16))>>2)]=SDL.buttonState;
+              HEAP32[(((ptr)+(20))>>2)]=Browser.mouseX;
+              HEAP32[(((ptr)+(24))>>2)]=Browser.mouseY;
+              HEAP32[(((ptr)+(28))>>2)]=Browser.mouseMovementX;
+              HEAP32[(((ptr)+(32))>>2)]=Browser.mouseMovementY;
+            }
+            break;
+          }
+          case 'wheel': {
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(16))>>2)]=event.deltaX;
+            HEAP32[(((ptr)+(20))>>2)]=event.deltaY;
+            break;
+          }
+          case 'touchstart': case 'touchend': case 'touchmove': {
+            var touch = event.touch;
+            if (!Browser.touches[touch.identifier]) break;
+            var w = Module['canvas'].width;
+            var h = Module['canvas'].height;
+            var x = Browser.touches[touch.identifier].x / w;
+            var y = Browser.touches[touch.identifier].y / h;
+            var lx = Browser.lastTouches[touch.identifier].x / w;
+            var ly = Browser.lastTouches[touch.identifier].y / h;
+            var dx = x - lx;
+            var dy = y - ly;
+            if (touch['deviceID'] === undefined) touch.deviceID = SDL.TOUCH_DEFAULT_ID;
+            if (dx === 0 && dy === 0 && event.type === 'touchmove') return false; // don't send these if nothing happened
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(4))>>2)]=_SDL_GetTicks();
+            (tempI64 = [touch.deviceID>>>0,(tempDouble=touch.deviceID,(+(Math_abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? ((Math_min((+(Math_floor((tempDouble)/4294967296.0))), 4294967295.0))|0)>>>0 : (~~((+(Math_ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)],HEAP32[(((ptr)+(8))>>2)]=tempI64[0],HEAP32[(((ptr)+(12))>>2)]=tempI64[1]);
+            (tempI64 = [touch.identifier>>>0,(tempDouble=touch.identifier,(+(Math_abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? ((Math_min((+(Math_floor((tempDouble)/4294967296.0))), 4294967295.0))|0)>>>0 : (~~((+(Math_ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)],HEAP32[(((ptr)+(16))>>2)]=tempI64[0],HEAP32[(((ptr)+(20))>>2)]=tempI64[1]);
+            HEAPF32[(((ptr)+(24))>>2)]=x;
+            HEAPF32[(((ptr)+(28))>>2)]=y;
+            HEAPF32[(((ptr)+(32))>>2)]=dx;
+            HEAPF32[(((ptr)+(36))>>2)]=dy;
+            if (touch.force !== undefined) {
+              HEAPF32[(((ptr)+(40))>>2)]=touch.force;
+            } else { // No pressure data, send a digital 0/1 pressure.
+              HEAPF32[(((ptr)+(40))>>2)]=event.type == "touchend" ? 0 : 1;
+            }
+            break;
+          }
+          case 'unload': {
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            break;
+          }
+          case 'resize': {
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(4))>>2)]=event.w;
+            HEAP32[(((ptr)+(8))>>2)]=event.h;
+            break;
+          }
+          case 'joystick_button_up': case 'joystick_button_down': {
+            var state = event.type === 'joystick_button_up' ? 0 : 1;
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP8[(((ptr)+(4))>>0)]=event.index;
+            HEAP8[(((ptr)+(5))>>0)]=event.button;
+            HEAP8[(((ptr)+(6))>>0)]=state;
+            break;
+          }
+          case 'joystick_axis_motion': {
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP8[(((ptr)+(4))>>0)]=event.index;
+            HEAP8[(((ptr)+(5))>>0)]=event.axis;
+            HEAP32[(((ptr)+(8))>>2)]=SDL.joystickAxisValueConversion(event.value);
+            break;
+          }
+          case 'focus': {
+            var SDL_WINDOWEVENT_FOCUS_GAINED = 12 /* SDL_WINDOWEVENT_FOCUS_GAINED */;
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(4))>>2)]=0;
+            HEAP8[(((ptr)+(8))>>0)]=SDL_WINDOWEVENT_FOCUS_GAINED;
+            break;
+          }
+          case 'blur': {
+            var SDL_WINDOWEVENT_FOCUS_LOST = 13 /* SDL_WINDOWEVENT_FOCUS_LOST */;
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(4))>>2)]=0;
+            HEAP8[(((ptr)+(8))>>0)]=SDL_WINDOWEVENT_FOCUS_LOST;
+            break;
+          }
+          case 'visibilitychange': {
+            var SDL_WINDOWEVENT_SHOWN  = 1 /* SDL_WINDOWEVENT_SHOWN */;
+            var SDL_WINDOWEVENT_HIDDEN = 2 /* SDL_WINDOWEVENT_HIDDEN */;
+            var visibilityEventID = event.visible ? SDL_WINDOWEVENT_SHOWN : SDL_WINDOWEVENT_HIDDEN;
+            HEAP32[((ptr)>>2)]=SDL.DOMEventToSDLEvent[event.type];
+            HEAP32[(((ptr)+(4))>>2)]=0;
+            HEAP8[(((ptr)+(8))>>0)]=visibilityEventID;
+            break;
+          }
+          default: throw 'Unhandled SDL event: ' + event.type;
+        }
+      },makeFontString:function (height, fontName) {
+        if (fontName.charAt(0) != "'" && fontName.charAt(0) != '"') {
+          // https://developer.mozilla.org/ru/docs/Web/CSS/font-family
+          // Font family names containing whitespace should be quoted.
+          // BTW, quote all font names is easier than searching spaces
+          fontName = '"' + fontName + '"';
+        }
+        return height + 'px ' + fontName + ', serif';
+      },estimateTextWidth:function (fontData, text) {
+        var h = fontData.size;
+        var fontString = SDL.makeFontString(h, fontData.name);
+        var tempCtx = SDL.ttfContext;
+        assert(tempCtx, 'TTF_Init must have been called');
+        tempCtx.save();
+        tempCtx.font = fontString;
+        var ret = tempCtx.measureText(text).width | 0;
+        tempCtx.restore();
+        return ret;
+      },allocateChannels:function (num) { // called from Mix_AllocateChannels and init
+        if (SDL.numChannels && SDL.numChannels >= num && num != 0) return;
+        SDL.numChannels = num;
+        SDL.channels = [];
+        for (var i = 0; i < num; i++) {
+          SDL.channels[i] = {
+            audio: null,
+            volume: 1.0
+          };
+        }
+      },setGetVolume:function (info, volume) {
+        if (!info) return 0;
+        var ret = info.volume * 128; // MIX_MAX_VOLUME
+        if (volume != -1) {
+          info.volume = Math.min(Math.max(volume, 0), 128) / 128;
+          if (info.audio) {
+            try {
+              info.audio.volume = info.volume; // For <audio> element
+              if (info.audio.webAudioGainNode) info.audio.webAudioGainNode['gain']['value'] = info.volume; // For WebAudio playback
+            } catch(e) {
+              err('setGetVolume failed to set audio volume: ' + e);
+            }
+          }
+        }
+        return ret;
+      },setPannerPosition:function (info, x, y, z) {
+        if (!info) return;
+        if (info.audio) {
+          if (info.audio.webAudioPannerNode) {
+            info.audio.webAudioPannerNode['setPosition'](x, y, z);
+          }
+        }
+      },playWebAudio:function (audio) {
+        if (!audio) return;
+        if (audio.webAudioNode) return; // This instance is already playing, don't start again.
+        if (!SDL.webAudioAvailable()) return;
+        try {
+          var webAudio = audio.resource.webAudio;
+          audio.paused = false;
+          if (!webAudio.decodedBuffer) {
+            if (webAudio.onDecodeComplete === undefined) abort("Cannot play back audio object that was not loaded");
+            webAudio.onDecodeComplete.push(function() { if (!audio.paused) SDL.playWebAudio(audio); });
+            return;
+          }
+          audio.webAudioNode = SDL.audioContext['createBufferSource']();
+          audio.webAudioNode['buffer'] = webAudio.decodedBuffer;
+          audio.webAudioNode['loop'] = audio.loop;
+          audio.webAudioNode['onended'] = function() { audio['onended'](); } // For <media> element compatibility, route the onended signal to the instance.
+  
+          audio.webAudioPannerNode = SDL.audioContext['createPanner']();
+          // avoid Chrome bug
+          // If posz = 0, the sound will come from only the right.
+          // By posz = -0.5 (slightly ahead), the sound will come from right and left correctly.
+          audio.webAudioPannerNode["setPosition"](0, 0, -.5);
+          audio.webAudioPannerNode['panningModel'] = 'equalpower';
+  
+          // Add an intermediate gain node to control volume.
+          audio.webAudioGainNode = SDL.audioContext['createGain']();
+          audio.webAudioGainNode['gain']['value'] = audio.volume;
+  
+          audio.webAudioNode['connect'](audio.webAudioPannerNode);
+          audio.webAudioPannerNode['connect'](audio.webAudioGainNode);
+          audio.webAudioGainNode['connect'](SDL.audioContext['destination']);
+  
+          audio.webAudioNode['start'](0, audio.currentPosition);
+          audio.startTime = SDL.audioContext['currentTime'] - audio.currentPosition;
+        } catch(e) {
+          err('playWebAudio failed: ' + e);
+        }
+      },pauseWebAudio:function (audio) {
+        if (!audio) return;
+        if (audio.webAudioNode) {
+          try {
+            // Remember where we left off, so that if/when we resume, we can restart the playback at a proper place.
+            audio.currentPosition = (SDL.audioContext['currentTime'] - audio.startTime) % audio.resource.webAudio.decodedBuffer.duration;
+            // Important: When we reach here, the audio playback is stopped by the user. But when calling .stop() below, the Web Audio
+            // graph will send the onended signal, but we don't want to process that, since pausing should not clear/destroy the audio
+            // channel.
+            audio.webAudioNode['onended'] = undefined;
+            audio.webAudioNode.stop(0); // 0 is a default parameter, but WebKit is confused by it #3861
+            audio.webAudioNode = undefined;
+          } catch(e) {
+            err('pauseWebAudio failed: ' + e);
+          }
+        }
+        audio.paused = true;
+      },openAudioContext:function () {
+        // Initialize Web Audio API if we haven't done so yet. Note: Only initialize Web Audio context ever once on the web page,
+        // since initializing multiple times fails on Chrome saying 'audio resources have been exhausted'.
+        if (!SDL.audioContext) {
+          if (typeof(AudioContext) !== 'undefined') SDL.audioContext = new AudioContext();
+          else if (typeof(webkitAudioContext) !== 'undefined') SDL.audioContext = new webkitAudioContext();
+        }
+      },webAudioAvailable:function () { return !!SDL.audioContext; },fillWebAudioBufferFromHeap:function (heapPtr, sizeSamplesPerChannel, dstAudioBuffer) {
+        // The input audio data is interleaved across the channels, i.e. [L, R, L, R, L, R, ...] and is either 8-bit, 16-bit or float as
+        // supported by the SDL API. The output audio wave data for Web Audio API must be in planar buffers of [-1,1]-normalized Float32 data,
+        // so perform a buffer conversion for the data.
+        var numChannels = SDL.audio.channels;
+        for(var c = 0; c < numChannels; ++c) {
+          var channelData = dstAudioBuffer['getChannelData'](c);
+          if (channelData.length != sizeSamplesPerChannel) {
+            throw 'Web Audio output buffer length mismatch! Destination size: ' + channelData.length + ' samples vs expected ' + sizeSamplesPerChannel + ' samples!';
+          }
+          if (SDL.audio.format == 0x8010 /*AUDIO_S16LSB*/) {
+            for(var j = 0; j < sizeSamplesPerChannel; ++j) {
+              channelData[j] = (HEAP16[(((heapPtr)+((j*numChannels + c)*2))>>1)]) / 0x8000;
+            }
+          } else if (SDL.audio.format == 0x0008 /*AUDIO_U8*/) {
+            for(var j = 0; j < sizeSamplesPerChannel; ++j) {
+              var v = (HEAP8[(((heapPtr)+(j*numChannels + c))>>0)]);
+              channelData[j] = ((v >= 0) ? v-128 : v+128) /128;
+            }
+          } else if (SDL.audio.format == 0x8120 /*AUDIO_F32*/) {
+            for(var j = 0; j < sizeSamplesPerChannel; ++j) {
+              channelData[j] = (HEAPF32[(((heapPtr)+((j*numChannels + c)*4))>>2)]);
+            }
+          } else {
+            throw 'Invalid SDL audio format ' + SDL.audio.format + '!';
+          }
+        }
+      },debugSurface:function (surfData) {
+        console.log('dumping surface ' + [surfData.surf, surfData.source, surfData.width, surfData.height]);
+        var image = surfData.ctx.getImageData(0, 0, surfData.width, surfData.height);
+        var data = image.data;
+        var num = Math.min(surfData.width, surfData.height);
+        for (var i = 0; i < num; i++) {
+          console.log('   diagonal ' + i + ':' + [data[i*surfData.width*4 + i*4 + 0], data[i*surfData.width*4 + i*4 + 1], data[i*surfData.width*4 + i*4 + 2], data[i*surfData.width*4 + i*4 + 3]]);
+        }
+      },joystickEventState:1,lastJoystickState:{},joystickNamePool:{},recordJoystickState:function (joystick, state) {
+        // Standardize button state.
+        var buttons = new Array(state.buttons.length);
+        for (var i = 0; i < state.buttons.length; i++) {
+          buttons[i] = SDL.getJoystickButtonState(state.buttons[i]);
+        }
+  
+        SDL.lastJoystickState[joystick] = {
+          buttons: buttons,
+          axes: state.axes.slice(0),
+          timestamp: state.timestamp,
+          index: state.index,
+          id: state.id
+        };
+      },getJoystickButtonState:function (button) {
+        if (typeof button === 'object') {
+          // Current gamepad API editor's draft (Firefox Nightly)
+          // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#idl-def-GamepadButton
+          return button['pressed'];
+        } else {
+          // Current gamepad API working draft (Firefox / Chrome Stable)
+          // http://www.w3.org/TR/2012/WD-gamepad-20120529/#gamepad-interface
+          return button > 0;
+        }
+      },queryJoysticks:function () {
+        for (var joystick in SDL.lastJoystickState) {
+          var state = SDL.getGamepad(joystick - 1);
+          var prevState = SDL.lastJoystickState[joystick];
+          // If joystick was removed, state returns null.
+          if (typeof state === 'undefined') return;
+          if (state === null) return;
+          // Check only if the timestamp has differed.
+          // NOTE: Timestamp is not available in Firefox.
+          // NOTE: Timestamp is currently not properly set for the GearVR controller
+          //       on Samsung Internet: it is always zero.
+          if (typeof state.timestamp !== 'number' || state.timestamp !== prevState.timestamp || !state.timestamp) {
+            var i;
+            for (i = 0; i < state.buttons.length; i++) {
+              var buttonState = SDL.getJoystickButtonState(state.buttons[i]);
+              // NOTE: The previous state already has a boolean representation of
+              //       its button, so no need to standardize its button state here.
+              if (buttonState !== prevState.buttons[i]) {
+                // Insert button-press event.
+                SDL.events.push({
+                  type: buttonState ? 'joystick_button_down' : 'joystick_button_up',
+                  joystick: joystick,
+                  index: joystick - 1,
+                  button: i
+                });
+              }
+            }
+            for (i = 0; i < state.axes.length; i++) {
+              if (state.axes[i] !== prevState.axes[i]) {
+                // Insert axes-change event.
+                SDL.events.push({
+                  type: 'joystick_axis_motion',
+                  joystick: joystick,
+                  index: joystick - 1,
+                  axis: i,
+                  value: state.axes[i]
+                });
+              }
+            }
+  
+            SDL.recordJoystickState(joystick, state);
+          }
+        }
+      },joystickAxisValueConversion:function (value) {
+        // Make sure value is properly clamped
+        value = Math.min(1, Math.max(value, -1));
+        // Ensures that 0 is 0, 1 is 32767, and -1 is 32768.
+        return Math.ceil(((value+1) * 32767.5) - 32768);
+      },getGamepads:function () {
+        var fcn = navigator.getGamepads || navigator.webkitGamepads || navigator.mozGamepads || navigator.gamepads || navigator.webkitGetGamepads;
+        if (fcn !== undefined) {
+          // The function must be applied on the navigator object.
+          return fcn.apply(navigator);
+        } else {
+          return [];
+        }
+      },getGamepad:function (deviceIndex) {
+        var gamepads = SDL.getGamepads();
+        if (gamepads.length > deviceIndex && deviceIndex >= 0) {
+          return gamepads[deviceIndex];
+        }
+        return null;
+      }};function _Mix_FreeChunk(id) {
+      SDL.audios[id] = null;
+    }
+
+  function _Mix_FreeMusic() {
+  return _Mix_FreeChunk.apply(null, arguments)
+  }
+
+  function _Mix_HaltChannel(channel) {
+      function halt(channel) {
+        var info = SDL.channels[channel];
+        if (info.audio) {
+          info.audio.pause();
+          info.audio = null;
+        }
+        if (SDL.channelFinished) {
+          getFuncWrapper(SDL.channelFinished, 'vi')(channel);
+        }
+      }
+      if (channel != -1) {
+        halt(channel);
+      } else {
+        for (var i = 0; i < SDL.channels.length; ++i) halt(i);
+      }
+      return 0;
+    }
+
+  function _Mix_HaltMusic() {
+      var audio = SDL.music.audio;
+      if (audio) {
+        audio.src = audio.src; // rewind <media> element
+        audio.currentPosition = 0; // rewind Web Audio graph playback.
+        audio.pause();
+      }
+      SDL.music.audio = null;
+      if (SDL.hookMusicFinished) {
+        Module['dynCall_v'](SDL.hookMusicFinished);
+      }
+      return 0;
+    }
+
+  
+  
+  function _Mix_LoadWAV_RW(rwopsID, freesrc) {
+      var rwops = SDL.rwops[rwopsID];
+  
+      if (rwops === undefined) {
+        var type = HEAP32[((rwopsID + 20)>>2)];
+  
+        if (type === 2/*SDL_RWOPS_STDFILE*/) {
+          var fp = HEAP32[((rwopsID + 28)>>2)];
+          var fd = Module['_fileno'](fp);
+          var stream = FS.getStream(fd);
+          if (stream) {
+            rwops = { filename: stream.path };
+          }
+        }
+        else if (type === 4/*SDL_RWOPS_MEMORY*/ || type === 5/*SDL_RWOPS_MEMORY_RO*/) {
+          var base = HEAP32[((rwopsID + 24)>>2)];
+          var stop = HEAP32[((rwopsID + 32)>>2)];
+  
+          rwops = { bytes: base, count: stop - base };
+        }
+      }
+  
+      if (rwops === undefined)
+        return 0;
+  
+      var filename = '';
+      var audio;
+      var webAudio;
+      var bytes;
+  
+      if (rwops.filename !== undefined) {
+        filename = PATH.resolve(rwops.filename);
+        var raw = Module["preloadedAudios"][filename];
+        if (!raw) {
+          if (raw === null) err('Trying to reuse preloaded audio, but freePreloadedMediaOnUse is set!');
+          if (!Module.noAudioDecoding) warnOnce('Cannot find preloaded audio ' + filename);
+  
+          // see if we can read the file-contents from the in-memory FS
+          try {
+            bytes = FS.readFile(filename);
+          } catch (e) {
+            err('Couldn\'t find file for: ' + filename);
+            return 0;
+          }
+        }
+        if (Module['freePreloadedMediaOnUse']) {
+          Module["preloadedAudios"][filename] = null;
+        }
+        audio = raw;
+      }
+      else if (rwops.bytes !== undefined) {
+        // For Web Audio context buffer decoding, we must make a clone of the audio data, but for <media> element,
+        // a view to existing data is sufficient.
+        if (SDL.webAudioAvailable()) bytes = HEAPU8.buffer.slice(rwops.bytes, rwops.bytes + rwops.count);
+        else bytes = HEAPU8.subarray(rwops.bytes, rwops.bytes + rwops.count);
+      }
+      else {
+        return 0;
+      }
+  
+      var arrayBuffer = bytes ? bytes.buffer || bytes : bytes;
+  
+      // To allow user code to work around browser bugs with audio playback on <audio> elements an Web Audio, enable
+      // the user code to hook in a callback to decide on a file basis whether each file should use Web Audio or <audio> for decoding and playback.
+      // In particular, see https://bugzilla.mozilla.org/show_bug.cgi?id=654787 and ?id=1012801 for tradeoffs.
+      var canPlayWithWebAudio = Module['SDL_canPlayWithWebAudio'] === undefined || Module['SDL_canPlayWithWebAudio'](filename, arrayBuffer);
+  
+      if (bytes !== undefined && SDL.webAudioAvailable() && canPlayWithWebAudio) {
+        audio = undefined;
+        webAudio = {};
+        // The audio decoding process is asynchronous, which gives trouble if user code plays the audio data back immediately
+        // after loading. Therefore prepare an array of callback handlers to run when this audio decoding is complete, which
+        // will then start the playback (with some delay).
+        webAudio.onDecodeComplete = []; // While this member array exists, decoding hasn't finished yet.
+        function onDecodeComplete(data) {
+          webAudio.decodedBuffer = data;
+          // Call all handlers that were waiting for this decode to finish, and clear the handler list.
+          webAudio.onDecodeComplete.forEach(function(e) { e(); });
+          webAudio.onDecodeComplete = undefined; // Don't allow more callback handlers since audio has finished decoding.
+        }
+  
+        SDL.audioContext['decodeAudioData'](arrayBuffer, onDecodeComplete);
+      } else if (audio === undefined && bytes) {
+        // Here, we didn't find a preloaded audio but we either were passed a filepath for
+        // which we loaded bytes, or we were passed some bytes
+        var blob = new Blob([bytes], {type: rwops.mimetype});
+        var url = URL.createObjectURL(blob);
+        audio = new Audio();
+        audio.src = url;
+        audio.mozAudioChannelType = 'content'; // bugzilla 910340
+      }
+  
+      var id = SDL.audios.length;
+      // Keep the loaded audio in the audio arrays, ready for playback
+      SDL.audios.push({
+        source: filename,
+        audio: audio, // Points to the <audio> element, if loaded
+        webAudio: webAudio // Points to a Web Audio -specific resource object, if loaded
+      });
+      return id;
+    }function _Mix_LoadMUS_RW() {
+  return _Mix_LoadWAV_RW.apply(null, arguments)
+  }
+  
+  function _SDL_FreeRW(rwopsID) {
+      SDL.rwops[rwopsID] = null;
+      while (SDL.rwops.length > 0 && SDL.rwops[SDL.rwops.length-1] === null) {
+        SDL.rwops.pop();
+      }
+    }function _Mix_LoadMUS(filename) {
+      var rwops = _SDL_RWFromFile(filename);
+      var result = _Mix_LoadMUS_RW(rwops);
+      _SDL_FreeRW(rwops);
+      return result;
+    }
+
+
+  function _Mix_OpenAudio(frequency, format, channels, chunksize) {
+      SDL.openAudioContext();
+      SDL.allocateChannels(32);
+      // Just record the values for a later call to Mix_QuickLoad_RAW
+      SDL.mixerFrequency = frequency;
+      SDL.mixerFormat = format;
+      SDL.mixerNumChannels = channels;
+      SDL.mixerChunkSize = chunksize;
+      return 0;
+    }
+
+  function _Mix_Pause(channel) {
+      if (channel === -1) {
+        for (var i = 0; i<SDL.channels.length;i++) {
+          _Mix_Pause(i);
+        }
+        return;
+      }
+      var info = SDL.channels[channel];
+      if (info && info.audio) {
+        info.audio.pause();
+      } else {
+        //err('Mix_Pause: no sound found for channel: ' + channel);
+      }
+    }
+
+  function _Mix_PauseMusic() {
+      var audio = SDL.music.audio;
+      if (audio) audio.pause();
+    }
+
+  function _Mix_Paused(channel) {
+      if (channel === -1) {
+        var pausedCount = 0;
+        for (var i = 0; i<SDL.channels.length;i++) {
+          pausedCount += _Mix_Paused(i);
+        }
+        return pausedCount;
+      }
+      var info = SDL.channels[channel];
+      if (info && info.audio && info.audio.paused) {
+        return 1;
+      }
+      return 0;
+    }
+
+  function _Mix_PausedMusic() {
+      return (SDL.music.audio && SDL.music.audio.paused) ? 1 : 0;
+    }
+
+  
+  function _Mix_PlayChannel(channel, id, loops) {
+      // TODO: handle fixed amount of N loops. Currently loops either 0 or infinite times.
+  
+      // Get the audio element associated with the ID
+      var info = SDL.audios[id];
+      if (!info) return -1;
+      if (!info.audio && !info.webAudio) return -1;
+  
+      // If the user asks us to allocate a channel automatically, get the first
+      // free one.
+      if (channel == -1) {
+        for (var i = SDL.channelMinimumNumber; i < SDL.numChannels; i++) {
+          if (!SDL.channels[i].audio) {
+            channel = i;
+            break;
+          }
+        }
+        if (channel == -1) {
+          err('All ' + SDL.numChannels + ' channels in use!');
+          return -1;
+        }
+      }
+      var channelInfo = SDL.channels[channel];
+      var audio;
+      if (info.webAudio) {
+        // Create an instance of the WebAudio object.
+        audio = {};
+        audio.resource = info; // This new object is an instance that refers to this existing resource.
+        audio.paused = false;
+        audio.currentPosition = 0;
+        // Make our instance look similar to the instance of a <media> to make api simple.
+        audio.play = function() { SDL.playWebAudio(this); }
+        audio.pause = function() { SDL.pauseWebAudio(this); }
+      } else {
+        // We clone the audio node to utilize the preloaded audio buffer, since
+        // the browser has already preloaded the audio file.
+        audio = info.audio.cloneNode(true);
+        audio.numChannels = info.audio.numChannels;
+        audio.frequency = info.audio.frequency;
+      }
+      audio['onended'] = function SDL_audio_onended() { // TODO: cache these
+        if (channelInfo.audio == this) { channelInfo.audio.paused = true; channelInfo.audio = null; }
+        if (SDL.channelFinished) getFuncWrapper(SDL.channelFinished, 'vi')(channel);
+      }
+      channelInfo.audio = audio;
+      // TODO: handle N loops. Behavior matches Mix_PlayMusic
+      audio.loop = loops != 0;
+      audio.volume = channelInfo.volume;
+      audio.play();
+      return channel;
+    }function _Mix_PlayChannelTimed() {
+  return _Mix_PlayChannel.apply(null, arguments)
+  }
+
+  function _Mix_PlayMusic(id, loops) {
+      // Pause old music if it exists.
+      if (SDL.music.audio) {
+        if (!SDL.music.audio.paused) err('Music is already playing. ' + SDL.music.source);
+        SDL.music.audio.pause();
+      }
+      var info = SDL.audios[id];
+      var audio;
+      if (info.webAudio) { // Play via Web Audio API
+        // Create an instance of the WebAudio object.
+        audio = {};
+        audio.resource = info; // This new webAudio object is an instance that refers to this existing resource.
+        audio.paused = false;
+        audio.currentPosition = 0;
+        audio.play = function() { SDL.playWebAudio(this); }
+        audio.pause = function() { SDL.pauseWebAudio(this); }
+      } else if (info.audio) { // Play via the <audio> element
+        audio = info.audio;
+      }
+      audio['onended'] = function() { if (SDL.music.audio == this) _Mix_HaltMusic(); } // will send callback
+      audio.loop = loops != 0; // TODO: handle N loops for finite N
+      audio.volume = SDL.music.volume;
+      SDL.music.audio = audio;
+      audio.play();
+      return 0;
+    }
+
+  function _Mix_Playing(channel) {
+      if (channel === -1) {
+        var count = 0;
+        for (var i = 0; i < SDL.channels.length; i++) {
+          count += _Mix_Playing(i);
+        }
+        return count;
+      }
+      var info = SDL.channels[channel];
+      if (info && info.audio && !info.audio.paused) {
+        return 1;
+      }
+      return 0;
+    }
+
+  function _Mix_PlayingMusic() {
+      return (SDL.music.audio && !SDL.music.audio.paused) ? 1 : 0;
+    }
+
+  function _Mix_Quit(){}
+
+  function _Mix_Resume(channel) {
+      if (channel === -1) {
+        for (var i = 0; i<SDL.channels.length;i++) {
+          _Mix_Resume(i);
+        }
+        return;
+      }
+      var info = SDL.channels[channel];
+      if (info && info.audio) info.audio.play();
+    }
+
+  function _Mix_Volume(channel, volume) {
+      if (channel == -1) {
+        for (var i = 0; i < SDL.numChannels-1; i++) {
+          _Mix_Volume(i, volume);
+        }
+        return _Mix_Volume(SDL.numChannels-1, volume);
+      }
+      return SDL.setGetVolume(SDL.channels[channel], volume);
+    }
+
+  function _Mix_VolumeMusic(volume) {
+      return SDL.setGetVolume(SDL.music, volume);
+    }
+
+  function ___assert_fail(condition, filename, line, func) {
+      abort('Assertion failed: ' + Pointer_stringify(condition) + ', at: ' + [filename ? Pointer_stringify(filename) : 'unknown filename', line, func ? Pointer_stringify(func) : 'unknown function']);
+    }
+
+  
+  var ENV={};function ___buildEnvironment(environ) {
+      // WARNING: Arbitrary limit!
+      var MAX_ENV_VALUES = 64;
+      var TOTAL_ENV_SIZE = 1024;
+  
+      // Statically allocate memory for the environment.
+      var poolPtr;
+      var envPtr;
+      if (!___buildEnvironment.called) {
+        ___buildEnvironment.called = true;
+        // Set default values. Use string keys for Closure Compiler compatibility.
+        ENV['USER'] = ENV['LOGNAME'] = 'web_user';
+        ENV['PATH'] = '/';
+        ENV['PWD'] = '/';
+        ENV['HOME'] = '/home/web_user';
+        ENV['LANG'] = 'C.UTF-8';
+        ENV['_'] = Module['thisProgram'];
+        // Allocate memory.
+        poolPtr = getMemory(TOTAL_ENV_SIZE);
+        envPtr = getMemory(MAX_ENV_VALUES * 4);
+        HEAP32[((envPtr)>>2)]=poolPtr;
+        HEAP32[((environ)>>2)]=envPtr;
+      } else {
+        envPtr = HEAP32[((environ)>>2)];
+        poolPtr = HEAP32[((envPtr)>>2)];
+      }
+  
+      // Collect key=value lines.
+      var strings = [];
+      var totalSize = 0;
+      for (var key in ENV) {
+        if (typeof ENV[key] === 'string') {
+          var line = key + '=' + ENV[key];
+          strings.push(line);
+          totalSize += line.length;
+        }
+      }
+      if (totalSize > TOTAL_ENV_SIZE) {
+        throw new Error('Environment size exceeded TOTAL_ENV_SIZE!');
+      }
+  
+      // Make new.
+      var ptrSize = 4;
+      for (var i = 0; i < strings.length; i++) {
+        var line = strings[i];
+        writeAsciiToMemory(line, poolPtr);
+        HEAP32[(((envPtr)+(i * ptrSize))>>2)]=poolPtr;
+        poolPtr += line.length + 1;
+      }
+      HEAP32[(((envPtr)+(strings.length * ptrSize))>>2)]=0;
+    }
+
+  function ___cxa_allocate_exception(size) {
+      return _malloc(size);
+    }
+
+  
+  var EXCEPTIONS={last:0,caught:[],infos:{},deAdjust:function (adjusted) {
+        if (!adjusted || EXCEPTIONS.infos[adjusted]) return adjusted;
+        for (var key in EXCEPTIONS.infos) {
+          var ptr = +key; // the iteration key is a string, and if we throw this, it must be an integer as that is what we look for
+          var info = EXCEPTIONS.infos[ptr];
+          if (info.adjusted === adjusted) {
+            return ptr;
+          }
+        }
+        return adjusted;
+      },addRef:function (ptr) {
+        if (!ptr) return;
+        var info = EXCEPTIONS.infos[ptr];
+        info.refcount++;
+      },decRef:function (ptr) {
+        if (!ptr) return;
+        var info = EXCEPTIONS.infos[ptr];
+        assert(info.refcount > 0);
+        info.refcount--;
+        // A rethrown exception can reach refcount 0; it must not be discarded
+        // Its next handler will clear the rethrown flag and addRef it, prior to
+        // final decRef and destruction here
+        if (info.refcount === 0 && !info.rethrown) {
+          if (info.destructor) {
+            Module['dynCall_vi'](info.destructor, ptr);
+          }
+          delete EXCEPTIONS.infos[ptr];
+          ___cxa_free_exception(ptr);
+        }
+      },clearRef:function (ptr) {
+        if (!ptr) return;
+        var info = EXCEPTIONS.infos[ptr];
+        info.refcount = 0;
+      }};function ___cxa_begin_catch(ptr) {
+      var info = EXCEPTIONS.infos[ptr];
+      if (info && !info.caught) {
+        info.caught = true;
+        __ZSt18uncaught_exceptionv.uncaught_exception--;
+      }
+      if (info) info.rethrown = false;
+      EXCEPTIONS.caught.push(ptr);
+      EXCEPTIONS.addRef(EXCEPTIONS.deAdjust(ptr));
+      return ptr;
+    }
+
+  function ___cxa_pure_virtual() {
+      ABORT = true;
+      throw 'Pure virtual function called!';
+    }
+
+  
+  
+  function ___resumeException(ptr) {
+      if (!EXCEPTIONS.last) { EXCEPTIONS.last = ptr; }
+      throw ptr + " - Exception catching is disabled, this exception cannot be caught. Compile with -s DISABLE_EXCEPTION_CATCHING=0 or DISABLE_EXCEPTION_CATCHING=2 to catch.";
+    }function ___cxa_find_matching_catch() {
+      var thrown = EXCEPTIONS.last;
+      if (!thrown) {
+        // just pass through the null ptr
+        return ((setTempRet0(0),0)|0);
+      }
+      var info = EXCEPTIONS.infos[thrown];
+      var throwntype = info.type;
+      if (!throwntype) {
+        // just pass through the thrown ptr
+        return ((setTempRet0(0),thrown)|0);
+      }
+      var typeArray = Array.prototype.slice.call(arguments);
+  
+      var pointer = Module['___cxa_is_pointer_type'](throwntype);
+      // can_catch receives a **, add indirection
+      if (!___cxa_find_matching_catch.buffer) ___cxa_find_matching_catch.buffer = _malloc(4);
+      HEAP32[((___cxa_find_matching_catch.buffer)>>2)]=thrown;
+      thrown = ___cxa_find_matching_catch.buffer;
+      // The different catch blocks are denoted by different types.
+      // Due to inheritance, those types may not precisely match the
+      // type of the thrown object. Find one which matches, and
+      // return the type of the catch block which should be called.
+      for (var i = 0; i < typeArray.length; i++) {
+        if (typeArray[i] && Module['___cxa_can_catch'](typeArray[i], throwntype, thrown)) {
+          thrown = HEAP32[((thrown)>>2)]; // undo indirection
+          info.adjusted = thrown;
+          return ((setTempRet0(typeArray[i]),thrown)|0);
+        }
+      }
+      // Shouldn't happen unless we have bogus data in typeArray
+      // or encounter a type for which emscripten doesn't have suitable
+      // typeinfo defined. Best-efforts match just in case.
+      thrown = HEAP32[((thrown)>>2)]; // undo indirection
+      return ((setTempRet0(throwntype),thrown)|0);
+    }function ___cxa_throw(ptr, type, destructor) {
+      EXCEPTIONS.infos[ptr] = {
+        ptr: ptr,
+        adjusted: ptr,
+        type: type,
+        destructor: destructor,
+        refcount: 0,
+        caught: false,
+        rethrown: false
+      };
+      EXCEPTIONS.last = ptr;
+      if (!("uncaught_exception" in __ZSt18uncaught_exceptionv)) {
+        __ZSt18uncaught_exceptionv.uncaught_exception = 1;
+      } else {
+        __ZSt18uncaught_exceptionv.uncaught_exception++;
+      }
+      throw ptr + " - Exception catching is disabled, this exception cannot be caught. Compile with -s DISABLE_EXCEPTION_CATCHING=0 or DISABLE_EXCEPTION_CATCHING=2 to catch.";
+    }
+
+  function ___cxa_uncaught_exception() {
+      return !!__ZSt18uncaught_exceptionv.uncaught_exception;
+    }
+
+  function ___gxx_personality_v0() {
+    }
+
+  function ___lock() {}
+
+  function ___map_file(pathname, size) {
+      ___setErrNo(ERRNO_CODES.EPERM);
+      return -1;
+    }
+
+  
+  var SYSCALLS={DEFAULT_POLLMASK:5,mappings:{},umask:511,calculateAt:function (dirfd, path) {
+        if (path[0] !== '/') {
+          // relative path
+          var dir;
+          if (dirfd === -100) {
+            dir = FS.cwd();
+          } else {
+            var dirstream = FS.getStream(dirfd);
+            if (!dirstream) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
+            dir = dirstream.path;
+          }
+          path = PATH.join2(dir, path);
+        }
+        return path;
+      },doStat:function (func, path, buf) {
+        try {
+          var stat = func(path);
+        } catch (e) {
+          if (e && e.node && PATH.normalize(path) !== PATH.normalize(FS.getPath(e.node))) {
+            // an error occurred while trying to look up the path; we should just report ENOTDIR
+            return -ERRNO_CODES.ENOTDIR;
+          }
+          throw e;
+        }
+        HEAP32[((buf)>>2)]=stat.dev;
+        HEAP32[(((buf)+(4))>>2)]=0;
+        HEAP32[(((buf)+(8))>>2)]=stat.ino;
+        HEAP32[(((buf)+(12))>>2)]=stat.mode;
+        HEAP32[(((buf)+(16))>>2)]=stat.nlink;
+        HEAP32[(((buf)+(20))>>2)]=stat.uid;
+        HEAP32[(((buf)+(24))>>2)]=stat.gid;
+        HEAP32[(((buf)+(28))>>2)]=stat.rdev;
+        HEAP32[(((buf)+(32))>>2)]=0;
+        HEAP32[(((buf)+(36))>>2)]=stat.size;
+        HEAP32[(((buf)+(40))>>2)]=4096;
+        HEAP32[(((buf)+(44))>>2)]=stat.blocks;
+        HEAP32[(((buf)+(48))>>2)]=(stat.atime.getTime() / 1000)|0;
+        HEAP32[(((buf)+(52))>>2)]=0;
+        HEAP32[(((buf)+(56))>>2)]=(stat.mtime.getTime() / 1000)|0;
+        HEAP32[(((buf)+(60))>>2)]=0;
+        HEAP32[(((buf)+(64))>>2)]=(stat.ctime.getTime() / 1000)|0;
+        HEAP32[(((buf)+(68))>>2)]=0;
+        HEAP32[(((buf)+(72))>>2)]=stat.ino;
+        return 0;
+      },doMsync:function (addr, stream, len, flags) {
+        var buffer = new Uint8Array(HEAPU8.subarray(addr, addr + len));
+        FS.msync(stream, buffer, 0, len, flags);
+      },doMkdir:function (path, mode) {
+        // remove a trailing slash, if one - /a/b/ has basename of '', but
+        // we want to create b in the context of this function
+        path = PATH.normalize(path);
+        if (path[path.length-1] === '/') path = path.substr(0, path.length-1);
+        FS.mkdir(path, mode, 0);
+        return 0;
+      },doMknod:function (path, mode, dev) {
+        // we don't want this in the JS API as it uses mknod to create all nodes.
+        switch (mode & 61440) {
+          case 32768:
+          case 8192:
+          case 24576:
+          case 4096:
+          case 49152:
+            break;
+          default: return -ERRNO_CODES.EINVAL;
+        }
+        FS.mknod(path, mode, dev);
+        return 0;
+      },doReadlink:function (path, buf, bufsize) {
+        if (bufsize <= 0) return -ERRNO_CODES.EINVAL;
+        var ret = FS.readlink(path);
+  
+        var len = Math.min(bufsize, lengthBytesUTF8(ret));
+        var endChar = HEAP8[buf+len];
+        stringToUTF8(ret, buf, bufsize+1);
+        // readlink is one of the rare functions that write out a C string, but does never append a null to the output buffer(!)
+        // stringToUTF8() always appends a null byte, so restore the character under the null byte after the write.
+        HEAP8[buf+len] = endChar;
+  
+        return len;
+      },doAccess:function (path, amode) {
+        if (amode & ~7) {
+          // need a valid mode
+          return -ERRNO_CODES.EINVAL;
+        }
+        var node;
+        var lookup = FS.lookupPath(path, { follow: true });
+        node = lookup.node;
+        var perms = '';
+        if (amode & 4) perms += 'r';
+        if (amode & 2) perms += 'w';
+        if (amode & 1) perms += 'x';
+        if (perms /* otherwise, they've just passed F_OK */ && FS.nodePermissions(node, perms)) {
+          return -ERRNO_CODES.EACCES;
+        }
+        return 0;
+      },doDup:function (path, flags, suggestFD) {
+        var suggest = FS.getStream(suggestFD);
+        if (suggest) FS.close(suggest);
+        return FS.open(path, flags, 0, suggestFD, suggestFD).fd;
+      },doReadv:function (stream, iov, iovcnt, offset) {
+        var ret = 0;
+        for (var i = 0; i < iovcnt; i++) {
+          var ptr = HEAP32[(((iov)+(i*8))>>2)];
+          var len = HEAP32[(((iov)+(i*8 + 4))>>2)];
+          var curr = FS.read(stream, HEAP8,ptr, len, offset);
+          if (curr < 0) return -1;
+          ret += curr;
+          if (curr < len) break; // nothing more to read
+        }
+        return ret;
+      },doWritev:function (stream, iov, iovcnt, offset) {
+        var ret = 0;
+        for (var i = 0; i < iovcnt; i++) {
+          var ptr = HEAP32[(((iov)+(i*8))>>2)];
+          var len = HEAP32[(((iov)+(i*8 + 4))>>2)];
+          var curr = FS.write(stream, HEAP8,ptr, len, offset);
+          if (curr < 0) return -1;
+          ret += curr;
+        }
+        return ret;
+      },varargs:0,get:function (varargs) {
+        SYSCALLS.varargs += 4;
+        var ret = HEAP32[(((SYSCALLS.varargs)-(4))>>2)];
+        return ret;
+      },getStr:function () {
+        var ret = Pointer_stringify(SYSCALLS.get());
+        return ret;
+      },getStreamFromFD:function () {
+        var stream = FS.getStream(SYSCALLS.get());
+        if (!stream) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
+        return stream;
+      },getSocketFromFD:function () {
+        var socket = SOCKFS.getSocket(SYSCALLS.get());
+        if (!socket) throw new FS.ErrnoError(ERRNO_CODES.EBADF);
+        return socket;
+      },getSocketAddress:function (allowNull) {
+        var addrp = SYSCALLS.get(), addrlen = SYSCALLS.get();
+        if (allowNull && addrp === 0) return null;
+        var info = __read_sockaddr(addrp, addrlen);
+        if (info.errno) throw new FS.ErrnoError(info.errno);
+        info.addr = DNS.lookup_addr(info.addr) || info.addr;
+        return info;
+      },get64:function () {
+        var low = SYSCALLS.get(), high = SYSCALLS.get();
+        if (low >= 0) assert(high === 0);
+        else assert(high === -1);
+        return low;
+      },getZero:function () {
+        assert(SYSCALLS.get() === 0);
+      }};function ___syscall140(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // llseek
+      var stream = SYSCALLS.getStreamFromFD(), offset_high = SYSCALLS.get(), offset_low = SYSCALLS.get(), result = SYSCALLS.get(), whence = SYSCALLS.get();
+      // NOTE: offset_high is unused - Emscripten's off_t is 32-bit
+      var offset = offset_low;
+      FS.llseek(stream, offset, whence);
+      HEAP32[((result)>>2)]=stream.position;
+      if (stream.getdents && offset === 0 && whence === 0) stream.getdents = null; // reset readdir state
+      return 0;
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall145(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // readv
+      var stream = SYSCALLS.getStreamFromFD(), iov = SYSCALLS.get(), iovcnt = SYSCALLS.get();
+      return SYSCALLS.doReadv(stream, iov, iovcnt);
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall146(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // writev
+      var stream = SYSCALLS.getStreamFromFD(), iov = SYSCALLS.get(), iovcnt = SYSCALLS.get();
+      return SYSCALLS.doWritev(stream, iov, iovcnt);
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall221(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // fcntl64
+      var stream = SYSCALLS.getStreamFromFD(), cmd = SYSCALLS.get();
+      switch (cmd) {
+        case 0: {
+          var arg = SYSCALLS.get();
+          if (arg < 0) {
+            return -ERRNO_CODES.EINVAL;
+          }
+          var newStream;
+          newStream = FS.open(stream.path, stream.flags, 0, arg);
+          return newStream.fd;
+        }
+        case 1:
+        case 2:
+          return 0;  // FD_CLOEXEC makes no sense for a single process.
+        case 3:
+          return stream.flags;
+        case 4: {
+          var arg = SYSCALLS.get();
+          stream.flags |= arg;
+          return 0;
+        }
+        case 12:
+        case 12: {
+          var arg = SYSCALLS.get();
+          var offset = 0;
+          // We're always unlocked.
+          HEAP16[(((arg)+(offset))>>1)]=2;
+          return 0;
+        }
+        case 13:
+        case 14:
+        case 13:
+        case 14:
+          return 0; // Pretend that the locking is successful.
+        case 16:
+        case 8:
+          return -ERRNO_CODES.EINVAL; // These are for sockets. We don't have them fully implemented yet.
+        case 9:
+          // musl trusts getown return values, due to a bug where they must be, as they overlap with errors. just return -1 here, so fnctl() returns that, and we set errno ourselves.
+          ___setErrNo(ERRNO_CODES.EINVAL);
+          return -1;
+        default: {
+          return -ERRNO_CODES.EINVAL;
+        }
+      }
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall5(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // open
+      var pathname = SYSCALLS.getStr(), flags = SYSCALLS.get(), mode = SYSCALLS.get() // optional TODO
+      var stream = FS.open(pathname, flags, mode);
+      return stream.fd;
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall54(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // ioctl
+      var stream = SYSCALLS.getStreamFromFD(), op = SYSCALLS.get();
+      switch (op) {
+        case 21509:
+        case 21505: {
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          return 0;
+        }
+        case 21510:
+        case 21511:
+        case 21512:
+        case 21506:
+        case 21507:
+        case 21508: {
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          return 0; // no-op, not actually adjusting terminal settings
+        }
+        case 21519: {
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          var argp = SYSCALLS.get();
+          HEAP32[((argp)>>2)]=0;
+          return 0;
+        }
+        case 21520: {
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          return -ERRNO_CODES.EINVAL; // not supported
+        }
+        case 21531: {
+          var argp = SYSCALLS.get();
+          return FS.ioctl(stream, op, argp);
+        }
+        case 21523: {
+          // TODO: in theory we should write to the winsize struct that gets
+          // passed in, but for now musl doesn't read anything on it
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          return 0;
+        }
+        case 21524: {
+          // TODO: technically, this ioctl call should change the window size.
+          // but, since emscripten doesn't have any concept of a terminal window
+          // yet, we'll just silently throw it away as we do TIOCGWINSZ
+          if (!stream.tty) return -ERRNO_CODES.ENOTTY;
+          return 0;
+        }
+        default: abort('bad ioctl syscall ' + op);
+      }
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall6(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // close
+      var stream = SYSCALLS.getStreamFromFD();
+      FS.close(stream);
+      return 0;
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___syscall91(which, varargs) {SYSCALLS.varargs = varargs;
+  try {
+   // munmap
+      var addr = SYSCALLS.get(), len = SYSCALLS.get();
+      // TODO: support unmmap'ing parts of allocations
+      var info = SYSCALLS.mappings[addr];
+      if (!info) return 0;
+      if (len === info.len) {
+        var stream = FS.getStream(info.fd);
+        SYSCALLS.doMsync(addr, stream, len, info.flags)
+        FS.munmap(stream);
+        SYSCALLS.mappings[addr] = null;
+        if (info.allocated) {
+          _free(info.malloc);
+        }
+      }
+      return 0;
+    } catch (e) {
+    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
+    return -e.errno;
+  }
+  }
+
+  function ___unlock() {}
+
+  function _abort() {
+      Module['abort']();
+    }
+
+  
+  function _emscripten_get_now_is_monotonic() {
+      // return whether emscripten_get_now is guaranteed monotonic; the Date.now
+      // implementation is not :(
+      return ENVIRONMENT_IS_NODE || (typeof dateNow !== 'undefined') ||
+          ((ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) && self['performance'] && self['performance']['now']);
+    }function _clock_gettime(clk_id, tp) {
+      // int clock_gettime(clockid_t clk_id, struct timespec *tp);
+      var now;
+      if (clk_id === 0) {
+        now = Date.now();
+      } else if (clk_id === 1 && _emscripten_get_now_is_monotonic()) {
+        now = _emscripten_get_now();
+      } else {
+        ___setErrNo(ERRNO_CODES.EINVAL);
+        return -1;
+      }
+      HEAP32[((tp)>>2)]=(now/1000)|0; // seconds
+      HEAP32[(((tp)+(4))>>2)]=((now % 1000)*1000*1000)|0; // nanoseconds
+      return 0;
+    }
+
+  
+  var DLFCN={error:null,errorMsg:null,loadedLibs:{},loadedLibNames:{}};function _dlclose(handle) {
+      // int dlclose(void *handle);
+      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlclose.html
+      if (!DLFCN.loadedLibs[handle]) {
+        DLFCN.errorMsg = 'Tried to dlclose() unopened handle: ' + handle;
+        return 1;
+      } else {
+        var lib_record = DLFCN.loadedLibs[handle];
+        if (--lib_record.refcount == 0) {
+          if (lib_record.module.cleanups) {
+            lib_record.module.cleanups.forEach(function(cleanup) { cleanup() });
+          }
+          delete DLFCN.loadedLibNames[lib_record.name];
+          delete DLFCN.loadedLibs[handle];
+        }
+        return 0;
+      }
+    }
+
+  function _dlerror() {
+      // char *dlerror(void);
+      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlerror.html
+      if (DLFCN.errorMsg === null) {
+        return 0;
+      } else {
+        if (DLFCN.error) _free(DLFCN.error);
+        var msgArr = intArrayFromString(DLFCN.errorMsg);
+        DLFCN.error = allocate(msgArr, 'i8', ALLOC_NORMAL);
+        DLFCN.errorMsg = null;
+        return DLFCN.error;
+      }
+    }
+
+  function _dlsym(handle, symbol) {
+      // void *dlsym(void *restrict handle, const char *restrict name);
+      // http://pubs.opengroup.org/onlinepubs/009695399/functions/dlsym.html
+      symbol = Pointer_stringify(symbol);
+  
+      if (!DLFCN.loadedLibs[handle]) {
+        DLFCN.errorMsg = 'Tried to dlsym() from an unopened handle: ' + handle;
+        return 0;
+      } else {
+        var lib = DLFCN.loadedLibs[handle];
+        symbol = '_' + symbol;
+        if (!lib.module.hasOwnProperty(symbol)) {
+          DLFCN.errorMsg = ('Tried to lookup unknown symbol "' + symbol +
+                                 '" in dynamic lib: ' + lib.name);
+          return 0;
+        } else {
+          var result = lib.module[symbol];
+          if (typeof result === 'function') {
+            // convert the exported function into a function pointer using our generic
+            // JS mechanism.
+            return addFunction(result);
+          }
+          return result;
+        }
+      }
+    }
+
+  
+  var EGL={errorCode:12288,defaultDisplayInitialized:false,currentContext:0,currentReadSurface:0,currentDrawSurface:0,stringCache:{},setErrorCode:function (code) {
         EGL.errorCode = code;
       },chooseConfig:function (display, attribList, config, config_size, numConfigs) { 
         if (display != 62000 /* Magic ID for Emscripten 'default display' */) {
@@ -11419,6 +12699,14 @@ function copyTempDouble(ptr) {
 FS.staticInit();__ATINIT__.unshift(function() { if (!Module["noFSInit"] && !FS.init.initialized) FS.init() });__ATMAIN__.push(function() { FS.ignorePermissions = false });__ATEXIT__.push(function() { FS.quit() });Module["FS_createFolder"] = FS.createFolder;Module["FS_createPath"] = FS.createPath;Module["FS_createDataFile"] = FS.createDataFile;Module["FS_createPreloadedFile"] = FS.createPreloadedFile;Module["FS_createLazyFile"] = FS.createLazyFile;Module["FS_createLink"] = FS.createLink;Module["FS_createDevice"] = FS.createDevice;Module["FS_unlink"] = FS.unlink;;
 __ATINIT__.unshift(function() { TTY.init() });__ATEXIT__.push(function() { TTY.shutdown() });;
 if (ENVIRONMENT_IS_NODE) { var fs = require("fs"); var NODEJS_PATH = require("path"); NODEFS.staticInit(); };
+Module["requestFullScreen"] = function Module_requestFullScreen(lockPointer, resizeCanvas, vrDevice) { err("Module.requestFullScreen is deprecated. Please call Module.requestFullscreen instead."); Module["requestFullScreen"] = Module["requestFullscreen"]; Browser.requestFullScreen(lockPointer, resizeCanvas, vrDevice) };
+  Module["requestFullscreen"] = function Module_requestFullscreen(lockPointer, resizeCanvas, vrDevice) { Browser.requestFullscreen(lockPointer, resizeCanvas, vrDevice) };
+  Module["requestAnimationFrame"] = function Module_requestAnimationFrame(func) { Browser.requestAnimationFrame(func) };
+  Module["setCanvasSize"] = function Module_setCanvasSize(width, height, noUpdates) { Browser.setCanvasSize(width, height, noUpdates) };
+  Module["pauseMainLoop"] = function Module_pauseMainLoop() { Browser.mainLoop.pause() };
+  Module["resumeMainLoop"] = function Module_resumeMainLoop() { Browser.mainLoop.resume() };
+  Module["getUserMedia"] = function Module_getUserMedia() { Browser.getUserMedia() }
+  Module["createContext"] = function Module_createContext(canvas, useWebGL, setInModule, webGLContextAttributes) { return Browser.createContext(canvas, useWebGL, setInModule, webGLContextAttributes) };
 if (ENVIRONMENT_IS_NODE) {
     _emscripten_get_now = function _emscripten_get_now_actual() {
       var t = process['hrtime']();
@@ -11433,14 +12721,6 @@ if (ENVIRONMENT_IS_NODE) {
   } else {
     _emscripten_get_now = Date.now;
   };
-Module["requestFullScreen"] = function Module_requestFullScreen(lockPointer, resizeCanvas, vrDevice) { err("Module.requestFullScreen is deprecated. Please call Module.requestFullscreen instead."); Module["requestFullScreen"] = Module["requestFullscreen"]; Browser.requestFullScreen(lockPointer, resizeCanvas, vrDevice) };
-  Module["requestFullscreen"] = function Module_requestFullscreen(lockPointer, resizeCanvas, vrDevice) { Browser.requestFullscreen(lockPointer, resizeCanvas, vrDevice) };
-  Module["requestAnimationFrame"] = function Module_requestAnimationFrame(func) { Browser.requestAnimationFrame(func) };
-  Module["setCanvasSize"] = function Module_setCanvasSize(width, height, noUpdates) { Browser.setCanvasSize(width, height, noUpdates) };
-  Module["pauseMainLoop"] = function Module_pauseMainLoop() { Browser.mainLoop.pause() };
-  Module["resumeMainLoop"] = function Module_resumeMainLoop() { Browser.mainLoop.resume() };
-  Module["getUserMedia"] = function Module_getUserMedia() { Browser.getUserMedia() }
-  Module["createContext"] = function Module_createContext(canvas, useWebGL, setInModule, webGLContextAttributes) { return Browser.createContext(canvas, useWebGL, setInModule, webGLContextAttributes) };
 var GLctx; GL.init();
 JSEvents.staticInit();;
 DYNAMICTOP_PTR = staticAlloc(4);
@@ -12232,10 +13512,28 @@ function invoke_vijj(index,a1,a2,a3,a4,a5) {
 
 Module.asmGlobalArg = {};
 
-Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_fi": nullFunc_fi, "nullFunc_i": nullFunc_i, "nullFunc_ii": nullFunc_ii, "nullFunc_iiffi": nullFunc_iiffi, "nullFunc_iii": nullFunc_iii, "nullFunc_iiid": nullFunc_iiid, "nullFunc_iiif": nullFunc_iiif, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiidii": nullFunc_iiiiidii, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiiiiiii": nullFunc_iiiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_iiij": nullFunc_iiij, "nullFunc_ji": nullFunc_ji, "nullFunc_jii": nullFunc_jii, "nullFunc_jiji": nullFunc_jiji, "nullFunc_v": nullFunc_v, "nullFunc_vd": nullFunc_vd, "nullFunc_vdd": nullFunc_vdd, "nullFunc_vdddddd": nullFunc_vdddddd, "nullFunc_vf": nullFunc_vf, "nullFunc_vff": nullFunc_vff, "nullFunc_vffff": nullFunc_vffff, "nullFunc_vfi": nullFunc_vfi, "nullFunc_vi": nullFunc_vi, "nullFunc_vif": nullFunc_vif, "nullFunc_viff": nullFunc_viff, "nullFunc_vifff": nullFunc_vifff, "nullFunc_viffff": nullFunc_viffff, "nullFunc_vifffiiii": nullFunc_vifffiiii, "nullFunc_vifi": nullFunc_vifi, "nullFunc_vii": nullFunc_vii, "nullFunc_viidi": nullFunc_viidi, "nullFunc_viidijj": nullFunc_viidijj, "nullFunc_viif": nullFunc_viif, "nullFunc_viifi": nullFunc_viifi, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viiiiiii": nullFunc_viiiiiii, "nullFunc_viiiiiiii": nullFunc_viiiiiiii, "nullFunc_viiiiiiiii": nullFunc_viiiiiiiii, "nullFunc_viiiiiiiiii": nullFunc_viiiiiiiiii, "nullFunc_viiiiiiiiiii": nullFunc_viiiiiiiiiii, "nullFunc_viiij": nullFunc_viiij, "nullFunc_viij": nullFunc_viij, "nullFunc_viijii": nullFunc_viijii, "nullFunc_vij": nullFunc_vij, "nullFunc_vijddd": nullFunc_vijddd, "nullFunc_vijj": nullFunc_vijj, "invoke_fi": invoke_fi, "invoke_i": invoke_i, "invoke_ii": invoke_ii, "invoke_iiffi": invoke_iiffi, "invoke_iii": invoke_iii, "invoke_iiid": invoke_iiid, "invoke_iiif": invoke_iiif, "invoke_iiii": invoke_iiii, "invoke_iiiii": invoke_iiiii, "invoke_iiiiid": invoke_iiiiid, "invoke_iiiiidii": invoke_iiiiidii, "invoke_iiiiii": invoke_iiiiii, "invoke_iiiiiid": invoke_iiiiiid, "invoke_iiiiiii": invoke_iiiiiii, "invoke_iiiiiiii": invoke_iiiiiiii, "invoke_iiiiiiiii": invoke_iiiiiiiii, "invoke_iiiiiiiiii": invoke_iiiiiiiiii, "invoke_iiiiij": invoke_iiiiij, "invoke_iiij": invoke_iiij, "invoke_ji": invoke_ji, "invoke_jii": invoke_jii, "invoke_jiji": invoke_jiji, "invoke_v": invoke_v, "invoke_vd": invoke_vd, "invoke_vdd": invoke_vdd, "invoke_vdddddd": invoke_vdddddd, "invoke_vf": invoke_vf, "invoke_vff": invoke_vff, "invoke_vffff": invoke_vffff, "invoke_vfi": invoke_vfi, "invoke_vi": invoke_vi, "invoke_vif": invoke_vif, "invoke_viff": invoke_viff, "invoke_vifff": invoke_vifff, "invoke_viffff": invoke_viffff, "invoke_vifffiiii": invoke_vifffiiii, "invoke_vifi": invoke_vifi, "invoke_vii": invoke_vii, "invoke_viidi": invoke_viidi, "invoke_viidijj": invoke_viidijj, "invoke_viif": invoke_viif, "invoke_viifi": invoke_viifi, "invoke_viii": invoke_viii, "invoke_viiii": invoke_viiii, "invoke_viiiii": invoke_viiiii, "invoke_viiiiii": invoke_viiiiii, "invoke_viiiiiii": invoke_viiiiiii, "invoke_viiiiiiii": invoke_viiiiiiii, "invoke_viiiiiiiii": invoke_viiiiiiiii, "invoke_viiiiiiiiii": invoke_viiiiiiiiii, "invoke_viiiiiiiiiii": invoke_viiiiiiiiiii, "invoke_viiij": invoke_viiij, "invoke_viij": invoke_viij, "invoke_viijii": invoke_viijii, "invoke_vij": invoke_vij, "invoke_vijddd": invoke_vijddd, "invoke_vijj": invoke_vijj, "___assert_fail": ___assert_fail, "___buildEnvironment": ___buildEnvironment, "___cxa_allocate_exception": ___cxa_allocate_exception, "___cxa_begin_catch": ___cxa_begin_catch, "___cxa_find_matching_catch": ___cxa_find_matching_catch, "___cxa_pure_virtual": ___cxa_pure_virtual, "___cxa_throw": ___cxa_throw, "___cxa_uncaught_exception": ___cxa_uncaught_exception, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___resumeException": ___resumeException, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall146": ___syscall146, "___syscall221": ___syscall221, "___syscall5": ___syscall5, "___syscall54": ___syscall54, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "__addDays": __addDays, "__arraySum": __arraySum, "__emscripten_sample_gamepad_data": __emscripten_sample_gamepad_data, "__exit": __exit, "__isLeapYear": __isLeapYear, "__registerRestoreOldStyle": __registerRestoreOldStyle, "__setLetterbox": __setLetterbox, "_abort": _abort, "_clock_gettime": _clock_gettime, "_dlclose": _dlclose, "_dlerror": _dlerror, "_dlsym": _dlsym, "_eglBindAPI": _eglBindAPI, "_eglChooseConfig": _eglChooseConfig, "_eglCreateContext": _eglCreateContext, "_eglCreateWindowSurface": _eglCreateWindowSurface, "_eglDestroyContext": _eglDestroyContext, "_eglDestroySurface": _eglDestroySurface, "_eglGetConfigAttrib": _eglGetConfigAttrib, "_eglGetDisplay": _eglGetDisplay, "_eglGetProcAddress": _eglGetProcAddress, "_eglInitialize": _eglInitialize, "_eglMakeCurrent": _eglMakeCurrent, "_eglSwapBuffers": _eglSwapBuffers, "_eglSwapInterval": _eglSwapInterval, "_eglTerminate": _eglTerminate, "_eglWaitClient": _eglWaitClient, "_eglWaitGL": _eglWaitGL, "_eglWaitNative": _eglWaitNative, "_emscripten_asm_const_i": _emscripten_asm_const_i, "_emscripten_asm_const_ii": _emscripten_asm_const_ii, "_emscripten_asm_const_iii": _emscripten_asm_const_iii, "_emscripten_asm_const_iiii": _emscripten_asm_const_iiii, "_emscripten_asm_const_iiiii": _emscripten_asm_const_iiiii, "_emscripten_cancel_main_loop": _emscripten_cancel_main_loop, "_emscripten_do_request_fullscreen": _emscripten_do_request_fullscreen, "_emscripten_exit_fullscreen": _emscripten_exit_fullscreen, "_emscripten_exit_pointerlock": _emscripten_exit_pointerlock, "_emscripten_get_canvas_element_size": _emscripten_get_canvas_element_size, "_emscripten_get_device_pixel_ratio": _emscripten_get_device_pixel_ratio, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "_emscripten_get_gamepad_status": _emscripten_get_gamepad_status, "_emscripten_get_now": _emscripten_get_now, "_emscripten_get_now_is_monotonic": _emscripten_get_now_is_monotonic, "_emscripten_get_num_gamepads": _emscripten_get_num_gamepads, "_emscripten_get_pointerlock_status": _emscripten_get_pointerlock_status, "_emscripten_glActiveTexture": _emscripten_glActiveTexture, "_emscripten_glAttachShader": _emscripten_glAttachShader, "_emscripten_glBeginConditionalRender": _emscripten_glBeginConditionalRender, "_emscripten_glBeginTransformFeedback": _emscripten_glBeginTransformFeedback, "_emscripten_glBindAttribLocation": _emscripten_glBindAttribLocation, "_emscripten_glBindBuffer": _emscripten_glBindBuffer, "_emscripten_glBindBufferBase": _emscripten_glBindBufferBase, "_emscripten_glBindBufferRange": _emscripten_glBindBufferRange, "_emscripten_glBindFragDataLocation": _emscripten_glBindFragDataLocation, "_emscripten_glBindFramebuffer": _emscripten_glBindFramebuffer, "_emscripten_glBindProgramARB": _emscripten_glBindProgramARB, "_emscripten_glBindRenderbuffer": _emscripten_glBindRenderbuffer, "_emscripten_glBindTexture": _emscripten_glBindTexture, "_emscripten_glBindVertexArray": _emscripten_glBindVertexArray, "_emscripten_glBlendColor": _emscripten_glBlendColor, "_emscripten_glBlendEquation": _emscripten_glBlendEquation, "_emscripten_glBlendEquationSeparate": _emscripten_glBlendEquationSeparate, "_emscripten_glBlendFunc": _emscripten_glBlendFunc, "_emscripten_glBlendFuncSeparate": _emscripten_glBlendFuncSeparate, "_emscripten_glBufferData": _emscripten_glBufferData, "_emscripten_glBufferSubData": _emscripten_glBufferSubData, "_emscripten_glCheckFramebufferStatus": _emscripten_glCheckFramebufferStatus, "_emscripten_glClampColor": _emscripten_glClampColor, "_emscripten_glClear": _emscripten_glClear, "_emscripten_glClearBufferfi": _emscripten_glClearBufferfi, "_emscripten_glClearBufferfv": _emscripten_glClearBufferfv, "_emscripten_glClearBufferiv": _emscripten_glClearBufferiv, "_emscripten_glClearBufferuiv": _emscripten_glClearBufferuiv, "_emscripten_glClearColor": _emscripten_glClearColor, "_emscripten_glClearDepth": _emscripten_glClearDepth, "_emscripten_glClearDepthf": _emscripten_glClearDepthf, "_emscripten_glClearStencil": _emscripten_glClearStencil, "_emscripten_glClientActiveTexture": _emscripten_glClientActiveTexture, "_emscripten_glColorMask": _emscripten_glColorMask, "_emscripten_glColorMaski": _emscripten_glColorMaski, "_emscripten_glColorPointer": _emscripten_glColorPointer, "_emscripten_glCompileShader": _emscripten_glCompileShader, "_emscripten_glCompressedTexImage2D": _emscripten_glCompressedTexImage2D, "_emscripten_glCompressedTexSubImage2D": _emscripten_glCompressedTexSubImage2D, "_emscripten_glCopyTexImage2D": _emscripten_glCopyTexImage2D, "_emscripten_glCopyTexSubImage2D": _emscripten_glCopyTexSubImage2D, "_emscripten_glCreateProgram": _emscripten_glCreateProgram, "_emscripten_glCreateShader": _emscripten_glCreateShader, "_emscripten_glCullFace": _emscripten_glCullFace, "_emscripten_glDeleteBuffers": _emscripten_glDeleteBuffers, "_emscripten_glDeleteFramebuffers": _emscripten_glDeleteFramebuffers, "_emscripten_glDeleteObjectARB": _emscripten_glDeleteObjectARB, "_emscripten_glDeleteProgram": _emscripten_glDeleteProgram, "_emscripten_glDeleteRenderbuffers": _emscripten_glDeleteRenderbuffers, "_emscripten_glDeleteShader": _emscripten_glDeleteShader, "_emscripten_glDeleteTextures": _emscripten_glDeleteTextures, "_emscripten_glDeleteVertexArrays": _emscripten_glDeleteVertexArrays, "_emscripten_glDepthFunc": _emscripten_glDepthFunc, "_emscripten_glDepthMask": _emscripten_glDepthMask, "_emscripten_glDepthRange": _emscripten_glDepthRange, "_emscripten_glDepthRangef": _emscripten_glDepthRangef, "_emscripten_glDetachShader": _emscripten_glDetachShader, "_emscripten_glDisable": _emscripten_glDisable, "_emscripten_glDisableVertexAttribArray": _emscripten_glDisableVertexAttribArray, "_emscripten_glDisablei": _emscripten_glDisablei, "_emscripten_glDrawArrays": _emscripten_glDrawArrays, "_emscripten_glDrawArraysInstanced": _emscripten_glDrawArraysInstanced, "_emscripten_glDrawBuffers": _emscripten_glDrawBuffers, "_emscripten_glDrawElements": _emscripten_glDrawElements, "_emscripten_glDrawElementsInstanced": _emscripten_glDrawElementsInstanced, "_emscripten_glDrawRangeElements": _emscripten_glDrawRangeElements, "_emscripten_glEnable": _emscripten_glEnable, "_emscripten_glEnableClientState": _emscripten_glEnableClientState, "_emscripten_glEnableVertexAttribArray": _emscripten_glEnableVertexAttribArray, "_emscripten_glEnablei": _emscripten_glEnablei, "_emscripten_glEndConditionalRender": _emscripten_glEndConditionalRender, "_emscripten_glEndTransformFeedback": _emscripten_glEndTransformFeedback, "_emscripten_glFinish": _emscripten_glFinish, "_emscripten_glFlush": _emscripten_glFlush, "_emscripten_glFramebufferRenderbuffer": _emscripten_glFramebufferRenderbuffer, "_emscripten_glFramebufferTexture2D": _emscripten_glFramebufferTexture2D, "_emscripten_glFrontFace": _emscripten_glFrontFace, "_emscripten_glFrustum": _emscripten_glFrustum, "_emscripten_glGenBuffers": _emscripten_glGenBuffers, "_emscripten_glGenFramebuffers": _emscripten_glGenFramebuffers, "_emscripten_glGenRenderbuffers": _emscripten_glGenRenderbuffers, "_emscripten_glGenTextures": _emscripten_glGenTextures, "_emscripten_glGenVertexArrays": _emscripten_glGenVertexArrays, "_emscripten_glGenerateMipmap": _emscripten_glGenerateMipmap, "_emscripten_glGetActiveAttrib": _emscripten_glGetActiveAttrib, "_emscripten_glGetActiveUniform": _emscripten_glGetActiveUniform, "_emscripten_glGetActiveUniformBlockName": _emscripten_glGetActiveUniformBlockName, "_emscripten_glGetActiveUniformBlockiv": _emscripten_glGetActiveUniformBlockiv, "_emscripten_glGetActiveUniformName": _emscripten_glGetActiveUniformName, "_emscripten_glGetActiveUniformsiv": _emscripten_glGetActiveUniformsiv, "_emscripten_glGetAttachedShaders": _emscripten_glGetAttachedShaders, "_emscripten_glGetAttribLocation": _emscripten_glGetAttribLocation, "_emscripten_glGetBooleani_v": _emscripten_glGetBooleani_v, "_emscripten_glGetBooleanv": _emscripten_glGetBooleanv, "_emscripten_glGetBufferParameteriv": _emscripten_glGetBufferParameteriv, "_emscripten_glGetError": _emscripten_glGetError, "_emscripten_glGetFloatv": _emscripten_glGetFloatv, "_emscripten_glGetFragDataLocation": _emscripten_glGetFragDataLocation, "_emscripten_glGetFramebufferAttachmentParameteriv": _emscripten_glGetFramebufferAttachmentParameteriv, "_emscripten_glGetInfoLogARB": _emscripten_glGetInfoLogARB, "_emscripten_glGetIntegeri_v": _emscripten_glGetIntegeri_v, "_emscripten_glGetIntegerv": _emscripten_glGetIntegerv, "_emscripten_glGetObjectParameterivARB": _emscripten_glGetObjectParameterivARB, "_emscripten_glGetPointerv": _emscripten_glGetPointerv, "_emscripten_glGetProgramInfoLog": _emscripten_glGetProgramInfoLog, "_emscripten_glGetProgramiv": _emscripten_glGetProgramiv, "_emscripten_glGetRenderbufferParameteriv": _emscripten_glGetRenderbufferParameteriv, "_emscripten_glGetShaderInfoLog": _emscripten_glGetShaderInfoLog, "_emscripten_glGetShaderPrecisionFormat": _emscripten_glGetShaderPrecisionFormat, "_emscripten_glGetShaderSource": _emscripten_glGetShaderSource, "_emscripten_glGetShaderiv": _emscripten_glGetShaderiv, "_emscripten_glGetString": _emscripten_glGetString, "_emscripten_glGetStringi": _emscripten_glGetStringi, "_emscripten_glGetTexParameterIiv": _emscripten_glGetTexParameterIiv, "_emscripten_glGetTexParameterIuiv": _emscripten_glGetTexParameterIuiv, "_emscripten_glGetTexParameterfv": _emscripten_glGetTexParameterfv, "_emscripten_glGetTexParameteriv": _emscripten_glGetTexParameteriv, "_emscripten_glGetTransformFeedbackVarying": _emscripten_glGetTransformFeedbackVarying, "_emscripten_glGetUniformBlockIndex": _emscripten_glGetUniformBlockIndex, "_emscripten_glGetUniformIndices": _emscripten_glGetUniformIndices, "_emscripten_glGetUniformLocation": _emscripten_glGetUniformLocation, "_emscripten_glGetUniformfv": _emscripten_glGetUniformfv, "_emscripten_glGetUniformiv": _emscripten_glGetUniformiv, "_emscripten_glGetUniformuiv": _emscripten_glGetUniformuiv, "_emscripten_glGetVertexAttribIiv": _emscripten_glGetVertexAttribIiv, "_emscripten_glGetVertexAttribIuiv": _emscripten_glGetVertexAttribIuiv, "_emscripten_glGetVertexAttribPointerv": _emscripten_glGetVertexAttribPointerv, "_emscripten_glGetVertexAttribfv": _emscripten_glGetVertexAttribfv, "_emscripten_glGetVertexAttribiv": _emscripten_glGetVertexAttribiv, "_emscripten_glHint": _emscripten_glHint, "_emscripten_glIsBuffer": _emscripten_glIsBuffer, "_emscripten_glIsEnabled": _emscripten_glIsEnabled, "_emscripten_glIsEnabledi": _emscripten_glIsEnabledi, "_emscripten_glIsFramebuffer": _emscripten_glIsFramebuffer, "_emscripten_glIsProgram": _emscripten_glIsProgram, "_emscripten_glIsRenderbuffer": _emscripten_glIsRenderbuffer, "_emscripten_glIsShader": _emscripten_glIsShader, "_emscripten_glIsTexture": _emscripten_glIsTexture, "_emscripten_glIsVertexArray": _emscripten_glIsVertexArray, "_emscripten_glLineWidth": _emscripten_glLineWidth, "_emscripten_glLinkProgram": _emscripten_glLinkProgram, "_emscripten_glLoadIdentity": _emscripten_glLoadIdentity, "_emscripten_glLoadMatrixf": _emscripten_glLoadMatrixf, "_emscripten_glMatrixMode": _emscripten_glMatrixMode, "_emscripten_glNormalPointer": _emscripten_glNormalPointer, "_emscripten_glPixelStorei": _emscripten_glPixelStorei, "_emscripten_glPolygonOffset": _emscripten_glPolygonOffset, "_emscripten_glReadPixels": _emscripten_glReadPixels, "_emscripten_glReleaseShaderCompiler": _emscripten_glReleaseShaderCompiler, "_emscripten_glRenderbufferStorage": _emscripten_glRenderbufferStorage, "_emscripten_glRotatef": _emscripten_glRotatef, "_emscripten_glSampleCoverage": _emscripten_glSampleCoverage, "_emscripten_glScissor": _emscripten_glScissor, "_emscripten_glShaderBinary": _emscripten_glShaderBinary, "_emscripten_glShaderSource": _emscripten_glShaderSource, "_emscripten_glStencilFunc": _emscripten_glStencilFunc, "_emscripten_glStencilFuncSeparate": _emscripten_glStencilFuncSeparate, "_emscripten_glStencilMask": _emscripten_glStencilMask, "_emscripten_glStencilMaskSeparate": _emscripten_glStencilMaskSeparate, "_emscripten_glStencilOp": _emscripten_glStencilOp, "_emscripten_glStencilOpSeparate": _emscripten_glStencilOpSeparate, "_emscripten_glTexCoordPointer": _emscripten_glTexCoordPointer, "_emscripten_glTexImage2D": _emscripten_glTexImage2D, "_emscripten_glTexImage3D": _emscripten_glTexImage3D, "_emscripten_glTexParameterIiv": _emscripten_glTexParameterIiv, "_emscripten_glTexParameterIuiv": _emscripten_glTexParameterIuiv, "_emscripten_glTexParameterf": _emscripten_glTexParameterf, "_emscripten_glTexParameterfv": _emscripten_glTexParameterfv, "_emscripten_glTexParameteri": _emscripten_glTexParameteri, "_emscripten_glTexParameteriv": _emscripten_glTexParameteriv, "_emscripten_glTexStorage2D": _emscripten_glTexStorage2D, "_emscripten_glTexStorage3D": _emscripten_glTexStorage3D, "_emscripten_glTexSubImage2D": _emscripten_glTexSubImage2D, "_emscripten_glTexSubImage3D": _emscripten_glTexSubImage3D, "_emscripten_glTransformFeedbackVaryings": _emscripten_glTransformFeedbackVaryings, "_emscripten_glUniform1f": _emscripten_glUniform1f, "_emscripten_glUniform1fv": _emscripten_glUniform1fv, "_emscripten_glUniform1i": _emscripten_glUniform1i, "_emscripten_glUniform1iv": _emscripten_glUniform1iv, "_emscripten_glUniform1ui": _emscripten_glUniform1ui, "_emscripten_glUniform2f": _emscripten_glUniform2f, "_emscripten_glUniform2fv": _emscripten_glUniform2fv, "_emscripten_glUniform2i": _emscripten_glUniform2i, "_emscripten_glUniform2iv": _emscripten_glUniform2iv, "_emscripten_glUniform2ui": _emscripten_glUniform2ui, "_emscripten_glUniform3f": _emscripten_glUniform3f, "_emscripten_glUniform3fv": _emscripten_glUniform3fv, "_emscripten_glUniform3i": _emscripten_glUniform3i, "_emscripten_glUniform3iv": _emscripten_glUniform3iv, "_emscripten_glUniform3ui": _emscripten_glUniform3ui, "_emscripten_glUniform4f": _emscripten_glUniform4f, "_emscripten_glUniform4fv": _emscripten_glUniform4fv, "_emscripten_glUniform4i": _emscripten_glUniform4i, "_emscripten_glUniform4iv": _emscripten_glUniform4iv, "_emscripten_glUniform4ui": _emscripten_glUniform4ui, "_emscripten_glUniformBlockBinding": _emscripten_glUniformBlockBinding, "_emscripten_glUniformMatrix2fv": _emscripten_glUniformMatrix2fv, "_emscripten_glUniformMatrix3fv": _emscripten_glUniformMatrix3fv, "_emscripten_glUniformMatrix4fv": _emscripten_glUniformMatrix4fv, "_emscripten_glUseProgram": _emscripten_glUseProgram, "_emscripten_glValidateProgram": _emscripten_glValidateProgram, "_emscripten_glVertexAttrib1f": _emscripten_glVertexAttrib1f, "_emscripten_glVertexAttrib1fv": _emscripten_glVertexAttrib1fv, "_emscripten_glVertexAttrib2f": _emscripten_glVertexAttrib2f, "_emscripten_glVertexAttrib2fv": _emscripten_glVertexAttrib2fv, "_emscripten_glVertexAttrib3f": _emscripten_glVertexAttrib3f, "_emscripten_glVertexAttrib3fv": _emscripten_glVertexAttrib3fv, "_emscripten_glVertexAttrib4f": _emscripten_glVertexAttrib4f, "_emscripten_glVertexAttrib4fv": _emscripten_glVertexAttrib4fv, "_emscripten_glVertexAttribDivisor": _emscripten_glVertexAttribDivisor, "_emscripten_glVertexAttribI1i": _emscripten_glVertexAttribI1i, "_emscripten_glVertexAttribI1iv": _emscripten_glVertexAttribI1iv, "_emscripten_glVertexAttribI1ui": _emscripten_glVertexAttribI1ui, "_emscripten_glVertexAttribI1uiv": _emscripten_glVertexAttribI1uiv, "_emscripten_glVertexAttribI2i": _emscripten_glVertexAttribI2i, "_emscripten_glVertexAttribI2iv": _emscripten_glVertexAttribI2iv, "_emscripten_glVertexAttribI2ui": _emscripten_glVertexAttribI2ui, "_emscripten_glVertexAttribI2uiv": _emscripten_glVertexAttribI2uiv, "_emscripten_glVertexAttribI3i": _emscripten_glVertexAttribI3i, "_emscripten_glVertexAttribI3iv": _emscripten_glVertexAttribI3iv, "_emscripten_glVertexAttribI3ui": _emscripten_glVertexAttribI3ui, "_emscripten_glVertexAttribI3uiv": _emscripten_glVertexAttribI3uiv, "_emscripten_glVertexAttribI4bv": _emscripten_glVertexAttribI4bv, "_emscripten_glVertexAttribI4i": _emscripten_glVertexAttribI4i, "_emscripten_glVertexAttribI4iv": _emscripten_glVertexAttribI4iv, "_emscripten_glVertexAttribI4sv": _emscripten_glVertexAttribI4sv, "_emscripten_glVertexAttribI4ubv": _emscripten_glVertexAttribI4ubv, "_emscripten_glVertexAttribI4ui": _emscripten_glVertexAttribI4ui, "_emscripten_glVertexAttribI4uiv": _emscripten_glVertexAttribI4uiv, "_emscripten_glVertexAttribI4usv": _emscripten_glVertexAttribI4usv, "_emscripten_glVertexAttribIPointer": _emscripten_glVertexAttribIPointer, "_emscripten_glVertexAttribPointer": _emscripten_glVertexAttribPointer, "_emscripten_glVertexPointer": _emscripten_glVertexPointer, "_emscripten_glViewport": _emscripten_glViewport, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_request_fullscreen_strategy": _emscripten_request_fullscreen_strategy, "_emscripten_request_pointerlock": _emscripten_request_pointerlock, "_emscripten_set_blur_callback": _emscripten_set_blur_callback, "_emscripten_set_canvas_size": _emscripten_set_canvas_size, "_emscripten_set_element_css_size": _emscripten_set_element_css_size, "_emscripten_set_focus_callback": _emscripten_set_focus_callback, "_emscripten_set_fullscreenchange_callback": _emscripten_set_fullscreenchange_callback, "_emscripten_set_gamepadconnected_callback": _emscripten_set_gamepadconnected_callback, "_emscripten_set_gamepaddisconnected_callback": _emscripten_set_gamepaddisconnected_callback, "_emscripten_set_keydown_callback": _emscripten_set_keydown_callback, "_emscripten_set_keypress_callback": _emscripten_set_keypress_callback, "_emscripten_set_keyup_callback": _emscripten_set_keyup_callback, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_emscripten_set_mousedown_callback": _emscripten_set_mousedown_callback, "_emscripten_set_mouseenter_callback": _emscripten_set_mouseenter_callback, "_emscripten_set_mouseleave_callback": _emscripten_set_mouseleave_callback, "_emscripten_set_mousemove_callback": _emscripten_set_mousemove_callback, "_emscripten_set_mouseup_callback": _emscripten_set_mouseup_callback, "_emscripten_set_resize_callback": _emscripten_set_resize_callback, "_emscripten_set_touchcancel_callback": _emscripten_set_touchcancel_callback, "_emscripten_set_touchend_callback": _emscripten_set_touchend_callback, "_emscripten_set_touchmove_callback": _emscripten_set_touchmove_callback, "_emscripten_set_touchstart_callback": _emscripten_set_touchstart_callback, "_emscripten_set_visibilitychange_callback": _emscripten_set_visibilitychange_callback, "_emscripten_set_wheel_callback": _emscripten_set_wheel_callback, "_exit": _exit, "_getenv": _getenv, "_gettimeofday": _gettimeofday, "_glActiveTexture": _glActiveTexture, "_glAttachShader": _glAttachShader, "_glBindBuffer": _glBindBuffer, "_glBindFramebuffer": _glBindFramebuffer, "_glBindRenderbuffer": _glBindRenderbuffer, "_glBindTexture": _glBindTexture, "_glBlendFunc": _glBlendFunc, "_glBufferData": _glBufferData, "_glCheckFramebufferStatus": _glCheckFramebufferStatus, "_glClear": _glClear, "_glClearColor": _glClearColor, "_glColorMask": _glColorMask, "_glCompileShader": _glCompileShader, "_glCreateProgram": _glCreateProgram, "_glCreateShader": _glCreateShader, "_glCullFace": _glCullFace, "_glDeleteBuffers": _glDeleteBuffers, "_glDeleteFramebuffers": _glDeleteFramebuffers, "_glDeleteProgram": _glDeleteProgram, "_glDeleteRenderbuffers": _glDeleteRenderbuffers, "_glDeleteShader": _glDeleteShader, "_glDeleteTextures": _glDeleteTextures, "_glDepthFunc": _glDepthFunc, "_glDepthMask": _glDepthMask, "_glDetachShader": _glDetachShader, "_glDisable": _glDisable, "_glDrawArrays": _glDrawArrays, "_glDrawElements": _glDrawElements, "_glEnable": _glEnable, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_glFramebufferRenderbuffer": _glFramebufferRenderbuffer, "_glFramebufferTexture2D": _glFramebufferTexture2D, "_glGenBuffers": _glGenBuffers, "_glGenFramebuffers": _glGenFramebuffers, "_glGenRenderbuffers": _glGenRenderbuffers, "_glGenTextures": _glGenTextures, "_glGetAttribLocation": _glGetAttribLocation, "_glGetIntegerv": _glGetIntegerv, "_glGetProgramInfoLog": _glGetProgramInfoLog, "_glGetProgramiv": _glGetProgramiv, "_glGetShaderInfoLog": _glGetShaderInfoLog, "_glGetShaderiv": _glGetShaderiv, "_glGetUniformLocation": _glGetUniformLocation, "_glLinkProgram": _glLinkProgram, "_glRenderbufferStorage": _glRenderbufferStorage, "_glShaderSource": _glShaderSource, "_glTexImage2D": _glTexImage2D, "_glTexParameterf": _glTexParameterf, "_glTexParameteri": _glTexParameteri, "_glUniform1f": _glUniform1f, "_glUniform1i": _glUniform1i, "_glUniform2fv": _glUniform2fv, "_glUniform3fv": _glUniform3fv, "_glUniform4fv": _glUniform4fv, "_glUniformMatrix4fv": _glUniformMatrix4fv, "_glUseProgram": _glUseProgram, "_glVertexAttribPointer": _glVertexAttribPointer, "_glViewport": _glViewport, "_glutCreateWindow": _glutCreateWindow, "_glutDestroyWindow": _glutDestroyWindow, "_glutInitDisplayMode": _glutInitDisplayMode, "_llvm_ceil_f32": _llvm_ceil_f32, "_llvm_ceil_f64": _llvm_ceil_f64, "_llvm_cos_f32": _llvm_cos_f32, "_llvm_cos_f64": _llvm_cos_f64, "_llvm_fabs_f32": _llvm_fabs_f32, "_llvm_fabs_f64": _llvm_fabs_f64, "_llvm_floor_f64": _llvm_floor_f64, "_llvm_sin_f32": _llvm_sin_f32, "_llvm_sin_f64": _llvm_sin_f64, "_llvm_sqrt_f32": _llvm_sqrt_f32, "_llvm_sqrt_f64": _llvm_sqrt_f64, "_llvm_stackrestore": _llvm_stackrestore, "_llvm_stacksave": _llvm_stacksave, "_llvm_trap": _llvm_trap, "_nanosleep": _nanosleep, "_pthread_cond_wait": _pthread_cond_wait, "_pthread_create": _pthread_create, "_pthread_getspecific": _pthread_getspecific, "_pthread_join": _pthread_join, "_pthread_key_create": _pthread_key_create, "_pthread_mutex_destroy": _pthread_mutex_destroy, "_pthread_once": _pthread_once, "_pthread_setspecific": _pthread_setspecific, "_sched_yield": _sched_yield, "_sigaction": _sigaction, "_signal": _signal, "_strftime": _strftime, "_strftime_l": _strftime_l, "_sysconf": _sysconf, "_usleep": _usleep, "emscriptenWebGLComputeImageSize": emscriptenWebGLComputeImageSize, "emscriptenWebGLGet": emscriptenWebGLGet, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "emscriptenWebGLGetUniform": emscriptenWebGLGetUniform, "emscriptenWebGLGetVertexAttrib": emscriptenWebGLGetVertexAttrib, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX };
+Module.asmLibraryArg = { "abort": abort, "assert": assert, "enlargeMemory": enlargeMemory, "getTotalMemory": getTotalMemory, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "nullFunc_fi": nullFunc_fi, "nullFunc_i": nullFunc_i, "nullFunc_ii": nullFunc_ii, "nullFunc_iiffi": nullFunc_iiffi, "nullFunc_iii": nullFunc_iii, "nullFunc_iiid": nullFunc_iiid, "nullFunc_iiif": nullFunc_iiif, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiidii": nullFunc_iiiiidii, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiiiiiii": nullFunc_iiiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_iiij": nullFunc_iiij, "nullFunc_ji": nullFunc_ji, "nullFunc_jii": nullFunc_jii, "nullFunc_jiji": nullFunc_jiji, "nullFunc_v": nullFunc_v, "nullFunc_vd": nullFunc_vd, "nullFunc_vdd": nullFunc_vdd, "nullFunc_vdddddd": nullFunc_vdddddd, "nullFunc_vf": nullFunc_vf, "nullFunc_vff": nullFunc_vff, "nullFunc_vffff": nullFunc_vffff, "nullFunc_vfi": nullFunc_vfi, "nullFunc_vi": nullFunc_vi, "nullFunc_vif": nullFunc_vif, "nullFunc_viff": nullFunc_viff, "nullFunc_vifff": nullFunc_vifff, "nullFunc_viffff": nullFunc_viffff, "nullFunc_vifffiiii": nullFunc_vifffiiii, "nullFunc_vifi": nullFunc_vifi, "nullFunc_vii": nullFunc_vii, "nullFunc_viidi": nullFunc_viidi, "nullFunc_viidijj": nullFunc_viidijj, "nullFunc_viif": nullFunc_viif, "nullFunc_viifi": nullFunc_viifi, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viiiiiii": nullFunc_viiiiiii, "nullFunc_viiiiiiii": nullFunc_viiiiiiii, "nullFunc_viiiiiiiii": nullFunc_viiiiiiiii, "nullFunc_viiiiiiiiii": nullFunc_viiiiiiiiii, "nullFunc_viiiiiiiiiii": nullFunc_viiiiiiiiiii, "nullFunc_viiij": nullFunc_viiij, "nullFunc_viij": nullFunc_viij, "nullFunc_viijii": nullFunc_viijii, "nullFunc_vij": nullFunc_vij, "nullFunc_vijddd": nullFunc_vijddd, "nullFunc_vijj": nullFunc_vijj, "invoke_fi": invoke_fi, "invoke_i": invoke_i, "invoke_ii": invoke_ii, "invoke_iiffi": invoke_iiffi, "invoke_iii": invoke_iii, "invoke_iiid": invoke_iiid, "invoke_iiif": invoke_iiif, "invoke_iiii": invoke_iiii, "invoke_iiiii": invoke_iiiii, "invoke_iiiiid": invoke_iiiiid, "invoke_iiiiidii": invoke_iiiiidii, "invoke_iiiiii": invoke_iiiiii, "invoke_iiiiiid": invoke_iiiiiid, "invoke_iiiiiii": invoke_iiiiiii, "invoke_iiiiiiii": invoke_iiiiiiii, "invoke_iiiiiiiii": invoke_iiiiiiiii, "invoke_iiiiiiiiii": invoke_iiiiiiiiii, "invoke_iiiiij": invoke_iiiiij, "invoke_iiij": invoke_iiij, "invoke_ji": invoke_ji, "invoke_jii": invoke_jii, "invoke_jiji": invoke_jiji, "invoke_v": invoke_v, "invoke_vd": invoke_vd, "invoke_vdd": invoke_vdd, "invoke_vdddddd": invoke_vdddddd, "invoke_vf": invoke_vf, "invoke_vff": invoke_vff, "invoke_vffff": invoke_vffff, "invoke_vfi": invoke_vfi, "invoke_vi": invoke_vi, "invoke_vif": invoke_vif, "invoke_viff": invoke_viff, "invoke_vifff": invoke_vifff, "invoke_viffff": invoke_viffff, "invoke_vifffiiii": invoke_vifffiiii, "invoke_vifi": invoke_vifi, "invoke_vii": invoke_vii, "invoke_viidi": invoke_viidi, "invoke_viidijj": invoke_viidijj, "invoke_viif": invoke_viif, "invoke_viifi": invoke_viifi, "invoke_viii": invoke_viii, "invoke_viiii": invoke_viiii, "invoke_viiiii": invoke_viiiii, "invoke_viiiiii": invoke_viiiiii, "invoke_viiiiiii": invoke_viiiiiii, "invoke_viiiiiiii": invoke_viiiiiiii, "invoke_viiiiiiiii": invoke_viiiiiiiii, "invoke_viiiiiiiiii": invoke_viiiiiiiiii, "invoke_viiiiiiiiiii": invoke_viiiiiiiiiii, "invoke_viiij": invoke_viiij, "invoke_viij": invoke_viij, "invoke_viijii": invoke_viijii, "invoke_vij": invoke_vij, "invoke_vijddd": invoke_vijddd, "invoke_vijj": invoke_vijj, "_Mix_FreeChunk": _Mix_FreeChunk, "_Mix_FreeMusic": _Mix_FreeMusic, "_Mix_HaltChannel": _Mix_HaltChannel, "_Mix_HaltMusic": _Mix_HaltMusic, "_Mix_LoadMUS": _Mix_LoadMUS, "_Mix_LoadMUS_RW": _Mix_LoadMUS_RW, "_Mix_LoadWAV_RW": _Mix_LoadWAV_RW, "_Mix_OpenAudio": _Mix_OpenAudio, "_Mix_Pause": _Mix_Pause, "_Mix_PauseMusic": _Mix_PauseMusic, "_Mix_Paused": _Mix_Paused, "_Mix_PausedMusic": _Mix_PausedMusic, "_Mix_PlayChannel": _Mix_PlayChannel, "_Mix_PlayChannelTimed": _Mix_PlayChannelTimed, "_Mix_PlayMusic": _Mix_PlayMusic, "_Mix_Playing": _Mix_Playing, "_Mix_PlayingMusic": _Mix_PlayingMusic, "_Mix_Quit": _Mix_Quit, "_Mix_Resume": _Mix_Resume, "_Mix_Volume": _Mix_Volume, "_Mix_VolumeMusic": _Mix_VolumeMusic, "_SDL_FreeRW": _SDL_FreeRW, "___assert_fail": ___assert_fail, "___buildEnvironment": ___buildEnvironment, "___cxa_allocate_exception": ___cxa_allocate_exception, "___cxa_begin_catch": ___cxa_begin_catch, "___cxa_find_matching_catch": ___cxa_find_matching_catch, "___cxa_pure_virtual": ___cxa_pure_virtual, "___cxa_throw": ___cxa_throw, "___cxa_uncaught_exception": ___cxa_uncaught_exception, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___resumeException": ___resumeException, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall146": ___syscall146, "___syscall221": ___syscall221, "___syscall5": ___syscall5, "___syscall54": ___syscall54, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "__addDays": __addDays, "__arraySum": __arraySum, "__emscripten_sample_gamepad_data": __emscripten_sample_gamepad_data, "__exit": __exit, "__isLeapYear": __isLeapYear, "__registerRestoreOldStyle": __registerRestoreOldStyle, "__setLetterbox": __setLetterbox, "_abort": _abort, "_clock_gettime": _clock_gettime, "_dlclose": _dlclose, "_dlerror": _dlerror, "_dlsym": _dlsym, "_eglBindAPI": _eglBindAPI, "_eglChooseConfig": _eglChooseConfig, "_eglCreateContext": _eglCreateContext, "_eglCreateWindowSurface": _eglCreateWindowSurface, "_eglDestroyContext": _eglDestroyContext, "_eglDestroySurface": _eglDestroySurface, "_eglGetConfigAttrib": _eglGetConfigAttrib, "_eglGetDisplay": _eglGetDisplay, "_eglGetProcAddress": _eglGetProcAddress, "_eglInitialize": _eglInitialize, "_eglMakeCurrent": _eglMakeCurrent, "_eglSwapBuffers": _eglSwapBuffers, "_eglSwapInterval": _eglSwapInterval, "_eglTerminate": _eglTerminate, "_eglWaitClient": _eglWaitClient, "_eglWaitGL": _eglWaitGL, "_eglWaitNative": _eglWaitNative, "_emscripten_asm_const_i": _emscripten_asm_const_i, "_emscripten_asm_const_ii": _emscripten_asm_const_ii, "_emscripten_asm_const_iii": _emscripten_asm_const_iii, "_emscripten_asm_const_iiii": _emscripten_asm_const_iiii, "_emscripten_asm_const_iiiii": _emscripten_asm_const_iiiii, "_emscripten_cancel_main_loop": _emscripten_cancel_main_loop, "_emscripten_do_request_fullscreen": _emscripten_do_request_fullscreen, "_emscripten_exit_fullscreen": _emscripten_exit_fullscreen, "_emscripten_exit_pointerlock": _emscripten_exit_pointerlock, "_emscripten_get_canvas_element_size": _emscripten_get_canvas_element_size, "_emscripten_get_device_pixel_ratio": _emscripten_get_device_pixel_ratio, "_emscripten_get_element_css_size": _emscripten_get_element_css_size, "_emscripten_get_gamepad_status": _emscripten_get_gamepad_status, "_emscripten_get_now": _emscripten_get_now, "_emscripten_get_now_is_monotonic": _emscripten_get_now_is_monotonic, "_emscripten_get_num_gamepads": _emscripten_get_num_gamepads, "_emscripten_get_pointerlock_status": _emscripten_get_pointerlock_status, "_emscripten_glActiveTexture": _emscripten_glActiveTexture, "_emscripten_glAttachShader": _emscripten_glAttachShader, "_emscripten_glBeginConditionalRender": _emscripten_glBeginConditionalRender, "_emscripten_glBeginTransformFeedback": _emscripten_glBeginTransformFeedback, "_emscripten_glBindAttribLocation": _emscripten_glBindAttribLocation, "_emscripten_glBindBuffer": _emscripten_glBindBuffer, "_emscripten_glBindBufferBase": _emscripten_glBindBufferBase, "_emscripten_glBindBufferRange": _emscripten_glBindBufferRange, "_emscripten_glBindFragDataLocation": _emscripten_glBindFragDataLocation, "_emscripten_glBindFramebuffer": _emscripten_glBindFramebuffer, "_emscripten_glBindProgramARB": _emscripten_glBindProgramARB, "_emscripten_glBindRenderbuffer": _emscripten_glBindRenderbuffer, "_emscripten_glBindTexture": _emscripten_glBindTexture, "_emscripten_glBindVertexArray": _emscripten_glBindVertexArray, "_emscripten_glBlendColor": _emscripten_glBlendColor, "_emscripten_glBlendEquation": _emscripten_glBlendEquation, "_emscripten_glBlendEquationSeparate": _emscripten_glBlendEquationSeparate, "_emscripten_glBlendFunc": _emscripten_glBlendFunc, "_emscripten_glBlendFuncSeparate": _emscripten_glBlendFuncSeparate, "_emscripten_glBufferData": _emscripten_glBufferData, "_emscripten_glBufferSubData": _emscripten_glBufferSubData, "_emscripten_glCheckFramebufferStatus": _emscripten_glCheckFramebufferStatus, "_emscripten_glClampColor": _emscripten_glClampColor, "_emscripten_glClear": _emscripten_glClear, "_emscripten_glClearBufferfi": _emscripten_glClearBufferfi, "_emscripten_glClearBufferfv": _emscripten_glClearBufferfv, "_emscripten_glClearBufferiv": _emscripten_glClearBufferiv, "_emscripten_glClearBufferuiv": _emscripten_glClearBufferuiv, "_emscripten_glClearColor": _emscripten_glClearColor, "_emscripten_glClearDepth": _emscripten_glClearDepth, "_emscripten_glClearDepthf": _emscripten_glClearDepthf, "_emscripten_glClearStencil": _emscripten_glClearStencil, "_emscripten_glClientActiveTexture": _emscripten_glClientActiveTexture, "_emscripten_glColorMask": _emscripten_glColorMask, "_emscripten_glColorMaski": _emscripten_glColorMaski, "_emscripten_glColorPointer": _emscripten_glColorPointer, "_emscripten_glCompileShader": _emscripten_glCompileShader, "_emscripten_glCompressedTexImage2D": _emscripten_glCompressedTexImage2D, "_emscripten_glCompressedTexSubImage2D": _emscripten_glCompressedTexSubImage2D, "_emscripten_glCopyTexImage2D": _emscripten_glCopyTexImage2D, "_emscripten_glCopyTexSubImage2D": _emscripten_glCopyTexSubImage2D, "_emscripten_glCreateProgram": _emscripten_glCreateProgram, "_emscripten_glCreateShader": _emscripten_glCreateShader, "_emscripten_glCullFace": _emscripten_glCullFace, "_emscripten_glDeleteBuffers": _emscripten_glDeleteBuffers, "_emscripten_glDeleteFramebuffers": _emscripten_glDeleteFramebuffers, "_emscripten_glDeleteObjectARB": _emscripten_glDeleteObjectARB, "_emscripten_glDeleteProgram": _emscripten_glDeleteProgram, "_emscripten_glDeleteRenderbuffers": _emscripten_glDeleteRenderbuffers, "_emscripten_glDeleteShader": _emscripten_glDeleteShader, "_emscripten_glDeleteTextures": _emscripten_glDeleteTextures, "_emscripten_glDeleteVertexArrays": _emscripten_glDeleteVertexArrays, "_emscripten_glDepthFunc": _emscripten_glDepthFunc, "_emscripten_glDepthMask": _emscripten_glDepthMask, "_emscripten_glDepthRange": _emscripten_glDepthRange, "_emscripten_glDepthRangef": _emscripten_glDepthRangef, "_emscripten_glDetachShader": _emscripten_glDetachShader, "_emscripten_glDisable": _emscripten_glDisable, "_emscripten_glDisableVertexAttribArray": _emscripten_glDisableVertexAttribArray, "_emscripten_glDisablei": _emscripten_glDisablei, "_emscripten_glDrawArrays": _emscripten_glDrawArrays, "_emscripten_glDrawArraysInstanced": _emscripten_glDrawArraysInstanced, "_emscripten_glDrawBuffers": _emscripten_glDrawBuffers, "_emscripten_glDrawElements": _emscripten_glDrawElements, "_emscripten_glDrawElementsInstanced": _emscripten_glDrawElementsInstanced, "_emscripten_glDrawRangeElements": _emscripten_glDrawRangeElements, "_emscripten_glEnable": _emscripten_glEnable, "_emscripten_glEnableClientState": _emscripten_glEnableClientState, "_emscripten_glEnableVertexAttribArray": _emscripten_glEnableVertexAttribArray, "_emscripten_glEnablei": _emscripten_glEnablei, "_emscripten_glEndConditionalRender": _emscripten_glEndConditionalRender, "_emscripten_glEndTransformFeedback": _emscripten_glEndTransformFeedback, "_emscripten_glFinish": _emscripten_glFinish, "_emscripten_glFlush": _emscripten_glFlush, "_emscripten_glFramebufferRenderbuffer": _emscripten_glFramebufferRenderbuffer, "_emscripten_glFramebufferTexture2D": _emscripten_glFramebufferTexture2D, "_emscripten_glFrontFace": _emscripten_glFrontFace, "_emscripten_glFrustum": _emscripten_glFrustum, "_emscripten_glGenBuffers": _emscripten_glGenBuffers, "_emscripten_glGenFramebuffers": _emscripten_glGenFramebuffers, "_emscripten_glGenRenderbuffers": _emscripten_glGenRenderbuffers, "_emscripten_glGenTextures": _emscripten_glGenTextures, "_emscripten_glGenVertexArrays": _emscripten_glGenVertexArrays, "_emscripten_glGenerateMipmap": _emscripten_glGenerateMipmap, "_emscripten_glGetActiveAttrib": _emscripten_glGetActiveAttrib, "_emscripten_glGetActiveUniform": _emscripten_glGetActiveUniform, "_emscripten_glGetActiveUniformBlockName": _emscripten_glGetActiveUniformBlockName, "_emscripten_glGetActiveUniformBlockiv": _emscripten_glGetActiveUniformBlockiv, "_emscripten_glGetActiveUniformName": _emscripten_glGetActiveUniformName, "_emscripten_glGetActiveUniformsiv": _emscripten_glGetActiveUniformsiv, "_emscripten_glGetAttachedShaders": _emscripten_glGetAttachedShaders, "_emscripten_glGetAttribLocation": _emscripten_glGetAttribLocation, "_emscripten_glGetBooleani_v": _emscripten_glGetBooleani_v, "_emscripten_glGetBooleanv": _emscripten_glGetBooleanv, "_emscripten_glGetBufferParameteriv": _emscripten_glGetBufferParameteriv, "_emscripten_glGetError": _emscripten_glGetError, "_emscripten_glGetFloatv": _emscripten_glGetFloatv, "_emscripten_glGetFragDataLocation": _emscripten_glGetFragDataLocation, "_emscripten_glGetFramebufferAttachmentParameteriv": _emscripten_glGetFramebufferAttachmentParameteriv, "_emscripten_glGetInfoLogARB": _emscripten_glGetInfoLogARB, "_emscripten_glGetIntegeri_v": _emscripten_glGetIntegeri_v, "_emscripten_glGetIntegerv": _emscripten_glGetIntegerv, "_emscripten_glGetObjectParameterivARB": _emscripten_glGetObjectParameterivARB, "_emscripten_glGetPointerv": _emscripten_glGetPointerv, "_emscripten_glGetProgramInfoLog": _emscripten_glGetProgramInfoLog, "_emscripten_glGetProgramiv": _emscripten_glGetProgramiv, "_emscripten_glGetRenderbufferParameteriv": _emscripten_glGetRenderbufferParameteriv, "_emscripten_glGetShaderInfoLog": _emscripten_glGetShaderInfoLog, "_emscripten_glGetShaderPrecisionFormat": _emscripten_glGetShaderPrecisionFormat, "_emscripten_glGetShaderSource": _emscripten_glGetShaderSource, "_emscripten_glGetShaderiv": _emscripten_glGetShaderiv, "_emscripten_glGetString": _emscripten_glGetString, "_emscripten_glGetStringi": _emscripten_glGetStringi, "_emscripten_glGetTexParameterIiv": _emscripten_glGetTexParameterIiv, "_emscripten_glGetTexParameterIuiv": _emscripten_glGetTexParameterIuiv, "_emscripten_glGetTexParameterfv": _emscripten_glGetTexParameterfv, "_emscripten_glGetTexParameteriv": _emscripten_glGetTexParameteriv, "_emscripten_glGetTransformFeedbackVarying": _emscripten_glGetTransformFeedbackVarying, "_emscripten_glGetUniformBlockIndex": _emscripten_glGetUniformBlockIndex, "_emscripten_glGetUniformIndices": _emscripten_glGetUniformIndices, "_emscripten_glGetUniformLocation": _emscripten_glGetUniformLocation, "_emscripten_glGetUniformfv": _emscripten_glGetUniformfv, "_emscripten_glGetUniformiv": _emscripten_glGetUniformiv, "_emscripten_glGetUniformuiv": _emscripten_glGetUniformuiv, "_emscripten_glGetVertexAttribIiv": _emscripten_glGetVertexAttribIiv, "_emscripten_glGetVertexAttribIuiv": _emscripten_glGetVertexAttribIuiv, "_emscripten_glGetVertexAttribPointerv": _emscripten_glGetVertexAttribPointerv, "_emscripten_glGetVertexAttribfv": _emscripten_glGetVertexAttribfv, "_emscripten_glGetVertexAttribiv": _emscripten_glGetVertexAttribiv, "_emscripten_glHint": _emscripten_glHint, "_emscripten_glIsBuffer": _emscripten_glIsBuffer, "_emscripten_glIsEnabled": _emscripten_glIsEnabled, "_emscripten_glIsEnabledi": _emscripten_glIsEnabledi, "_emscripten_glIsFramebuffer": _emscripten_glIsFramebuffer, "_emscripten_glIsProgram": _emscripten_glIsProgram, "_emscripten_glIsRenderbuffer": _emscripten_glIsRenderbuffer, "_emscripten_glIsShader": _emscripten_glIsShader, "_emscripten_glIsTexture": _emscripten_glIsTexture, "_emscripten_glIsVertexArray": _emscripten_glIsVertexArray, "_emscripten_glLineWidth": _emscripten_glLineWidth, "_emscripten_glLinkProgram": _emscripten_glLinkProgram, "_emscripten_glLoadIdentity": _emscripten_glLoadIdentity, "_emscripten_glLoadMatrixf": _emscripten_glLoadMatrixf, "_emscripten_glMatrixMode": _emscripten_glMatrixMode, "_emscripten_glNormalPointer": _emscripten_glNormalPointer, "_emscripten_glPixelStorei": _emscripten_glPixelStorei, "_emscripten_glPolygonOffset": _emscripten_glPolygonOffset, "_emscripten_glReadPixels": _emscripten_glReadPixels, "_emscripten_glReleaseShaderCompiler": _emscripten_glReleaseShaderCompiler, "_emscripten_glRenderbufferStorage": _emscripten_glRenderbufferStorage, "_emscripten_glRotatef": _emscripten_glRotatef, "_emscripten_glSampleCoverage": _emscripten_glSampleCoverage, "_emscripten_glScissor": _emscripten_glScissor, "_emscripten_glShaderBinary": _emscripten_glShaderBinary, "_emscripten_glShaderSource": _emscripten_glShaderSource, "_emscripten_glStencilFunc": _emscripten_glStencilFunc, "_emscripten_glStencilFuncSeparate": _emscripten_glStencilFuncSeparate, "_emscripten_glStencilMask": _emscripten_glStencilMask, "_emscripten_glStencilMaskSeparate": _emscripten_glStencilMaskSeparate, "_emscripten_glStencilOp": _emscripten_glStencilOp, "_emscripten_glStencilOpSeparate": _emscripten_glStencilOpSeparate, "_emscripten_glTexCoordPointer": _emscripten_glTexCoordPointer, "_emscripten_glTexImage2D": _emscripten_glTexImage2D, "_emscripten_glTexImage3D": _emscripten_glTexImage3D, "_emscripten_glTexParameterIiv": _emscripten_glTexParameterIiv, "_emscripten_glTexParameterIuiv": _emscripten_glTexParameterIuiv, "_emscripten_glTexParameterf": _emscripten_glTexParameterf, "_emscripten_glTexParameterfv": _emscripten_glTexParameterfv, "_emscripten_glTexParameteri": _emscripten_glTexParameteri, "_emscripten_glTexParameteriv": _emscripten_glTexParameteriv, "_emscripten_glTexStorage2D": _emscripten_glTexStorage2D, "_emscripten_glTexStorage3D": _emscripten_glTexStorage3D, "_emscripten_glTexSubImage2D": _emscripten_glTexSubImage2D, "_emscripten_glTexSubImage3D": _emscripten_glTexSubImage3D, "_emscripten_glTransformFeedbackVaryings": _emscripten_glTransformFeedbackVaryings, "_emscripten_glUniform1f": _emscripten_glUniform1f, "_emscripten_glUniform1fv": _emscripten_glUniform1fv, "_emscripten_glUniform1i": _emscripten_glUniform1i, "_emscripten_glUniform1iv": _emscripten_glUniform1iv, "_emscripten_glUniform1ui": _emscripten_glUniform1ui, "_emscripten_glUniform2f": _emscripten_glUniform2f, "_emscripten_glUniform2fv": _emscripten_glUniform2fv, "_emscripten_glUniform2i": _emscripten_glUniform2i, "_emscripten_glUniform2iv": _emscripten_glUniform2iv, "_emscripten_glUniform2ui": _emscripten_glUniform2ui, "_emscripten_glUniform3f": _emscripten_glUniform3f, "_emscripten_glUniform3fv": _emscripten_glUniform3fv, "_emscripten_glUniform3i": _emscripten_glUniform3i, "_emscripten_glUniform3iv": _emscripten_glUniform3iv, "_emscripten_glUniform3ui": _emscripten_glUniform3ui, "_emscripten_glUniform4f": _emscripten_glUniform4f, "_emscripten_glUniform4fv": _emscripten_glUniform4fv, "_emscripten_glUniform4i": _emscripten_glUniform4i, "_emscripten_glUniform4iv": _emscripten_glUniform4iv, "_emscripten_glUniform4ui": _emscripten_glUniform4ui, "_emscripten_glUniformBlockBinding": _emscripten_glUniformBlockBinding, "_emscripten_glUniformMatrix2fv": _emscripten_glUniformMatrix2fv, "_emscripten_glUniformMatrix3fv": _emscripten_glUniformMatrix3fv, "_emscripten_glUniformMatrix4fv": _emscripten_glUniformMatrix4fv, "_emscripten_glUseProgram": _emscripten_glUseProgram, "_emscripten_glValidateProgram": _emscripten_glValidateProgram, "_emscripten_glVertexAttrib1f": _emscripten_glVertexAttrib1f, "_emscripten_glVertexAttrib1fv": _emscripten_glVertexAttrib1fv, "_emscripten_glVertexAttrib2f": _emscripten_glVertexAttrib2f, "_emscripten_glVertexAttrib2fv": _emscripten_glVertexAttrib2fv, "_emscripten_glVertexAttrib3f": _emscripten_glVertexAttrib3f, "_emscripten_glVertexAttrib3fv": _emscripten_glVertexAttrib3fv, "_emscripten_glVertexAttrib4f": _emscripten_glVertexAttrib4f, "_emscripten_glVertexAttrib4fv": _emscripten_glVertexAttrib4fv, "_emscripten_glVertexAttribDivisor": _emscripten_glVertexAttribDivisor, "_emscripten_glVertexAttribI1i": _emscripten_glVertexAttribI1i, "_emscripten_glVertexAttribI1iv": _emscripten_glVertexAttribI1iv, "_emscripten_glVertexAttribI1ui": _emscripten_glVertexAttribI1ui, "_emscripten_glVertexAttribI1uiv": _emscripten_glVertexAttribI1uiv, "_emscripten_glVertexAttribI2i": _emscripten_glVertexAttribI2i, "_emscripten_glVertexAttribI2iv": _emscripten_glVertexAttribI2iv, "_emscripten_glVertexAttribI2ui": _emscripten_glVertexAttribI2ui, "_emscripten_glVertexAttribI2uiv": _emscripten_glVertexAttribI2uiv, "_emscripten_glVertexAttribI3i": _emscripten_glVertexAttribI3i, "_emscripten_glVertexAttribI3iv": _emscripten_glVertexAttribI3iv, "_emscripten_glVertexAttribI3ui": _emscripten_glVertexAttribI3ui, "_emscripten_glVertexAttribI3uiv": _emscripten_glVertexAttribI3uiv, "_emscripten_glVertexAttribI4bv": _emscripten_glVertexAttribI4bv, "_emscripten_glVertexAttribI4i": _emscripten_glVertexAttribI4i, "_emscripten_glVertexAttribI4iv": _emscripten_glVertexAttribI4iv, "_emscripten_glVertexAttribI4sv": _emscripten_glVertexAttribI4sv, "_emscripten_glVertexAttribI4ubv": _emscripten_glVertexAttribI4ubv, "_emscripten_glVertexAttribI4ui": _emscripten_glVertexAttribI4ui, "_emscripten_glVertexAttribI4uiv": _emscripten_glVertexAttribI4uiv, "_emscripten_glVertexAttribI4usv": _emscripten_glVertexAttribI4usv, "_emscripten_glVertexAttribIPointer": _emscripten_glVertexAttribIPointer, "_emscripten_glVertexAttribPointer": _emscripten_glVertexAttribPointer, "_emscripten_glVertexPointer": _emscripten_glVertexPointer, "_emscripten_glViewport": _emscripten_glViewport, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_request_fullscreen_strategy": _emscripten_request_fullscreen_strategy, "_emscripten_request_pointerlock": _emscripten_request_pointerlock, "_emscripten_set_blur_callback": _emscripten_set_blur_callback, "_emscripten_set_canvas_size": _emscripten_set_canvas_size, "_emscripten_set_element_css_size": _emscripten_set_element_css_size, "_emscripten_set_focus_callback": _emscripten_set_focus_callback, "_emscripten_set_fullscreenchange_callback": _emscripten_set_fullscreenchange_callback, "_emscripten_set_gamepadconnected_callback": _emscripten_set_gamepadconnected_callback, "_emscripten_set_gamepaddisconnected_callback": _emscripten_set_gamepaddisconnected_callback, "_emscripten_set_keydown_callback": _emscripten_set_keydown_callback, "_emscripten_set_keypress_callback": _emscripten_set_keypress_callback, "_emscripten_set_keyup_callback": _emscripten_set_keyup_callback, "_emscripten_set_main_loop": _emscripten_set_main_loop, "_emscripten_set_main_loop_timing": _emscripten_set_main_loop_timing, "_emscripten_set_mousedown_callback": _emscripten_set_mousedown_callback, "_emscripten_set_mouseenter_callback": _emscripten_set_mouseenter_callback, "_emscripten_set_mouseleave_callback": _emscripten_set_mouseleave_callback, "_emscripten_set_mousemove_callback": _emscripten_set_mousemove_callback, "_emscripten_set_mouseup_callback": _emscripten_set_mouseup_callback, "_emscripten_set_resize_callback": _emscripten_set_resize_callback, "_emscripten_set_touchcancel_callback": _emscripten_set_touchcancel_callback, "_emscripten_set_touchend_callback": _emscripten_set_touchend_callback, "_emscripten_set_touchmove_callback": _emscripten_set_touchmove_callback, "_emscripten_set_touchstart_callback": _emscripten_set_touchstart_callback, "_emscripten_set_visibilitychange_callback": _emscripten_set_visibilitychange_callback, "_emscripten_set_wheel_callback": _emscripten_set_wheel_callback, "_exit": _exit, "_getenv": _getenv, "_gettimeofday": _gettimeofday, "_glActiveTexture": _glActiveTexture, "_glAttachShader": _glAttachShader, "_glBindBuffer": _glBindBuffer, "_glBindFramebuffer": _glBindFramebuffer, "_glBindRenderbuffer": _glBindRenderbuffer, "_glBindTexture": _glBindTexture, "_glBlendFunc": _glBlendFunc, "_glBufferData": _glBufferData, "_glCheckFramebufferStatus": _glCheckFramebufferStatus, "_glClear": _glClear, "_glClearColor": _glClearColor, "_glColorMask": _glColorMask, "_glCompileShader": _glCompileShader, "_glCreateProgram": _glCreateProgram, "_glCreateShader": _glCreateShader, "_glCullFace": _glCullFace, "_glDeleteBuffers": _glDeleteBuffers, "_glDeleteFramebuffers": _glDeleteFramebuffers, "_glDeleteProgram": _glDeleteProgram, "_glDeleteRenderbuffers": _glDeleteRenderbuffers, "_glDeleteShader": _glDeleteShader, "_glDeleteTextures": _glDeleteTextures, "_glDepthFunc": _glDepthFunc, "_glDepthMask": _glDepthMask, "_glDetachShader": _glDetachShader, "_glDisable": _glDisable, "_glDrawArrays": _glDrawArrays, "_glDrawElements": _glDrawElements, "_glEnable": _glEnable, "_glEnableVertexAttribArray": _glEnableVertexAttribArray, "_glFramebufferRenderbuffer": _glFramebufferRenderbuffer, "_glFramebufferTexture2D": _glFramebufferTexture2D, "_glGenBuffers": _glGenBuffers, "_glGenFramebuffers": _glGenFramebuffers, "_glGenRenderbuffers": _glGenRenderbuffers, "_glGenTextures": _glGenTextures, "_glGetAttribLocation": _glGetAttribLocation, "_glGetIntegerv": _glGetIntegerv, "_glGetProgramInfoLog": _glGetProgramInfoLog, "_glGetProgramiv": _glGetProgramiv, "_glGetShaderInfoLog": _glGetShaderInfoLog, "_glGetShaderiv": _glGetShaderiv, "_glGetUniformLocation": _glGetUniformLocation, "_glLinkProgram": _glLinkProgram, "_glRenderbufferStorage": _glRenderbufferStorage, "_glShaderSource": _glShaderSource, "_glTexImage2D": _glTexImage2D, "_glTexParameterf": _glTexParameterf, "_glTexParameteri": _glTexParameteri, "_glUniform1f": _glUniform1f, "_glUniform1i": _glUniform1i, "_glUniform2fv": _glUniform2fv, "_glUniform3fv": _glUniform3fv, "_glUniform4fv": _glUniform4fv, "_glUniformMatrix4fv": _glUniformMatrix4fv, "_glUseProgram": _glUseProgram, "_glVertexAttribPointer": _glVertexAttribPointer, "_glViewport": _glViewport, "_glutCreateWindow": _glutCreateWindow, "_glutDestroyWindow": _glutDestroyWindow, "_glutInitDisplayMode": _glutInitDisplayMode, "_llvm_ceil_f32": _llvm_ceil_f32, "_llvm_ceil_f64": _llvm_ceil_f64, "_llvm_cos_f32": _llvm_cos_f32, "_llvm_cos_f64": _llvm_cos_f64, "_llvm_fabs_f32": _llvm_fabs_f32, "_llvm_fabs_f64": _llvm_fabs_f64, "_llvm_floor_f64": _llvm_floor_f64, "_llvm_sin_f32": _llvm_sin_f32, "_llvm_sin_f64": _llvm_sin_f64, "_llvm_sqrt_f32": _llvm_sqrt_f32, "_llvm_sqrt_f64": _llvm_sqrt_f64, "_llvm_stackrestore": _llvm_stackrestore, "_llvm_stacksave": _llvm_stacksave, "_llvm_trap": _llvm_trap, "_nanosleep": _nanosleep, "_pthread_cond_wait": _pthread_cond_wait, "_pthread_create": _pthread_create, "_pthread_getspecific": _pthread_getspecific, "_pthread_join": _pthread_join, "_pthread_key_create": _pthread_key_create, "_pthread_mutex_destroy": _pthread_mutex_destroy, "_pthread_once": _pthread_once, "_pthread_setspecific": _pthread_setspecific, "_sched_yield": _sched_yield, "_sigaction": _sigaction, "_signal": _signal, "_strftime": _strftime, "_strftime_l": _strftime_l, "_sysconf": _sysconf, "_usleep": _usleep, "emscriptenWebGLComputeImageSize": emscriptenWebGLComputeImageSize, "emscriptenWebGLGet": emscriptenWebGLGet, "emscriptenWebGLGetTexPixelData": emscriptenWebGLGetTexPixelData, "emscriptenWebGLGetUniform": emscriptenWebGLGetUniform, "emscriptenWebGLGetVertexAttrib": emscriptenWebGLGetVertexAttrib, "DYNAMICTOP_PTR": DYNAMICTOP_PTR, "tempDoublePtr": tempDoublePtr, "ABORT": ABORT, "STACKTOP": STACKTOP, "STACK_MAX": STACK_MAX };
 // EMSCRIPTEN_START_ASM
 var asm =Module["asm"]// EMSCRIPTEN_END_ASM
 (Module.asmGlobalArg, Module.asmLibraryArg, buffer);
+
+var real__SDL_GetTicks = asm["_SDL_GetTicks"]; asm["_SDL_GetTicks"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__SDL_GetTicks.apply(null, arguments);
+};
+
+var real__SDL_LockSurface = asm["_SDL_LockSurface"]; asm["_SDL_LockSurface"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__SDL_LockSurface.apply(null, arguments);
+};
+
+var real__SDL_RWFromFile = asm["_SDL_RWFromFile"]; asm["_SDL_RWFromFile"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__SDL_RWFromFile.apply(null, arguments);
+};
 
 var real___GLOBAL__I_000101 = asm["__GLOBAL__I_000101"]; asm["__GLOBAL__I_000101"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
@@ -12387,12 +13685,6 @@ var real____cxx_global_var_init = asm["___cxx_global_var_init"]; asm["___cxx_glo
   return real____cxx_global_var_init.apply(null, arguments);
 };
 
-var real____cxx_global_var_init_12 = asm["___cxx_global_var_init_12"]; asm["___cxx_global_var_init_12"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return real____cxx_global_var_init_12.apply(null, arguments);
-};
-
 var real____cxx_global_var_init_13 = asm["___cxx_global_var_init_13"]; asm["___cxx_global_var_init_13"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12405,16 +13697,22 @@ var real____cxx_global_var_init_14 = asm["___cxx_global_var_init_14"]; asm["___c
   return real____cxx_global_var_init_14.apply(null, arguments);
 };
 
-var real____cxx_global_var_init_14_466 = asm["___cxx_global_var_init_14_466"]; asm["___cxx_global_var_init_14_466"] = function() {
+var real____cxx_global_var_init_14_472 = asm["___cxx_global_var_init_14_472"]; asm["___cxx_global_var_init_14_472"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return real____cxx_global_var_init_14_466.apply(null, arguments);
+  return real____cxx_global_var_init_14_472.apply(null, arguments);
 };
 
-var real____cxx_global_var_init_1_1602 = asm["___cxx_global_var_init_1_1602"]; asm["___cxx_global_var_init_1_1602"] = function() {
+var real____cxx_global_var_init_15 = asm["___cxx_global_var_init_15"]; asm["___cxx_global_var_init_15"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return real____cxx_global_var_init_1_1602.apply(null, arguments);
+  return real____cxx_global_var_init_15.apply(null, arguments);
+};
+
+var real____cxx_global_var_init_1_1608 = asm["___cxx_global_var_init_1_1608"]; asm["___cxx_global_var_init_1_1608"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real____cxx_global_var_init_1_1608.apply(null, arguments);
 };
 
 var real____cxx_global_var_init_4 = asm["___cxx_global_var_init_4"]; asm["___cxx_global_var_init_4"] = function() {
@@ -12457,6 +13755,12 @@ var real__fflush = asm["_fflush"]; asm["_fflush"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return real__fflush.apply(null, arguments);
+};
+
+var real__fileno = asm["_fileno"]; asm["_fileno"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__fileno.apply(null, arguments);
 };
 
 var real__free = asm["_free"]; asm["_free"] = function() {
@@ -12561,6 +13865,18 @@ var real_stackSave = asm["stackSave"]; asm["stackSave"] = function() {
   return real_stackSave.apply(null, arguments);
 };
 Module["asm"] = asm;
+var _SDL_GetTicks = Module["_SDL_GetTicks"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_SDL_GetTicks"].apply(null, arguments) };
+var _SDL_LockSurface = Module["_SDL_LockSurface"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_SDL_LockSurface"].apply(null, arguments) };
+var _SDL_RWFromFile = Module["_SDL_RWFromFile"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_SDL_RWFromFile"].apply(null, arguments) };
 var __GLOBAL__I_000101 = Module["__GLOBAL__I_000101"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12661,10 +13977,6 @@ var ___cxx_global_var_init = Module["___cxx_global_var_init"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["___cxx_global_var_init"].apply(null, arguments) };
-var ___cxx_global_var_init_12 = Module["___cxx_global_var_init_12"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["___cxx_global_var_init_12"].apply(null, arguments) };
 var ___cxx_global_var_init_13 = Module["___cxx_global_var_init_13"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12673,14 +13985,18 @@ var ___cxx_global_var_init_14 = Module["___cxx_global_var_init_14"] = function()
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["___cxx_global_var_init_14"].apply(null, arguments) };
-var ___cxx_global_var_init_14_466 = Module["___cxx_global_var_init_14_466"] = function() {
+var ___cxx_global_var_init_14_472 = Module["___cxx_global_var_init_14_472"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["___cxx_global_var_init_14_466"].apply(null, arguments) };
-var ___cxx_global_var_init_1_1602 = Module["___cxx_global_var_init_1_1602"] = function() {
+  return Module["asm"]["___cxx_global_var_init_14_472"].apply(null, arguments) };
+var ___cxx_global_var_init_15 = Module["___cxx_global_var_init_15"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["___cxx_global_var_init_1_1602"].apply(null, arguments) };
+  return Module["asm"]["___cxx_global_var_init_15"].apply(null, arguments) };
+var ___cxx_global_var_init_1_1608 = Module["___cxx_global_var_init_1_1608"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["___cxx_global_var_init_1_1608"].apply(null, arguments) };
 var ___cxx_global_var_init_4 = Module["___cxx_global_var_init_4"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -12713,6 +14029,10 @@ var _fflush = Module["_fflush"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["_fflush"].apply(null, arguments) };
+var _fileno = Module["_fileno"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_fileno"].apply(null, arguments) };
 var _free = Module["_free"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
