@@ -29,6 +29,7 @@
 #include <Crimild_SDL.hpp>
 
 using namespace crimild;
+using namespace crimild::audio;
 using namespace crimild::sdl;
 using namespace crimild::animation;
 using namespace crimild::messaging;
@@ -288,6 +289,14 @@ int main( int argc, char **argv )
 	light3->local().setTranslate( 0.0f, 0.0f, 3.0f );
 	light3->setAttenuation( Vector3f( 2.0f, 0.0f, 0.0f ) );
 	scene->attachNode( light3 );
+
+    scene->attachComponent< AudioSourceComponent >( AudioManager::getInstance()->createAudioSource( FileSystem::getInstance().pathForResource( "assets/music/steps.wav" ), false ) );
+	auto source = scene->getComponent< AudioSourceComponent >()->getAudioSource();
+	if ( source != nullptr ) {
+		source->setLoop( true );
+		source->setVolume( 0.5f );
+		source->play();
+	}
 	
     sim->setScene( scene );
 
