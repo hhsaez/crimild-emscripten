@@ -11,14 +11,8 @@ SET ( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CRIMILD_SOURCE_DIR}/CMakeTools" 
 SET( CRIMILD_APP_NAME crimild-emcc )
 SET( CRIMILD_APP_SOURCE_DIRECTORIES src )
 SET( CRIMILD_APP_INCLUDE_DIRECTORIES src )
+SET( CRIMILD_APP_ASSETS_DIRECTORY assets )
+SET( CRIMILD_APP_INDEX_FILE src/index.html )
 
 INCLUDE( ModuleBuildApp )
-
-if ( ${CMAKE_SYSTEM_NAME} MATCHES "Emscripten" )
-    set_target_properties( crimild-emcc PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 -s ALLOW_MEMORY_GROWTH=1 -s --preload-file assets" )
-
-    configure_file( ${PROJECT_SOURCE_DIR}/src/index.html "." COPYONLY )
-
-	FILE ( INSTALL ${PROJECT_SOURCE_DIR}/assets DESTINATION . )
-endif ()
 
